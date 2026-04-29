@@ -1,0 +1,316 @@
+.RadioWrapName-s {
+    font-size: var(--font-size-s, 14px);
+    line-height: var(--font-line-height-xs, 16px); /* 114.286% */
+    font-weight: var(--font-weight-regular, 300);
+}
+.Radio {
+    &Name {
+      transition: all .3s ease-in-out 0s;
+      color: var(--Text-body, #14131C);
+      font-family: $font-family-body;
+      font-style: normal;
+    }
+    &Wrap {
+      display: flex;
+      justify-content: space-between;
+      label {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        color: #343434;
+        margin-bottom: 16px;
+        cursor: pointer;
+        transition: all .3s ease-in-out 0s; 
+        span {
+            vertical-align: middle;
+        }
+        input {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          pointer-events: none;
+          &:disabled {
+            cursor: no-drop;
+            &+ span:before {
+              border-color: var(--border-disabled, #878787)!important;
+            }
+            &+ span:after {
+             
+            }
+            &+ span {
+              color: var(--text-disabled, #878787)!important;
+            }
+          }
+          &+ span:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            transition: all .3s ease-in-out 0s;
+            background: var(--surface-page, #FFF);
+            border-radius: 50%;
+          }
+          &+ span:after {
+            top: 0;
+            left: 0;
+            position: absolute;
+            transition: all 0.3s ease-in-out 0s;
+          }
+        }
+        &.label-xs {
+          padding: 0 0 0 28px;
+          .RadioName {
+            color: var(--Text-body, #2B2B2B);
+            font-size: var(--font-size-xs, 12px);
+            font-style: normal;
+            font-weight: var(--font-weight-book, 325);
+            line-height: var(--font-line-height-xs, 16px); /* 133.333% */
+            letter-spacing: var(--font-spacing-0, 0px);
+          }
+          input + span:before {
+            box-shadow: inset 0px 0px 0px 0.75px #878787;
+            width: 12px;
+            height: 12px;
+          }
+          input {
+            &:checked + span:after {
+              width: 12px;
+              height: 12px;
+              display: flex;
+              justify-content: center;
+              content: url('data:image/svg+xml,<svg width="4" height="12" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="' + $encoded-color-checked-radio-bg + '"/></svg>');
+
+              top: 0;
+              left: 0;
+              position: absolute;
+                transition: all 0.3s ease-in-out 0s;
+            }
+            &:checked + span:before {
+              box-shadow: inset 0px 0px 0px 1.25px $color-radiobox-border-dot;
+            }
+            &:checked + span {
+              color: #2B2B2B;
+            }
+          }
+        }
+        &.label-s {
+          padding: 0 0 0 24px;
+          .RadioName {
+            color: var(--Text-body, #2B2B2B);
+            font-size: var(--font-size-s, 14px);
+            font-style: normal;
+            font-weight: var(--font-weight-book, 325);
+            line-height: var(--font-line-height-xs, 16px); /* 114.286% */
+            letter-spacing: var(--font-spacing-0, 0px);
+          }
+          input + span:before {
+            box-shadow: inset 0px 0px 0px 0.75px #878787;
+            width: 16px;
+            height: 16px;
+          }
+          input {
+            &:checked + span:after {
+              width: 16px;
+              height: 16px;
+              display: flex;
+              justify-content: center;
+              content: url('data:image/svg+xml,<svg width="6" height="16" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="3" r="3" fill="' + $encoded-color-checked-radio-bg + '"/></svg>');
+
+              top: 0;
+              left: 0;
+              position: absolute;
+                transition: all 0.3s ease-in-out 0s;
+            }
+            &:checked + span:before {
+              box-shadow: inset 0px 0px 0px 1.25px $color-radiobox-border-dot;
+            }
+            &:checked + span {
+              color: #2B2B2B;
+            }
+          }
+        }
+        &.label-m {
+          padding: 0 0 0 28px;
+          .RadioName {
+            color: var(--Text-body, #2B2B2B);
+            font-size: var(--font-size-m, 16px);
+            font-style: normal;
+            font-weight: var(--font-weight-book, 325);
+            line-height: var(--font-line-height-s, 24px); /* 150% */
+            letter-spacing: var(--font-spacing-0, 0px);
+          }
+          input + span:before {
+            box-shadow: inset 0px 0px 0px 0.75px #878787;
+            width: 20px;
+            height: 20px;
+          }
+          input {
+            &:checked + span:after {
+              width: 20px;
+              height: 20px;
+              display: flex;
+              justify-content: center;
+              content: url('data:image/svg+xml,<svg width="8" height="20" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4" fill="' + $encoded-color-checked-radio-bg + '"/></svg>');
+
+              top: 0;
+              left: 0;
+              position: absolute;
+                transition: all 0.3s ease-in-out 0s;
+            }
+            &:checked + span:before {
+              box-shadow: inset 0px 0px 0px 1.25px $color-radiobox-border-dot;
+            }
+            &:checked + span {
+              color: #2B2B2B;
+            }
+          }
+        }
+        &.label-l {
+          padding: 0 0 0 32px;
+          .RadioName {
+            color: var(--Text-body, #2B2B2B);
+            font-size: var(--font-size-l, 20px);
+            font-style: normal;
+            font-weight: var(--font-weight-book, 400);
+            line-height: var(--font-line-height-m, 28px); /* 140% */
+            letter-spacing: var(--font-spacing-0, 0px);
+          }
+          input + span:before {
+            box-shadow: inset 0px 0px 0px 0.75px #878787;
+            width: 24px;
+            height: 24px;
+          }
+          input {
+            &:checked + span:after {
+                width: 24px;
+                height: 24px;
+                display: flex;
+                justify-content: center;
+
+                content: url('data:image/svg+xml,<svg width="12" height="24" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="6" fill="' + $encoded-color-checked-radio-bg + '"/></svg>');
+
+                top: 0;
+                left: 0;
+                position: absolute;
+                transition: all 0.3s ease-in-out 0s;
+            }
+            &:checked + span:before {
+              box-shadow: inset 0px 0px 0px 0.75px $color-radiobox-border-dot;
+            }
+            &:checked + span {
+              color: #2B2B2B;
+            }
+          }
+        }
+        &:hover {
+          input {
+            &:disabled + span:before {
+              border-color: $color-radiobox-bg;
+            }
+          }
+          span:before {
+            border-color: $color-radiobox-bg;
+          }
+        }
+        &.label-xs:hover {
+          input {
+              &+ span:after {
+                opacity: 1;
+                width: 12px;
+                height: 12px;
+                display: flex;
+                justify-content: center;
+                content: url('data:image/svg+xml,<svg width="4" height="12" viewBox="0 0 4 4"  fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="' + $encoded-color-radio-bg + '"/></svg>');
+              }
+                &:checked {
+                  &+ span:after {
+                      content: url('data:image/svg+xml,<svg width="4" height="12" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="' + $encoded-color-radio-bg + '"/></svg>');
+                  }
+                  &+ span:before {
+                    box-shadow: inset 0px 0px 0px 0.75px $color-radiobox-bg-checked-dot;
+                    background: $color-radiobox-bg;
+                  }
+              }
+              & + span:before {
+                  box-shadow: inset 0px 0px 0px 20px $color-radiobox-bg;
+              }
+          }
+      }
+        &.label-s:hover {
+          input {
+              &+ span:after {
+                opacity: 1;
+                width: 16px;
+                height: 16px;
+                display: flex;
+                justify-content: center;
+                content: url('data:image/svg+xml,<svg width="6" height="16" viewBox="0 0 6 6"  fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="3" r="3" fill="' + $encoded-color-radio-bg + '"/></svg>');
+              }
+                &:checked {
+                  &+ span:after {
+                      content: url('data:image/svg+xml,<svg width="6" height="16" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="3" r="3" fill="' + $encoded-color-radio-bg + '"/></svg>');
+                  }
+                  &+ span:before {
+                    box-shadow: inset 0px 0px 0px 0.75px $color-radiobox-bg-checked-dot;
+                    background: $color-radiobox-bg;
+                  }
+              }
+              & + span:before {
+                  box-shadow: inset 0px 0px 0px 50px $color-radiobox-bg;
+              }
+          }
+      }
+        &.label-m:hover {
+            input {
+                &+ span:after {
+                  opacity: 1;
+                  width: 20px;
+                  height: 20px;
+                  display: flex;
+                  justify-content: center;
+                  content: url('data:image/svg+xml,<svg width="8" height="20" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4" fill="' + $encoded-color-radio-bg + '"/></svg>');
+                }
+                &:checked {
+                    &+ span:after {
+                        content: url('data:image/svg+xml,<svg width="8" height="20" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4" fill="' + $encoded-color-radio-bg + '"/></svg>');
+                    }
+                    &+ span:before {
+                      box-shadow: inset 0px 0px 0px 0.75px $color-radiobox-bg-checked-dot;
+                      background: $color-radiobox-bg;
+                    }
+                }
+                & + span:before {
+                    box-shadow: inset 0px 0px 0px 20px $color-radiobox-bg;
+                }
+            }
+        }
+        &.label-l:hover {
+            input {
+                &+ span:after {
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    justify-content: center;
+                    content: url('data:image/svg+xml,<svg width="12" height="24" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="6" fill="' + $encoded-color-radio-bg + '"/></svg>');
+                }
+                &:checked {
+                    &+ span:after {
+                        content: url('data:image/svg+xml,<svg width="12" height="24" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="6" fill="' + $encoded-color-radio-bg + '"/></svg>');
+                    }
+                    &+ span:before {
+                      box-shadow: inset 0px 0px 0px 0.75px $color-radiobox-bg-checked-dot;
+                      background: $color-radiobox-bg;
+                    }
+                }
+                & + span:before {
+                    box-shadow: inset 0px 0px 0px 20px $color-radiobox-bg;
+                }
+            }
+        }
+      }
+    }
+  }
+  

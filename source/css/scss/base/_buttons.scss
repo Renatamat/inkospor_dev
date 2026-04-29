@@ -1,0 +1,360 @@
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+/**
+ * Button and submit inputs reset
+ * 1) These should be styled using c-btn
+ */
+button {
+	cursor: pointer;
+}
+
+/**
+ *
+ * 1) Button or link that has functionality to it
+ */
+ .c-btn {
+	font-family: $font-family-body;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px; /* 120% */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	width: fit-content;
+	transition: 0.3s ease;
+	cursor: pointer;
+	&:hover{
+		background: $color-btn-primary-bg-hover;
+	}
+}
+
+/*
+ * Inner container wrapper
+ * 1) Container is direct decendant of <button>, since there's
+ *    a bug with applying flexbox directly to a <button>
+ * 2) Only needs to be used for buttons containing both icons and text
+ */
+.c-btn__inner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+}
+
+/*
+ * Button icon
+ */
+.c-btn__icon {
+	width: 1rem;
+	height: 1rem;
+	fill: $color-btn-primary;
+	transition: fill $anim-fade-quick $anim-ease;
+}
+
+/* Rozmiary */
+.c-btn-s { 
+	@include typographyParagraphS-mobile();
+    @include media-breakpoint-up(lg) {
+        @include typographyParagraphS();
+    }
+    @include media-breakpoint-up(xxxl) {
+        @include typographyParagraphS-hd();
+    }
+	padding: var(--Spacing-s, 8px) var(--Spacing-m, 12px);
+	font-weight: 300;
+	svg{
+		width: 16px;
+		height: 16px;
+	}
+	&>span{
+		padding: 0px 8px;
+	}
+}
+.c-btn-m { 
+
+	@include typographyParagraphM-mobile();
+    @include media-breakpoint-up(lg) {
+        @include typographyParagraphM();
+    }
+    @include media-breakpoint-up(xxxl) {
+        @include typographyParagraphM-hd();
+		font-weight: 300;
+    }
+	font-weight: 300;
+	padding: var(--Spacing-m, 12px);
+	svg{
+		width: 20px;
+		height: 20px;
+	}
+	.c-btn__inner {
+		padding: 0px 8px;
+	}
+	&>span{
+		padding: 0px 8px;
+	}
+ }
+.c-btn-l { 
+	@include typographyParagraphL-mobile();
+    @include media-breakpoint-up(lg) {
+        @include typographyParagraphL();
+    }
+    @include media-breakpoint-up(xxxl) {
+        @include typographyParagraphL-hd();
+		font-weight: 300;
+    }
+	padding: var(--Spacing-m, 12px) var(--Spacing-m, 16px);
+	gap: 4px;
+	&>span{
+		padding: 0px var(--Spacing-m, 12px);
+	}
+	font-weight: 300;
+	@include media-breakpoint-up(xxxl) {
+		padding: var(--Spacing-m, 16px) var(--Spacing-m, 24px);
+    }
+
+ }
+ .c-btn-xl { 
+	@include typographyParagraphXl-mobile();
+    @include media-breakpoint-up(lg) {
+        @include typographyParagraphXl();
+    }
+    @include media-breakpoint-up(xxxl) {
+        @include typographyParagraphXl-hd();
+    }
+	padding: var(--Spacing-m, 16px) var(--Spacing-l, 24px);
+	gap: 4px;
+	
+
+	&>span{
+		padding: 0px var(--Spacing-m, 12px);
+	}
+ }
+
+ .c-btn-link { 
+	color: $color-btn-link-text;
+	padding: 0px;
+	&:hover {
+		color: $color-btn-link-text-hover;
+		background: unset;
+	}
+	&:target, &:active, &:focus, &:visited  {
+		color: $color-btn-link-text; 
+	}
+ }
+/* Typy */
+.c-btn-fill { 
+	color: $color-btn-primary-text;
+	border-radius: 0;
+	background: $color-btn-primary-bg;
+	border: 2px solid $color-btn-primary-border;
+	&:hover {
+		background: $color-btn-primary-bg-hover;
+		border: 2px solid $color-btn-primary-border-hover;
+		color: $color-btn-primary-text-hover;
+	}
+	&:target, &:active, &:focus, &:visited  {
+		background: $color-btn-primary-bg;
+		color: $color-btn-primary-text-hover; 
+		border: 2px solid $color-btn-primary-border;
+	}
+ }
+.c-btn-outline { 
+	text-wrap: nowrap;
+	color: $color-btn-outline-text;
+	border-radius: 0;
+	background: $color-btn-outline-bg;
+	border: 2px solid $color-btn-outline-border;
+	&:hover {
+		background: $color-btn-outline-bg-hover;
+		border: 2px solid $color-btn-outline-border-hover;
+		color: $color-btn-outline-text-hover;
+		svg{
+			path{
+				fill:$color-btn-outline-text-hover;
+			}
+		}
+	}
+	&:target, &:active, &:focus {
+		background: unset;
+		border: 2px solid $color-btn-outline-border;
+		color: $color-btn-outline-text;
+	}
+	svg{
+		path{
+			fill:$color-btn-outline;
+		}
+	}
+	&.c-white{
+		&:hover{
+			color:$color-btn-outline !important;
+		}
+
+	}
+ }
+.c-btn-text { 
+	padding: 0px;
+	color: $color-btn-text-text;
+	svg{
+		path{
+			fill:$color-btn-text-text;
+			transition: .3s ease;
+		}
+	}
+	&:hover {
+		background: unset;		
+		border: none;
+		color: $color-btn-text-text-hover;
+		svg{
+			path{
+				fill:$color-btn-text-text-hover;
+			}
+		}
+	}
+	.c-btn__inner {
+		padding: 0px;
+	}
+	&.c-white{
+		svg{
+			path{
+				fill: #FFF;
+			}
+		}
+		&:hover{
+			svg{
+				path{
+					fill: #4D3A33;
+				}
+			}
+		}
+	}
+ }
+
+/* Ikony */
+.c-btn__icon {
+    fill: red; /* Ustawia kolor wypełnienia SVG na czerwony */
+}
+.c-btn__icon--left {
+
+}
+.c-btn__icon--right {
+
+}
+
+
+// Inne przyciski
+
+.c-btn-icon {
+	transition: .3s;
+	border-radius: 1000px;
+	align-items: center;
+	justify-content: center;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.c-btn-icon-s {
+	width: 32px;
+	height: 32px;
+	svg{
+		width: 16px;
+		height: 16px;
+	}
+}
+
+.c-btn-icon-m {
+	width: 44px;
+	height: 44px;
+	svg{
+		width: 20px;
+		height: 20px;
+	}
+}
+
+.c-btn-icon-l {
+	width: 48px;
+	height: 48px;
+}
+
+.c-btn-icon-xl {
+	width: 56px;
+	height: 56px;
+}
+
+.c-btn-text.c-btn-icon-xl{
+	width: 40px;
+	height: 40px;
+}
+
+.c-btn-text.c-btn-icon-l{
+	width: 32px;
+	height: 32px;
+}
+
+.c-btn-text.c-btn-icon-m{
+	width: 28px;
+	height: 28px;
+}
+
+.c-btn-text.c-btn-icon-s{
+	width: 24px;
+	height: 24px;
+}
+
+
+.c-btn-wherebuy {
+	text-align: center;
+	flex: 1;
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+.c-btn-label {
+	transition: .3s;
+	border: unset;
+
+	padding: var(--gap-s, 12px) var(--gap-m, 16px);
+	border-radius: 1000px;
+	background: var(--surface-page, #FFF);
+
+	color: var(--text-action, #2E53C2);
+	font-family: $font-family-body;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+
+	display: flex;
+	gap: 8px;
+	span {
+		padding: 0px 4px;
+	}
+	&:hover {
+		color: #fff;
+		background: #2E53C2;
+		svg {
+			path {
+				fill: #fff;
+			}
+		}
+	}
+}
+.c-btn-mobile {
+	width: 100%;
+	@include media-breakpoint-up(lg) {
+		width: fit-content;
+	}
+	&-sm{
+		width: 100%;
+		@include media-breakpoint-up(sm) {
+			width: fit-content;
+		}
+	}
+}

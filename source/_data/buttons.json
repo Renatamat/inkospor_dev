@@ -1,0 +1,38 @@
+{
+    "buttonTag": true,
+    "buttonText": "Button",
+    "buttonGroup": [
+      {
+        "size": "s",
+        "type": "fill",
+        "icon": "close",
+        "iconDisplay": true,
+        "iconPositionLeft": true,
+        "iconPositionRight": false
+      },
+      {
+        "size": "m",
+        "type": "outline",
+        "icon": "close",
+        "iconDisplay": false,
+        "iconPositionLeft": false,
+        "iconPositionRight": false
+      },
+      {
+        "size": "l",
+        "type": "text",
+        "icon": "close",
+        "iconDisplay": true,
+        "iconPositionLeft": false,
+        "iconPositionRight": true
+      },
+      {
+        "size": "s",
+        "type": "fill",
+        "icon": "close",
+        "iconDisplay": true,
+        "iconPositionLeft": true,
+        "iconPositionRight": false
+      }
+    ]
+  }

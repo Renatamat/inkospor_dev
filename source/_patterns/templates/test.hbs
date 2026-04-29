@@ -1,0 +1,116 @@
+<div class="InputWrap">
+  <span class="InputPlaceholder-label p-xs mb-8 d-block">Sortuj loty</span>
+  <select
+    name="flight_sort"
+    placeholder="Wybierz sposob sortowania"
+    data-mobile-select-title="Sortuj loty"
+  >
+    <option value="">Wybierz sposob sortowania</option>
+    <option value="arrival">Arrival Time</option>
+    <option value="departure">Departure Time</option>
+    <option value="price">Lowest Fare</option>
+    <option value="duration">Duration</option>
+    <option value="nonstop">Non-Stop</option>
+  </select>
+</div>
+
+<!-- Pelna dokumentacja API: README-mobile-portal.md -->
+
+<div style="margin-top: 40px;">
+  <div
+    id="promo-status"
+    style="margin-bottom: 16px; padding: 12px 16px; border-radius: 12px; background: #eef1f8;"
+  >
+    Promocja nie zostala jeszcze aktywowana.
+  </div>
+
+  <button
+    type="button"
+    class="c-btn c-btn--primary"
+    data-mobile-portal-trigger
+    data-mobile-portal-title="Szczegoly promocji"
+    data-mobile-portal-content-id="mobile-portal-promo-1"
+    data-mobile-portal-confirm-action="promo-save"
+    data-mobile-portal-confirm-text="Zastosuj"
+  >
+    Otworz mobile portal
+  </button>
+</div>
+
+<div style="margin-top: 16px;">
+  <button
+    type="button"
+    class="c-btn c-btn--primary"
+    data-mobile-portal-trigger
+    data-mobile-portal-title="Informacja o dostawie"
+    data-mobile-portal-content-id="mobile-portal-info-1"
+    data-mobile-portal-full-height
+  >
+    Otworz portal informacyjny
+  </button>
+</div>
+
+<div style="margin-top: 16px;">
+  <button
+    type="button"
+    class="c-btn c-btn--primary"
+    data-mobile-portal-trigger
+    data-mobile-portal-title="Informacja o dostawie"
+    data-mobile-portal-content-id="mobile-portal-info-2"
+  >
+    Otworz formularz
+  </button>
+</div>
+
+
+<div id="mobile-portal-promo-1" class="d-none" data-mobile-portal-source>
+  <div style="padding: 8px 4px 24px;">
+    <p style="margin-bottom: 16px;">
+      Odbierz zamowienie w siedzibie Healion, bez kosztow dostawy.
+      Zamow online i odbierz wygodnie, bez czekania na kuriera.
+    </p>
+    <p style="margin-bottom: 16px;">
+      Jesli zamowienie nie zostalo oplacone w sklepie internetowym,
+      platnosc przy odbiorze mozliwa jest wylacznie gotowka.
+    </p>
+    <a href="#" class="c-btn c-btn--primary">Przejdz dalej</a>
+  </div>
+</div>
+
+<div id="mobile-portal-info-1" class="d-none" data-mobile-portal-source>
+  <div style="padding: 8px 4px 24px;">
+    {{> molecules-gallery-zoom-2 }}
+  </div>
+</div>
+
+<div id="mobile-portal-info-2" class="d-none" data-mobile-portal-source>
+  <div style="padding: 8px 4px 24px;">
+    {{> organisms-contact-1 }}
+  </div>
+</div>
+
+
+
+<script>
+  document.addEventListener("mobileportal:confirm", function(event) {
+    const detail = event.detail || {};
+
+    if (detail.action === "promo-save") {
+      const status = document.getElementById("promo-status");
+
+      if (status) {
+        status.textContent = "Promocja zostala aktywowana i zapisana.";
+        status.style.background = "#e7f7ea";
+        status.style.color = "#0f6b2a";
+        status.style.border = "1px solid #8ed19b";
+      }
+
+      if (detail.trigger instanceof HTMLElement) {
+        detail.trigger.textContent = "Promocja aktywna";
+        detail.trigger.setAttribute("disabled", "true");
+        detail.trigger.style.opacity = "0.7";
+        detail.trigger.style.pointerEvents = "none";
+      }
+    }
+  });
+</script>

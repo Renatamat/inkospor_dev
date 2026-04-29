@@ -1,0 +1,91 @@
+/*------------------------------------*\
+    #PARAGRAPHS
+\*------------------------------------*/
+
+/**
+ * Paragraph Uppercase base styles
+ */
+ .p-up {
+    @include typographyParagraphUppercase();
+    @include media-breakpoint-up(xxxl) {
+        @include typographyParagraphUppercase-hd();
+    }
+}
+
+/**
+ * Paragraph Overline base styles
+ */
+.p-overline {
+    @include typographyParagraphOverline-mobile();
+    @include media-breakpoint-up(lg) {
+        @include typographyParagraphOverline();
+    }
+    @include media-breakpoint-up(xxxl) {
+        @include typographyParagraphOverline-hd();
+    }
+}
+
+/**
+ * Paragraph Extra Small base styles
+ */
+.p-xs {
+    @include typographyParagraphXs-mobile();
+    @include media-breakpoint-up(lg) {
+        @include typographyParagraphXs();
+    }
+    @include media-breakpoint-up(xxxl) {
+        @include typographyParagraphXs-hd();
+    }
+}
+
+/**
+ * Paragraph Small base styles
+ */
+.p-s {
+    @include typographyParagraphS-mobile();
+    @include media-breakpoint-up(lg) {
+        @include typographyParagraphS();
+    }
+    @include media-breakpoint-up(xxxl) {
+        @include typographyParagraphS-hd();
+    }
+}
+
+/**
+ * Paragraph Medium base styles
+ */
+.p-m {
+    @include typographyParagraphM-mobile();
+    @include media-breakpoint-up(lg) {
+        @include typographyParagraphM();
+    }
+    @include media-breakpoint-up(xxxl) {
+        @include typographyParagraphM-hd();
+    }
+}
+
+/**
+ * Paragraph Large base styles
+ */
+.p-l {
+    @include typographyParagraphL-mobile();
+    @include media-breakpoint-up(lg) {
+        @include typographyParagraphL();
+    }
+    @include media-breakpoint-up(xxxl) {
+        @include typographyParagraphL-hd();
+    }
+}
+
+/**
+ * Paragraph Extra Large base styles
+ */
+.p-xl {
+    @include typographyParagraphXl-mobile();
+    @include media-breakpoint-up(lg) {
+        @include typographyParagraphXl();
+    }
+    @include media-breakpoint-up(xxxl) {
+        @include typographyParagraphXl-hd();
+    }
+}

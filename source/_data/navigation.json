@@ -1,0 +1,50 @@
+{
+    "navToggle" : {
+        "styleModifier" : "",
+        "buttonText" : "Menu"
+    },
+    "navItems" : [
+        {
+            "label" : "O nas",
+            "url" : "#",
+            "child" : false,
+            "active" : false
+        },
+        {
+            "label" : "Usługi",
+            "url" : "#",
+            "child" : true,
+            "active" : false
+        },
+        {
+            "label" : "Zespół",
+            "url" : "#",
+            "child" : false,
+            "active" : true
+        },
+        {
+            "label" : "Aktualności",
+            "url" : "#",
+            "child" : false,
+            "active" : false
+        }
+    ],
+    "footerNav" : [
+        {
+            "label" : "Footer Nav",
+            "url" : "#"
+        },
+        {
+            "label" : "Footer Nav",
+            "url" : "#"
+        },
+        {
+            "label" : "Footer Nav",
+            "url" : "#"
+        },
+        {
+            "label" : "Footer Nav",
+            "url" : "#"
+        }
+    ]
+}

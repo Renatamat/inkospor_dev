@@ -1,0 +1,310 @@
+/*------------------------------------*\
+    #VARIABLES
+\*------------------------------------*/
+
+/**
+ * CONTENTS
+ *
+ * COLORS
+ * Brand Colors...............Globally-available variables and config
+ * Neutral Colors.............Grayscale colors, including white and black
+ * Utility Colors.............Info, Warning, Error, Success
+ *
+ * TYPOGRAPHY
+ * Font Families..............The fonts used in the design system
+ * Sizing.....................Font sizing
+ *
+ * LAYOUT
+ * Max-widths.................Maximum layout container width
+ *
+ * SPACING
+ * Spacing defaults...........Spacing between elements
+ *
+ * BORDERS
+ * Border Width...............Border thicknesses
+ * Border Radius..............Border radius definitions
+ *
+ * ANIMATION
+ * Animation Speed............Transition/animation speed variables
+ * Animation easing...........Easing variables
+ *
+ * BREAKPOINTS
+ * Breakpoints................Global breakpoint definitions
+ */
+
+/*------------------------------------*\
+     #COLORS
+\*------------------------------------*/    
+
+
+$succes-500: $green-500;
+$error-500: $red-500;
+
+/* Mode 1 */
+/* color */
+$base-100: #ffffff;
+$base-200: #f2f2f2;
+$base-300: #d7d7d7;
+$base-400: #b7b7b7;
+$base-500: #898989;
+$base-600: #707070;
+$base-700: #4e4e4e;
+$base-800: #272727;
+$base-900: #000000;
+
+$brand-green-100: #e6fdf9;
+$brand-green-200: #c7faf2;
+$brand-green-300: #9cf6e8;
+$brand-green-400: #73f2df;
+$brand-green-500: #24ecce;
+$brand-green-600: #00caad;
+$brand-green-700: #00a28a;
+$brand-green-800: #007160;
+$brand-green-900: #004f43;
+
+$brand-orange-100: #fff8ec;
+$brand-orange-200: #fff0d5;
+$brand-orange-300: #ffe1ab;
+$brand-orange-400: #ffd281;
+$brand-orange-500: #ffbc42;
+$brand-orange-600: #e2a73b;
+$brand-orange-700: #aa7d2c;
+$brand-orange-800: #71531d;
+$brand-orange-900: #392a0f;
+
+$brand-red-100: #ffeee6;
+$brand-red-200: #ffd9c6;
+$brand-red-300: #ffa67c;
+$brand-red-400: #ff8244;
+$brand-red-500: #fd5200;
+$brand-red-600: #e14a04;
+$brand-red-700: #b73d00;
+$brand-red-800: #7e2800;
+$brand-red-900: #381200;
+
+$brand-violet-100: #f0f0ff;
+$brand-violet-200: #ddddff;
+$brand-violet-300: #babcff;
+$brand-violet-400: #989aff;
+$brand-violet-500: #7578ff;
+$brand-violet-600: #595be2;
+$brand-violet-700: #4345aa;
+$brand-violet-800: #2c2e71;
+$brand-violet-900: #161739;
+
+$neutral-100: #fafafa;
+$neutral-200: #e8eaf2;
+$neutral-300: #dfdfe9;
+$neutral-400: #8d8da8;
+$neutral-500: #68688b;
+$neutral-600: #40406c;
+$neutral-700: #2e2e54;
+$neutral-800: #21213c;
+$neutral-900: #141425;
+
+$primary-100: #f3f5fe;
+$primary-200: #d6dffc;
+$primary-300: #b8c6f9;
+$primary-400: #8ea5f6;
+$primary-500: #2454ff;
+$primary-600: #244ee2;
+$primary-700: #1e41bc;
+$primary-800: #152c81;
+$primary-900: #0c194a;
+
+$green-100: #e7faed;
+$green-200: #caf4d8;
+$green-300: #95eab1;
+$green-400: #60df8a;
+$green-500: #2bd463;
+$green-600: #0eb846;
+$green-700: #0b8a35;
+$green-800: #075c23;
+$green-900: #042e12;
+
+$red-100: #fde6e6;
+$red-200: #fac8c8;
+$red-300: #f49191;
+$red-400: #ef5a5a;
+$red-500: #ea2424;
+$red-600: #cd0707;
+$red-700: #9a0505;
+$red-800: #670404;
+$red-900: #330202;
+ 
+$text-headline: #000;
+$text-action: #7F6053;
+
+ /*------------------------------------*\
+     #TYPOGRAPHY
+ \*------------------------------------*/
+ 
+ /**
+  * Font Family
+  */
+ $font-family-primary: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+ $font-family-secondary: serif;
+ $font-family-body: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+
+
+ /**
+  * Font Sizing Mobile
+  */
+
+  
+  $font-size-sm-mobile: 24px;
+  $font-size-sm-2-mobile: 28px;
+  $font-size-med-mobile: 36px;
+  $font-size-med-2-mobile: 44px;
+  $font-size-large-mobile: 48px;
+  $font-size-xl-mobile: 64px;
+
+  /**
+  * Font Sizing Desktop
+  */
+
+  
+ $font-size-sm: var(--font-size-2xl, 32px);
+ $font-size-sm-2: var(--font-size-3xl, 40px);
+ $font-size-med: var(--font-size-4xl, 48px);
+ $font-size-med-2: var(--font-size-5xl, 56px);
+ $font-size-large: var(--font-size-6xl, 64px);
+ $font-size-xl: var(--font-size-7xl, 80px);
+
+  /**
+  * Font Sizing HD Desktop
+  */
+
+  $font-size-sm-hd: var(--font-size-2xl, 40px);
+  $font-size-sm-2-hd: var(--font-size-3xl, 48px);
+  $font-size-med-hd: var(--font-size-4xl, 56px);
+  $font-size-med-2-hd: var(--font-size-5xl, 64px);
+  $font-size-large-hd: var(--font-size-6xl, 80px);
+  $font-size-xl-hd:  var(--font-size-7xl, 96px);
+
+
+  /**
+  * Font Sizing Paragraph Mobile
+  */
+  $font-size-paragragh-overline-mobile: 10px;
+  $font-size-paragragh-xs-mobile: 12px;
+  $font-size-paragragh-s-mobile: 14px;
+  $font-size-paragragh-med-mobile: 16px;
+  $font-size-paragragh-large-mobile: 18px;
+  $font-size-paragragh-xl-mobile: 20px;
+
+
+  /**
+  * Font Sizing Paragraph
+  */
+  $font-size-paragragh-overline: 10px;
+  $font-size-paragragh-xs: 12px;
+  $font-size-paragragh-s: 14px;
+  $font-size-paragragh-med: var(--font-size-m, 16px);
+  $font-size-paragragh-large: 20px;
+  $font-size-paragragh-xl: 24px;
+
+ /**
+  * Font Sizing Paragraph HD
+  */
+  $font-size-paragragh-overline-hd: 12px;
+  $font-size-paragragh-xs-hd: 14px;
+  $font-size-paragragh-s-hd: 16px;
+  $font-size-paragragh-med-hd: 20px;
+  $font-size-paragragh-large-hd: 28px;
+  $font-size-paragragh-xl-hd: 32px;
+ 
+ /**
+  * Line Height
+  */
+ $line-height-sm: 0.8;
+ $line-height-sm-2: 0.9;
+ $line-height-med: 1;
+ $line-height-med-2: 1.2;
+ $line-height-large: 1.6;
+ $line-height-xl: 1.8;
+ 
+ /*------------------------------------*\
+     #LAYOUT
+ \*------------------------------------*/
+ 
+ /**
+  * Max Width
+  */
+ $l-max-width: 60rem !default;
+ $l-linelength-width: 36rem !default;
+ 
+ /*------------------------------------*\
+     #SPACING
+ \*------------------------------------*/
+ 
+ /**
+  * Spacing and offsets
+  */
+ $spacing: 1rem;
+ $spacing-small: round(0.5 * $spacing);
+ $spacing-large: round(2 * $spacing);
+ 
+ $gap-none: 0rem;
+ $gap-xxs: 0.25rem;
+ $gap-xs: 0.5rem;
+ $gap-s: 0.75rem;
+ $gap-m: 1rem;
+ $gap-l: 1.5rem;
+ $gap-xl: 2rem;
+ $gap-xxl: 3rem;
+ $gap-xxxl: 4rem;
+ 
+ /*------------------------------------*\
+     #BORDERS
+ \*------------------------------------*/
+ 
+ /**
+  * Border widths
+  */
+ $border-width: 1px;
+ $border-none: 0rem;
+ $border-s: 0.0625rem;
+ $border-m: 0.125rem;
+ $border-l: 0.25rem;
+ 
+ /**
+  * Border radius
+  */
+ $border-radius: 8px;
+ $radius-none: 0rem;
+ $radius-xs: 0.25rem;
+ $radius-s: 0.5rem;
+ $radius-m: 1rem;
+ $radius-l: 1.5rem;
+ $radius-xl: 2rem;
+ $radius-round: 62.5rem;
+ 
+ /*------------------------------------*\
+     #ANIMATION
+ \*------------------------------------*/
+ 
+ /**
+  * Transition Speed
+  */
+ $anim-fade-quick: 0.15s;
+ $anim-fade-long: 0.4s;
+ 
+ /**
+  * Transition Ease
+  */
+ $anim-ease: ease-out;
+ 
+ /*------------------------------------*\
+     #BREAKPOINTS
+ \*------------------------------------*/
+ 
+ /**
+  * Breakpoints used in media queries
+  */
+ $bp-small: 28em;
+ $bp-med: 47em;
+ $bp-large: 60em;
+ $bp-xl: 70em;
+
+

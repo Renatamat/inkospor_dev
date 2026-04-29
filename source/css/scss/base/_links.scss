@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+
+/**
+ * Link base styles
+ */
+a {
+	color: $color-links;
+	text-decoration: none;
+	outline: 0;
+	transition: color $anim-fade-quick $anim-ease;
+
+	&:hover, &:focus {
+		color: initial;
+	}
+
+	&:active {
+		color:initial;
+	}
+	&:visited{
+		color: initial;
+	}
+}

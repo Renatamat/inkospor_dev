@@ -1,0 +1,148 @@
+/*------------------------------------*\
+    #COLORS
+\*------------------------------------*/
+
+/**
+ * In this file, we take the literal colors from our palette (defined in variables.scss)
+ * and define them against variables that we can utilise anywhere throughout the project.
+ */
+
+
+
+
+
+/*------------------------------------*\
+    #GLOBAL TEXT COLOR
+\*------------------------------------*/
+
+/**
+ * Body text and background colors
+ */
+$color-body-text: $neutral-900 !default;
+$color-body-bg: $neutral-100 !default;
+$color-text-headline: $base-900;
+$color-text-action: $primary-500;
+
+/**
+ * Highlight colors
+ */
+$color-text-highlight: $neutral-100;
+$color-text-highlight-bg: $primary-400;
+
+
+
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+
+$color-links: $neutral-700 !default;
+$color-links-hover: $neutral-500!default;
+$color-links-active: $neutral-900 !default;
+$color-links-visited: $neutral-900 !default;
+
+
+
+
+
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+$color-btn-primary: $primary-500 !default;
+$color-btn-primary-bg: $primary-500 !default;
+$color-btn-primary-bg-hover: $primary-700 !default;
+$color-btn-primary-border: $primary-500 !default;
+$color-btn-primary-border-hover: $primary-700 !default;
+$color-btn-primary-text: $base-100 !default;
+$color-btn-primary-text-hover: $base-100 !default;
+
+
+
+$color-btn-outline: $primary-500 !default;
+$color-btn-outline-bg: $base-100 !default;
+$color-btn-outline-bg-hover: $neutral-200 !default;
+$color-btn-outline-border: $primary-500 !default;
+$color-btn-outline-border-hover: $primary-700 !default;
+$color-btn-outline-text: $primary-500 !default;
+$color-btn-outline-text-hover: $primary-700 !default;
+
+
+$color-btn-text: $primary-500 !default;
+$color-btn-text-bg: $base-100 !default;
+$color-btn-text-bg-hover: $neutral-200 !default;
+$color-btn-text-border: $primary-500 !default;
+$color-btn-text-border-hover: $primary-700 !default;
+$color-btn-text-text: $primary-500 !default;
+$color-btn-text-text-hover: $primary-700 !default;
+
+
+
+$color-btn-secondary: $neutral-900 !default;
+$color-btn-secondary-bg: $neutral-100 !default;
+$color-btn-secondary-bg-hover: $neutral-700 !default;
+$color-btn-secondary-border: $neutral-900 !default;
+
+
+$color-btn-link-text: $primary-500 !default;
+$color-btn-link-text-hover: $primary-700 !default;
+
+$color-btn-disabled: $neutral-500 !default;
+$color-btn-disabled-bg: $neutral-700!default;
+
+
+
+
+
+/*------------------------------------*\
+    #FORMS
+\*------------------------------------*/
+
+
+
+
+$color-checkbox-bg: #2255BE;
+$color-radiobox-bg: #2255BE;
+
+@function encode-hash($color) {
+  $color-hex: to-upper-case(#{ $color }); // Zamienia kolor na string z hex
+  @return str-replace($color-hex, "#", "%23");
+}
+
+
+$encoded-color-bg: encode-hash($color-checkbox-bg);
+$encoded-color-radio-bg: encode-hash($color-radiobox-bg);
+
+
+
+$color-form: $neutral-900 !default;
+$color-form-bg: $neutral-100 !default;
+$color-form-border: $neutral-700 !default;
+$color-form-border-focus: $neutral-900 !default;
+$color-form-border-error: $red-500 !default;
+$color-form-label: $neutral-900 !default;
+$color-form-info: $neutral-700;
+$color-form-placeholder: $neutral-700;
+
+
+
+$color-checkbox-bg-dot: #fff;
+$color-radiobox-bg-dot: #fff;
+$color-radiobox-bg-checked-dot: #2255BE;
+$color-radiobox-border-dot: #2255BE;
+
+
+$color-checkbox-bg-white-dot: #FFF;
+
+
+@function encode-hash($color) {
+  $color-hex: to-upper-case(#{ $color }); // Zamienia kolor na string z hex
+  @return str-replace($color-hex, "#", "%23");
+}
+
+
+$encoded-color-bg: encode-hash($color-checkbox-bg-dot);
+$encoded-color-radio-bg: encode-hash($color-radiobox-bg-dot);
+$encoded-color-checked-radio-bg: encode-hash($color-radiobox-bg-checked-dot);
+
+$encoded-color-white-bg: encode-hash($color-checkbox-bg-white-dot);
+ 

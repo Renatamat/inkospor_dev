@@ -1,0 +1,90 @@
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+
+/**
+ * Heading 1 base styles
+ */
+ 
+h1, .h1 {
+	display: inline-block;
+	@include typographyH1-mobile();
+	@include media-breakpoint-up(lg) {
+		@include typographyH1();
+	}
+	@include media-breakpoint-up(xxxl)	{
+		@include typographyH1-hd();
+	}
+}
+
+/**
+ * Heading 2 base styles
+ */
+h2, .h2 {
+	display: inline-block;
+	@include typographyH2-mobile();
+	@include media-breakpoint-up(lg) {
+		@include typographyH2();
+	}
+	@include media-breakpoint-up(xxxl) {
+		@include typographyH2-hd();
+		}
+}
+
+/**
+ * Heading 3 base styles
+ */
+h3, .h3 {
+	display: inline-block;
+	@include typographyH3-mobile();
+	@include media-breakpoint-up(lg) {
+		@include typographyH3();
+	}
+	@include media-breakpoint-up(xxxl) {
+		@include typographyH3-hd();
+	}
+}
+
+/**
+ * Heading 4 base styles
+ */
+h4, .h4 {
+	display: inline-block;
+	@include typographyH4-mobile();
+	@include media-breakpoint-up(lg) {
+		@include typographyH4();
+	}
+	@include media-breakpoint-up(xxxl) {
+		@include typographyH4-hd();
+	}
+}
+
+/**
+ * Heading 5 base styles
+ */
+ h5, .h5 {
+	display: inline-block;
+	@include typographyH5-mobile();
+	@include media-breakpoint-up(lg) {
+		@include typographyH5(); 
+	}
+	@include media-breakpoint-up(xxxl) {
+		@include typographyH5-hd();
+	}
+} 
+ 
+
+/**
+ * Heading 6 base styles
+ */
+ h6, .h6 {
+	display: inline-block;
+	@include typographyH6-mobile();
+	@include media-breakpoint-up(lg) {
+		@include typographyH6();
+	}
+	@include media-breakpoint-up(xxxl) {
+		
+		@include typographyH6-hd();
+	}
+}

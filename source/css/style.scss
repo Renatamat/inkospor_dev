@@ -1,0 +1,186 @@
+/*------------------------------------*\
+    #TABLE OF CONTENTS
+\*------------------------------------*/
+/**
+ * BOOTSTRAP.............................Declarations Bootstrap
+ * ABSTRACTS..............................Declarations of Sass variables & mixins
+ * BASE...................................Default element styles
+ * LAYOUT.................................Layout-specific styles
+ * COMPONENTS.............................Component styles
+ * UTILITIES..............................Utility classes
+ */
+
+
+ // <weight>: Use a value from 200 to 900
+
+  
+
+/*------------------------------------*\
+    #BOOTSTRAP
+\*------------------------------------*/
+
+.gs-dev-tools {
+    z-index: 99999999;
+    top: 0; 
+}
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+
+@import "scss/abstracts/variables";
+
+
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px, 
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1200px,
+  xxxl: 1680px,
+);
+$theme-colors: (
+    primary: #7F6053
+  );
+
+  $grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+    xxxl: 1980px, 
+  );
+
+  $font-weight-lighter:         200;
+  $font-weight-bolder:          600;
+  
+
+@import "../../node_modules/bootstrap/scss/variables-dark";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";  
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/utilities/api";
+
+@import "../../node_modules/lightgallery/scss/lightgallery";
+
+  // Definiuj niestandardowe klasy kolumnowe dla xxxl
+  @include media-breakpoint-up(xxxl){
+    @for $i from 1 through 12 {
+    .col-xxxl-#{$i} {
+        flex: 0 0 auto;
+        width: calc(100% * #{$i} / 12);
+    }
+    }
+    }
+    @include media-breakpoint-up(xxxl){
+        @for $i from 1 through 12 {
+        .offset-xxxl-#{$i} {
+            margin-left: calc(100% * #{$i} / 12);
+        }
+        }
+    }
+    .fw-lighter{
+        @include media-breakpoint-up(xxxl){
+            font-weight: 100 !important;
+        }
+    }
+
+/*------------------------------------*\
+    #ABSTRACTS
+\*------------------------------------*/
+
+@import "scss/abstracts/fonts";
+@import "scss/abstracts/mixins";
+@import "scss/abstracts/mixinsparagraph";
+@import "scss/abstracts/colors";
+
+
+
+
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+@import "scss/base/reset";
+@import "scss/base/body";
+@import "scss/base/links";
+@import "scss/base/lists";
+@import "scss/base/headings";
+@import "scss/base/paragraph";
+@import "scss/base/forms";
+@import "scss/base/buttons";
+@import "scss/base/main";
+@import "scss/base/media";
+@import "scss/base/text";
+
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+@import "scss/layout/layout";
+
+/*------------------------------------*\
+    #UTILITIES
+\*------------------------------------*/
+@import "scss/utilities/visibility";
+@import "scss/utilities/spacing";
+
+/*------------------------------------*\
+    #COMPONENTS
+\*------------------------------------*/
+
+@import "scss/swiper-bundle.scss";
+
+@import "../_patterns/atoms/images/icon.scss";
+@import "../_patterns/atoms/forms/checkbox.scss";
+@import "../_patterns/atoms/forms/radio.scss";
+
+@import "../_patterns/molecules/gallery slider/gallery-slider.scss";
+@import "../_patterns/molecules/gallery zoom/gallery-zoom.scss";
+@import "../_patterns/molecules/accordions/accordions.scss";
+@import "../_patterns/molecules/cards/cards.scss";
+@import "../_patterns/molecules/portfolio/portfolio.scss";
+@import "../_patterns/organisms/testfloat/testfloat.scss";
+
+
+
+.breadcrump-wrapper a {
+    padding: 0px 8px;
+    color: var(--Text-on, #FFF);
+    /* S/Regular */
+    font-family: var(--font-family-body, Sora);
+    font-size: var(--font-size-s, 14px);
+    font-style: normal;
+    font-weight: var(--font-weight-regular, 300);
+    line-height: var(--font-line-height-xs, 16px); /* 114.286% */
+    letter-spacing: var(--font-spacing-0, 0px);
+    @include media-breakpoint-up(xxxl) { 
+        font-size: 16px; 
+    }
+    &:hover{  
+        color:#7F6053;
+    }
+}
+
+.breadcrump-wrapper .breadcrump-separator {
+    font-size: var(--font-size-m, 16px);
+    line-height: var(--font-line-height-s, 24px); /* 150% */
+}
+
+.breadcrump-wrapper .breadcrump-last {
+    color: var(--Text-action, #7F6053); 
+    font-family: var(--font-family-body, Sora);
+    font-size: var(--font-size-s, 14px);
+    font-style: normal;
+    font-weight: var(--font-weight-regular, 300);
+    line-height: var(--font-line-height-xs, 16px); /* 114.286% */
+    letter-spacing: var(--font-spacing-0, 0px);
+    @include media-breakpoint-up(xxxl) {
+        font-size: 16px;
+    }
+}

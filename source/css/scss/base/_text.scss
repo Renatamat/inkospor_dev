@@ -1,0 +1,121 @@
+/*------------------------------------*\
+    #TEXT
+\*------------------------------------*/
+
+/**
+ * Paragraph base styles
+ */
+
+
+/**
+ * Blockquote base styles
+ */
+blockquote {
+	// font-style: italic;
+	// border-left: 1px solid $neutral-500;
+	// color:  $neutral-500;
+	// padding-left: 1rem;
+	// margin-bottom: $spacing;
+}
+.blockquote {
+	&-body {
+		flex: 1;
+	}
+	&-container {
+		@include media-breakpoint-up(md) {
+			padding: 32px;
+		}
+		@include media-breakpoint-up(xxxl) {
+			padding: 32px;
+		}
+	}
+}
+
+
+/**
+ * Horizontal rule base styles
+ */
+hr {
+	border: 0;
+	height: 1px;
+	background:  $neutral-500;
+	margin: 1rem 0; 
+}
+
+/**
+ * Selection styles
+ */
+::-moz-selection {
+	color: $color-text-highlight;
+	background: $color-text-highlight-bg; /* Gecko Browsers */
+}
+
+::selection {
+	color: $color-text-highlight;
+	background: $color-text-highlight-bg; /* WebKit/Blink Browsers */
+}
+
+/**
+ * Code base styles
+ */
+code {
+	display: inline-block;
+	background: $neutral-200;
+	border: 1px solid $neutral-100;
+	padding: 0.2rem 0.5rem;
+	line-height: 1.2;
+	font-size: 0.85rem;
+}
+
+/**
+ * Preformatted text base styles
+ */
+pre {
+	background: $neutral-200;
+	border: 1px solid $neutral-100;
+	font-size: $font-size-med;
+	padding: 1rem;
+	overflow-x: auto;
+
+	/**
+	 * Remove border from code within preformatted text block
+	 */
+	code {
+		border: 0;
+	}
+}
+
+/**
+ * Code with languages associated with them
+ * 1) Override Prism sysles for code blocks with language
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+	font-family: monospace !important;
+}
+
+.c-headline{
+	color: $color-text-headline;
+}
+.c-action{
+	color: $color-text-action !important;
+	svg{
+		path{
+			fill: $color-text-action;
+		}
+	}
+}
+.c-body{
+	color: $color-body-text;
+}
+.c-white{
+	color: $base-100 !important; 
+	path{
+		fill:$base-100 ;
+	}
+	&:hover{
+		path{
+			fill: #4D3A33 ;
+		}
+	}
+}

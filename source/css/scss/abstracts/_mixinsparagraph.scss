@@ -1,0 +1,145 @@
+/**
+ * Paragraph Styles
+ */
+
+/**
+ * Paragraph Uppercase Styles
+ */
+ @mixin typographyParagraphUppercase() {
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+}
+@mixin typographyParagraphUppercase-hd() {
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+}
+
+/**
+ * Paragraph Overline Styles
+ */
+ @mixin typographyParagraphOverline-mobile() {
+    font-family: $font-family-body;
+    font-size: $font-size-paragragh-overline-mobile;
+    font-style: normal;
+    font-weight: var(--font-weight-light, 200);
+    letter-spacing: var(--font-spacing-2, 4px);
+    text-transform: uppercase;
+ }
+
+
+@mixin typographyParagraphOverline() {
+    font-size: $font-size-paragragh-overline;
+    line-height: var(--font-line-height-xs, 22px); /* 183.333% */
+
+}
+@mixin typographyParagraphOverline-hd() {
+    font-size: $font-size-paragragh-overline-hd;
+    font-weight: var(--font-weight-light, 100);
+    line-height: var(--font-line-height-xs, 22px); /* 183.333% */
+}
+
+/**
+ * Paragraph Extra Small Styles
+ */
+
+ @mixin typographyParagraphXs-mobile() {
+    font-family: $font-family-body;
+    font-size: $font-size-paragragh-xs-mobile;
+    font-style: normal;
+    letter-spacing: var(--font-spacing-0, 0px);
+    font-weight: var(--font-weight-light, 300);
+ }
+
+@mixin typographyParagraphXs() {
+    font-size: $font-size-paragragh-xs;
+    line-height: var(--font-line-height-xs, 16px); /* 133.333% */
+}
+@mixin typographyParagraphXs-hd() {
+    font-size: $font-size-paragragh-xs-hd;
+    line-height: var(--font-line-height-xs, 22px); /* 157.143% */
+}
+
+/**
+ * Paragraph Small Styles
+ */
+ @mixin typographyParagraphS-mobile() {
+    font-family: $font-family-body;
+    font-style: normal;
+    letter-spacing: var(--font-spacing-0, 0px);
+    font-weight: var(--font-weight-light, 300);
+    font-size: $font-size-paragragh-s-mobile;
+ }
+
+@mixin typographyParagraphS() {
+    font-size: $font-size-paragragh-s;
+    line-height: var(--font-line-height-xs, 16px); /* 114.286% */
+    
+}
+@mixin typographyParagraphS-hd() {
+    font-size: $font-size-paragragh-s-hd;
+    line-height: var(--font-line-height-xs, 22px); /* 137.5% */
+}
+
+/**
+ * Paragraph Medium Styles
+ */
+ @mixin typographyParagraphM-mobile() {
+    letter-spacing: var(--font-spacing-0, 0px);
+    font-family: $font-family-body;
+    font-style: normal;
+    font-size: $font-size-paragragh-med-mobile;
+    line-height: var(--font-line-height-s, 24px); /* 150% */
+    font-weight: var(--font-weight-light, 300);
+ }
+
+@mixin typographyParagraphM() {
+    font-size: $font-size-paragragh-med;
+    line-height: var(--font-line-height-s, 24px); /* 150% */
+    
+}
+@mixin typographyParagraphM-hd() {
+    font-size: $font-size-paragragh-med-hd;
+    line-height: var(--font-line-height-s, 28px); /* 140% */
+}
+
+/**
+ * Paragraph Large Styles
+ */
+ @mixin typographyParagraphL-mobile() {
+    font-size: $font-size-paragragh-large-mobile;
+    font-family: $font-family-body;
+    font-style: normal;
+    font-weight: var(--font-weight-light, 300);
+    letter-spacing: var(--font-spacing-0, 0px);
+    line-height: var(--font-line-height-m, 24px); /* 140% */
+ }
+
+@mixin typographyParagraphL() {
+    font-size: $font-size-paragragh-large;
+    line-height: var(--font-line-height-m, 28px); /* 140% */
+}
+@mixin typographyParagraphL-hd() {
+    font-size: $font-size-paragragh-large-hd;
+    line-height: var(--font-line-height-m, 32px); 
+}
+
+/**
+ * Paragraph Extra Large Styles
+ */
+ @mixin typographyParagraphXl-mobile() {
+    font-family: $font-family-body;
+    font-style: normal;
+    font-weight: var(--font-weight-light, 300);
+    letter-spacing: var(--font-spacing-0, 0px);
+    font-size: $font-size-paragragh-xl-mobile;
+    line-height: var(--font-line-height-m, 28px);
+ }
+
+@mixin typographyParagraphXl() { 
+    font-size: $font-size-paragragh-xl;
+    line-height: var(--font-line-height-m, 28px);
+}
+@mixin typographyParagraphXl-hd() {
+    font-size: $font-size-paragragh-xl-hd;
+    line-height: var(--font-line-height-m, 32px); /* 100% */
+}

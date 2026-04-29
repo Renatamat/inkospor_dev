@@ -1,0 +1,10 @@
+{
+	"iconPath": "../../icons/16-close.svg",
+	"icon": "close",
+	"icons": [
+		{
+			"iconPath": "../../icons/16-close.svg",
+			"icon": "close"
+		}
+	]
+}

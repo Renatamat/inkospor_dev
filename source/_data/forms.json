@@ -1,0 +1,61 @@
+{
+    "legend" : "Legend",
+    "label" : "Label",
+    "value" : "",
+    "email" : "Placeholder E-mail",
+    "placeholder-label" : "Label",
+    "placeholder" : "Input Text",
+    "placeholder-hint" : "Hint",
+    "fieldNote" : "This is a note about the field",
+    "id" : "",
+    "selectOptions" : [
+        {
+            "value" : "option-1",
+            "option" : "Nazwa A-Z"
+        },
+        {
+            "value" : "option-2",
+            "option" : "Nazwa Z-A"
+        }
+    ],
+    "checkboxes" : [
+        {
+            "label" : "Option 1",
+            "id" : "check-1",
+            "name" : "checkname",
+            "size" : "S",
+            "checked" : true
+        },
+        {
+            "label" : "Option 2",
+            "id" : "check-2",
+            "size" : "M",
+            "name" : "checkname"
+        },
+        {
+            "label" : "Option 3",
+            "id" : "check-3",
+            "size" : "L",
+            "name" : "checkname"
+        }
+    ],
+    "radios" : [
+        {
+            "label" : "Option 1",
+            "id" : "radio-1",
+            "name" : "radioname",
+            "checked" : true
+        },
+        {
+            "label" : "Option 2",
+            "id" : "radio-2",
+            "name" : "radioname"
+        }
+    ],
+    "searchForm": true,
+    "searchFormButton": {
+        "buttonTag": true,
+        "styleModifier": "u-is-vishidden",
+        "buttonText": "Search"
+    }
+}

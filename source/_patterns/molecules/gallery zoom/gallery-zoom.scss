@@ -1,0 +1,46 @@
+.gallery-zoom {
+    .col-lg-3 > :first-child {
+        display: block;
+        @include media-breakpoint-up(lg) {
+            aspect-ratio: 1/1;
+        }
+        img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+    .col-lg-4 > :first-child {
+        display: block;
+        @include media-breakpoint-up(lg) {
+            aspect-ratio: 1/1;
+        }
+        img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+    .col-lg-6 > :first-child {
+        display: block;
+        @include media-breakpoint-up(lg) {
+            aspect-ratio: 1/1;
+        }
+        img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+    .col-lg-12 > :first-child {
+        display: block;
+        @include media-breakpoint-up(lg) {
+            aspect-ratio: 1176/576;
+        }
+        img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+}

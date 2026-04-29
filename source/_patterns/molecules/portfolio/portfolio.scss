@@ -1,0 +1,10 @@
+.portfolio {
+    &-navigation {
+        .c-btn-outline {
+            border: 2px solid rgba(255,255,255,0);
+            &.--active {
+                border: 2px solid $color-btn-outline-border;
+            }
+        }
+    }
+}

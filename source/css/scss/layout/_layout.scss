@@ -1,0 +1,111 @@
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+
+/**
+ *
+ * 1) This caps the width of text passages
+ *    to achieve a comfortable line length
+ */
+.l-linelength-container {
+	max-width: $l-linelength-width;
+}
+.align-items-center {
+    align-items: center;
+}
+
+.no-wrap {
+    flex-wrap: nowrap;
+}
+.align-items-end{
+    align-items: flex-end;
+}
+
+@media screen and (min-width: 768px) {
+    .col-12.col-md-66-procent {
+        flex:0 0 auto;
+        width: 66.66%!important
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .col-md-66-procent {
+        flex:0 0 auto;
+        width: 66.66%!important
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .col-md-66-procent.col-lg-6 {
+        flex:0 0 auto;
+        width: 50%!important
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .col-md-66-procent.col-lg-2 {
+        flex:0 0 auto;
+        width: 25%!important
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .col-md-66-procent.col-md-6 {
+        flex:0 0 auto;
+        width: 50%!important
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .col-md-66-procent.col-xl-16 {
+        flex:0 0 auto;
+        width: 100%!important
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .col-md-66-procent.col-xl-8 {
+        flex:0 0 auto;
+        width: 50%!important
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .col-md-66-procent.col-xxl-3 {
+        flex:0 0 auto;
+        width: 18.75%!important
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .col-md-66-procent.col-xxl-16 {
+        flex:0 0 auto;
+        width: 100%!important
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .col-md-66-procent.col-xxl-33-procent {
+        flex:0 0 auto;
+        width: 66.66%!important
+    }
+}
+
+.col-66-procent {
+    flex: 0 0 auto;
+    width: 66.66%!important
+}
+
+@media screen and (min-width: 768px) {
+    .col-66-procent.col-md-8 {
+        flex:0 0 auto;
+        width: 50%!important
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .col-66-procent.col-xxl-5 {
+        flex:0 0 auto;
+        width: 31.25%!important
+    }
+}
