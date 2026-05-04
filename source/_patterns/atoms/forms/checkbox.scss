@@ -4,7 +4,7 @@
 .CheckboxName-s {
     font-size: var(--font-size-s, 14px);
     line-height: var(--font-line-height-xs, 16px); /* 114.286% */
-    font-weight: var(--font-weight-regular, 300);
+    font-weight: var(--font-weight-regular, 400);
 }
 .Checkbox {
     &Name {
@@ -34,13 +34,13 @@
                 &:disabled {
                     cursor: no-drop;
                     &+ span:before {
-                        border-color: var(--border-disabled, #878787)!important;
+                        border-color:  $base-500  !important;
                     }
                     &+ span:after {
                         content: unset!important;
                     }
                     &+ span {
-                        color: var(--text-disabled, #878787)!important;
+                        color: $base-500 !important;
                     }
                 }
                 &+ span:before {
@@ -56,9 +56,9 @@
             &.label-s {
                 padding: 0 0 0 24px;
                 .CheckboxName {
-                    font-size: var(--font-size-s, 14px);
+                    font-size: var(--font-size-s, 16px);
                     line-height: var(--font-line-height-xs, 16px); /* 114.286% */
-                    font-weight: var(--font-weight-regular, 300);
+                    font-weight: var(--font-weight-regular, 400);
                 }
                 input + span:before {
                     border-radius: 1.6px;
@@ -73,7 +73,7 @@
                         height: 16px;
                         content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.7841 4.361C13.0265 4.57315 13.0511 4.94167 12.8389 5.18413L7.23895 11.5841C7.13707 11.7006 6.99311 11.7718 6.83875 11.782C6.68438 11.7923 6.53225 11.7409 6.41582 11.639L3.21582 8.839C2.97336 8.62686 2.94879 8.25833 3.16094 8.01587C3.37309 7.77342 3.74162 7.74885 3.98407 7.961L6.74507 10.3769L11.9609 4.41587C12.1731 4.17342 12.5416 4.14885 12.7841 4.361Z' fill='%23fff'/%3E%3C/svg%3E");
                     }
-    
+                    
                     &:checked + span:after {
                         top: 0;
                         left: 0;
@@ -93,8 +93,8 @@
             &.label-m {
                 padding: 0 0 0 28px;
                 .CheckboxName {
-                    font-size: var(--font-size-m, 16px);
-                    font-weight: var(--font-weight-regular, 300);
+                    font-size: var(--font-size-m, 20px);
+                    font-weight: var(--font-weight-regular, 400);
                     line-height: var(--font-line-height-s, 24px); /* 150% */
                     @include media-breakpoint-up(xxxl) {
                         @include typographyParagraphS-hd();
@@ -133,9 +133,9 @@
             &.label-l {
                 padding: 0 0 0 32px;
                 .CheckboxName {
-                    font-size: var(--font-size-l, 20px);
+                    font-size: var(--font-size-l, 24px);
                     line-height: var(--font-line-height-m, 28px); /* 140% */
-                    font-weight: var(--font-weight-regular, 300);
+                    font-weight: var(--font-weight-regular, 400);
                 }
                 input+ span:before {
                     border: 1.5px solid var(--Border-secondary, #C1C1C4);

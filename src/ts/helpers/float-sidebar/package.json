@@ -1,0 +1,47 @@
+{
+  "name": "float-sidebar",
+  "description": "Lightweight (2kb gzipped), zero-dependency JavaScript library that makes sidebars float",
+  "keywords": [
+    "fsm",
+    "sidebars",
+    "javascript",
+    "lightweight",
+    "float sidebar",
+    "sticky sidebar",
+    "zero dependencies",
+    "finite state machine"
+  ],
+  "author": "Sergey Vinogradov",
+  "email": "mr.vursen@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vursen/FloatSidebar.js/issues"
+  },
+  "homepage": "https://github.com/vursen/FloatSidebar.js",
+  "version": "1.3.1",
+  "main": "./src/float-sidebar.js",
+  "module": "./src/float-sidebar.js",
+  "exports": {
+    ".": {
+      "import": "./src/float-sidebar.js",
+      "require": "./src/float-sidebar.js"
+    }
+  },
+  "files": [
+    "src"
+  ],
+  "devDependencies": {
+    "@open-wc/testing": "^4.0.0",
+    "@web/test-runner": "^0.20.2",
+    "@web/dev-server": "^0.4.6",
+    "sinon": "^21.0.0"
+  },
+  "scripts": {
+    "test": "web-test-runner test/**/*.test.js --node-resolve",
+    "start": "web-dev-server --open --watch --node-resolve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vursen/FloatSidebar.js.git"
+  }
+}

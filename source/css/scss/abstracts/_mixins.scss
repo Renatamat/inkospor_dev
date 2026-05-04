@@ -10,9 +10,9 @@
 	font-size: $font-size-paragragh-med;
 	line-height: 1.4;
 	-webkit-text-size-adjust: 100%; /* 1 */
-	font-family: $font-family-body;
+	font-family: $font-family-headings;
     font-optical-sizing: auto;
-    font-weight: 200 900;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -30,20 +30,19 @@
  */
  @mixin typographyH1-mobile() {
 	letter-spacing: var(--font-spacing--2, -2px);
-	font-family: $font-family-body;
+	font-family: $font-family-headings;
 	font-style: normal;
 	font-size: $font-size-xl-mobile;
-	font-weight: 300;
-	line-height: 64px;
+	line-height: var(--font-line-height-7xl, 96px); /* 120% */
  }
 
 @mixin typographyH1() {
 	font-size: $font-size-xl;
-	line-height: var(--font-line-height-5xl, 80px); /* 100% */
+	line-height: var(--font-line-height-7xl, 88px); /* 91.667% */
 }
 @mixin typographyH1-hd() {
 	font-size: $font-size-xl-hd;
-	line-height: var(--font-line-height-5xl, 96px); /* 100% */
+	line-height: var(--font-line-height-7xl, 112px); /* 87.5% */
 	
 }
 
@@ -53,20 +52,20 @@
 
  @mixin typographyH2-mobile () {
 	font-size: $font-size-large-mobile;
-	font-family: $font-family-body;
+	font-family: $font-family-headings;
 	font-style: normal;
 	letter-spacing: var(--font-spacing--2, -2px);
-	line-height: 56px;
-	font-weight: 300;
+	line-height: var(--font-line-height-6xl, 88px); /* 122.222% */
  }
 @mixin typographyH2() {
 	font-size: $font-size-large;
-	line-height: var(--font-line-height-4xl, 72px); /* 112.5% */
+	line-height: var(--font-line-height-6xl, 80px); /* 100% */
 }
 
 @mixin typographyH2-hd() {
 	font-size: $font-size-large-hd;
-	line-height: var(--font-line-height-4xl, 80px); /* 100% */
+	line-height: var(--font-line-height-6xl, 104px); /* 92.857% */
+
 }
 
 /**
@@ -74,24 +73,22 @@
  */
 
  @mixin typographyH3-mobile() {
-	font-family: $font-family-body;
+	font-family: $font-family-headings;
 	font-size: $font-size-med-2-mobile;
-	font-weight: 300;
-	line-height: 48px; /* 114.286% */
+	line-height: var(--font-line-height-5xl, 80px); /* 125% */
 	letter-spacing: var(--font-spacing--2, -2px);
 	font-style: normal;
  }
 
 @mixin typographyH3() {
 	font-size: $font-size-med-2;
-	line-height: var(--font-line-height-3xl, 64px); /* 114.286% */
+	line-height: var(--font-line-height-5xl, 72px); /* 100% */
 
 }
 
 @mixin typographyH3-hd() {
 	font-size: $font-size-med-2-hd;
-	line-height: var(--font-line-height-3xl, 72px); /* 112.5% */
-	
+	line-height: var(--font-line-height-5xl, 96px); /* 100% */	
 }
 
 
@@ -100,21 +97,19 @@
  */
  
  @mixin typographyH4-mobile() {
-	font-family: $font-family-body;
+	font-family: $font-family-headings;
 	letter-spacing: var(--font-spacing--1, -1px);
 	font-size: $font-size-med-mobile;
 	font-style: normal;
-	font-weight: 300;
-	line-height: 38px;
+	line-height: var(--font-line-height-4xl, 72px); /* 128.571% */
  }
 @mixin typographyH4() {
 	font-size: $font-size-med;
-	line-height: var(--font-line-height-2xl, 52px); /* 108.333% */
+	line-height: var(--font-line-height-4xl, 64px); /* 100% */
 }
 @mixin typographyH4-hd() {
 	font-size: $font-size-med-hd;
-	line-height: var(--font-line-height-2xl, 64px); /* 114.286% */
-	
+	line-height: var(--font-line-height-3xl, 80px); /* 111.111% */	
 }
 
 
@@ -123,22 +118,22 @@
  */
 
  @mixin typographyH5-mobile() {
-	font-family: $font-family-body;
+	font-family: $font-family-headings;
 	letter-spacing: var(--font-spacing--1, -1px);
 	font-style: normal;
 	font-size: $font-size-sm-2-mobile;
 	font-weight: 300;
-	line-height: 38px; 
+	line-height: var(--font-line-height-3xl, 67px); /* 139.583% */
  }
 
  @mixin typographyH5() {
 	font-size: $font-size-sm-2;
-	line-height: var(--font-line-height-2xl, 52px); /* 130% */
+	line-height: var(--font-line-height-3xl, 56px); /* 100% */
 }
 
  @mixin typographyH5-hd() {
 	font-size: $font-size-sm-2-hd;
-	line-height: var(--font-line-height-2xl, 64px); /* 133.333% */
+	line-height: var(--font-line-height-3xl, 80px); /* 111.111% */
 }
 
 
@@ -148,21 +143,20 @@
  */
 
  @mixin typographyH6-mobile() {
-	font-family: $font-family-body;
+	font-family: $font-family-headings;
 	font-size: $font-size-sm-mobile;
-	font-weight: 300;
-	line-height: 28px; /* 112.5% */
+	line-height: var(--font-line-height-2xl, 48px); /* 120% */
 	letter-spacing: var(--font-spacing--1, -1px);
 	font-style: normal;
  }
 
  @mixin typographyH6() {
 	font-size: $font-size-sm;
-	line-height: var(--font-line-height-l, 36px); /* 112.5% */
+	line-height: var(--font-line-height-2xl, 48px); /* 120% */
+
 }
 
  @mixin typographyH6-hd() {
 	font-size: $font-size-sm-hd;
-	line-height: var(--font-line-height-l, 44px); /* 110% */
-	
+	line-height: var(--font-line-height-2xl, 72px); /* 112.5% */	
 }

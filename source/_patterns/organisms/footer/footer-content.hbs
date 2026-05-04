@@ -1,0 +1,226 @@
+{{! organisms-footer.hbs }}
+<div class="row">
+  <div class="col-12">
+    <div class="c-footer bg-surface-200 pt-48">
+      <div class="c-footer__inner">
+
+        {{! TOP GRID }}
+
+        {{! COL 1: company }}
+        <div class="c-footer__top d-grid">
+          <div class="c-footer__top-box">
+            <div class="d-flex flex-column gap-14 gap-lg-16">
+
+              {{! logo }}
+              <a
+                class="c-footer__logo d-inline-flex align-items-center"
+                href="/"
+                aria-label="Healion"
+              >
+                {{! podmień na swój atom logo }}
+                {{!-- {{> atoms-logo-healion }} --}}
+                <img
+                  src="/images/logoHeader.svg"
+                  alt="Healion"
+                  width="147"
+                  height="38"
+                />
+              </a>
+
+              <div class="p-s fw-bold">
+                CENTRUM SPRZEDAŻY ODŻYWEK Sp. j.
+              </div>
+
+              <div class="p-s">
+                ul. Poznańska 106 A<br />
+                05-850 Bronisze / k. Warszawy
+              </div>
+
+              <div class="p-s">
+                <strong>NIP:</strong>
+                5262579386<br />
+                <strong>KRS:</strong>
+                0000074784<br />
+                <strong>Nr rej. BDO:</strong>
+                000463771
+              </div>
+
+            </div>
+          </div>
+
+          {{! COL 2: kontakt + mapa }}
+          <div class="c-footer__top-box">
+            <div class="d-flex flex-column gap-24">
+
+              <div class="d-flex flex-column gap-14 gap-lg-16">
+                <div class="h7 fw-bold m-0">KONTAKT</div>
+
+                <div class="d-flex flex-column gap-8">
+
+                  <a class="c-btn c-btn-s c-btn-text" href="tel:228864848">
+                    <svg class="i-sprite icon-16"><use
+                        href="/sprites/icons-16.svg#phone"
+                      ></use></svg>
+                    <span>22 886 48 48</span>
+                  </a>
+
+                  <a class="c-btn c-btn-s c-btn-text" href="tel:696486688">
+                    <svg class="i-sprite icon-16"><use
+                        href="/sprites/icons-16.svg#cell_phone"
+                      ></use></svg>
+                    <span>696 48 66 88</span>
+                  </a>
+
+                  <div class="p-s">10:00 - 16:00 (pon-pt)</div>
+
+                  <a
+                    class="c-btn c-btn-s c-btn-text"
+                    href="mailto:sklep@healion.pl"
+                  >
+                    <svg class="i-sprite icon-16"><use
+                        href="/sprites/icons-16.svg#mail"
+                      ></use></svg>
+                    <span>sklep@healion.pl</span>
+                  </a>
+
+                </div>
+              </div>
+
+              <div class="d-flex flex-column gap-14 gap-lg-16">
+                <div class="p-m fw-bold m-0">Mapa dojazdu</div>
+
+                <div class="d-flex flex-column gap-8">
+                  <div class="p-s">
+                    Wjazd od ul. Poznańskiej 108, droga<br />
+                    wewnętrzna przed przystankiem autobusowym.
+                  </div>
+
+                  <a
+                    class="c-footer__link-maps c-btn c-btn-s c-btn-text text-decoration-underline fw-normal"
+                    href="#"
+                  >
+                    <svg class="i-sprite icon-16"><use
+                        href="/sprites/icons-16.svg#map_pin"
+                      ></use></svg>
+                    <span>Zobacz na mapie</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          {{! COL 3: informacje }}
+          <div class="c-footer__top-box">
+            <div class="d-flex flex-column gap-16">
+              <div class="h7 fw-bold m-0">INFORMACJE</div>
+
+              <nav
+                class="d-flex flex-column gap-14 gap-lg-16"
+                aria-label="Informacje"
+              >
+                <a class="c-btn c-btn-m c-btn-link fw-normal" href="#">Regulamin
+                  sklepu</a>
+                <a class="c-btn c-btn-m c-btn-link fw-normal" href="#">Pozostałe
+                  regulaminy</a>
+                <a
+                  class="c-btn c-btn-m c-btn-link fw-normal"
+                  href="#"
+                >Informacje zdrowotne</a>
+                <a
+                  class="c-btn c-btn-m c-btn-link fw-normal"
+                  href="#"
+                >Bezpieczne zakupy</a>
+                <a
+                  class="c-btn c-btn-m c-btn-link fw-normal"
+                  href="#"
+                >Rozporządzenie (GPSR)</a>
+                <a class="c-btn c-btn-m c-btn-link fw-normal" href="#">Dla
+                  dostawców</a>
+              </nav>
+            </div>
+          </div>
+
+          {{! COL 4: pomoc }}
+          <div class="c-footer__top-box">
+            <div class="d-flex flex-column gap-16">
+              <div class="h7 fw-bold m-0">POMOC</div>
+
+              <nav
+                class="d-flex flex-column gap-14 gap-lg-16"
+                aria-label="Pomoc"
+              >
+                <a class="c-btn c-btn-m c-btn-link fw-normal" href="#">Dostawa i
+                  koszty wysyłki</a>
+                <a class="c-btn c-btn-m c-btn-link fw-normal" href="#">Metody
+                  płatności</a>
+                <a class="c-btn c-btn-m c-btn-link fw-normal" href="#">Kody
+                  rabatowe i punkty</a>
+                <a
+                  class="c-btn c-btn-m c-btn-link fw-normal"
+                  href="#"
+                >Reklamacje i zwroty</a>
+                <a class="c-btn c-btn-m c-btn-link fw-normal" href="#">Śledzenie
+                  zamówienia</a>
+                <a class="c-btn c-btn-m c-btn-link fw-normal" href="#">Moje
+                  konto</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        {{! B2B BOX }}
+        <div
+          class="c-footer__b2b mt-20 mt-lg-48 mb-20 mb-lg-48 p-20 p-md-32 bg-white outline-1 border-disabled d-flex flex-column flex-xl-row gap-24"
+        >
+          <div class="b2b-img d-flex align-items-end gap-24">
+            {{! logo inkospor (podmień na svg/atom) }}
+            <img
+              src="/images/inkospor.svg"
+              alt="Inkospor"
+              width="88"
+              height="76"
+            />
+          </div>
+
+          <div
+            class="d-flex flex-column flex-lg-row gap-16 gap-lg-24 align-items-start align-items-lg-end"
+          >
+            <div class="c-footer__b2b-box flex-grow-1 d-flex flex-column gap-8">
+              <div class="h6 m-0">
+                <span class="c-red fw-bold">B2B.</span>
+                <span class="fw-bold"> SPRZEDAŻ DLA FIRM</span>
+              </div>
+              <div class="p-s">
+                Jako wyłączny przedstawiciel Inkospor w Polsce oferujemy
+                suplementy i odżywki premium cenione w całej Europie za wysoką
+                jakość i skuteczność.
+              </div>
+            </div>
+            <div class="c-divider-horizontal"></div>
+            <div class="c-footer__b2b-box flex-grow-1 p-s">
+              Zapewniamy atrakcyjne warunki handlowe oraz szybkie dostawy.
+              Chcesz wyróżnić swoją ofertę i zyskać przewagę na rynku? Zostań
+              partnerem Inkospor. Napisz do nas i zacznij współpracę!
+            </div>
+          </div>
+
+          <a
+            class="c-btn c-btn-l c-btn-fill bg-black text-white c-btn-mobile-fullwidth"
+            href="#"
+          >
+            <span>Przejdź do formularza</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+      <div class="c-footer__payments d-grid align-items-center mx-auto mx-lg-0 gap-lg-64 justify-content-center">
+        <img src="/images/payments/przelewy_logo.svg" alt="Przelewy24" />
+        <img src="/images/payments/blik_logo.svg" alt="BLIK" />
+        <img src="/images/payments/inpost_logo.svg" alt="InPost" />
+      </div>
+  </div>
+</div>

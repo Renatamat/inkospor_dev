@@ -24,18 +24,18 @@
     font-weight: var(--font-weight-light, 200);
     letter-spacing: var(--font-spacing-2, 4px);
     text-transform: uppercase;
+    line-height: var(--font-line-height-xs, 20px); /* 200% */
  }
 
 
 @mixin typographyParagraphOverline() {
     font-size: $font-size-paragragh-overline;
-    line-height: var(--font-line-height-xs, 22px); /* 183.333% */
-
+    line-height: var(--font-line-height-xs, 20px); /* 200% */
 }
 @mixin typographyParagraphOverline-hd() {
     font-size: $font-size-paragragh-overline-hd;
     font-weight: var(--font-weight-light, 100);
-    line-height: var(--font-line-height-xs, 22px); /* 183.333% */
+    line-height: var(--font-line-height-xs, 32px); /* 266.667% */
 }
 
 /**
@@ -47,16 +47,17 @@
     font-size: $font-size-paragragh-xs-mobile;
     font-style: normal;
     letter-spacing: var(--font-spacing-0, 0px);
-    font-weight: var(--font-weight-light, 300);
+    font-weight: var(--font-weight-regular, 400);
+    line-height: var(--font-line-height-xs, 20px); /* 166.667% */
  }
 
 @mixin typographyParagraphXs() {
     font-size: $font-size-paragragh-xs;
-    line-height: var(--font-line-height-xs, 16px); /* 133.333% */
+    line-height: var(--font-line-height-xs, 20px); /* 142.857% */
 }
 @mixin typographyParagraphXs-hd() {
     font-size: $font-size-paragragh-xs-hd;
-    line-height: var(--font-line-height-xs, 22px); /* 157.143% */
+    line-height: var(--font-line-height-xs, 32px); /* 133.333% */
 }
 
 /**
@@ -66,18 +67,19 @@
     font-family: $font-family-body;
     font-style: normal;
     letter-spacing: var(--font-spacing-0, 0px);
-    font-weight: var(--font-weight-light, 300);
+    font-weight: var(--font-weight-regular, 400);
     font-size: $font-size-paragragh-s-mobile;
+    line-height: var(--font-line-height-s, 24px); /* 150% */
  }
 
 @mixin typographyParagraphS() {
     font-size: $font-size-paragragh-s;
-    line-height: var(--font-line-height-xs, 16px); /* 114.286% */
+    line-height: var(--font-line-height-s, 24px); /* 150% */
     
 }
 @mixin typographyParagraphS-hd() {
     font-size: $font-size-paragragh-s-hd;
-    line-height: var(--font-line-height-xs, 22px); /* 137.5% */
+    line-height: var(--font-line-height-s, 40px); /* 142.857% */
 }
 
 /**
@@ -88,18 +90,17 @@
     font-family: $font-family-body;
     font-style: normal;
     font-size: $font-size-paragragh-med-mobile;
-    line-height: var(--font-line-height-s, 24px); /* 150% */
-    font-weight: var(--font-weight-light, 300);
+    line-height: var(--font-line-height-m, 28px); /* 140% */
+    font-weight: var(--font-weight-regular, 400);
  }
 
 @mixin typographyParagraphM() {
     font-size: $font-size-paragragh-med;
-    line-height: var(--font-line-height-s, 24px); /* 150% */
-    
+    line-height: var(--font-line-height-m, 28px); /* 140% */    
 }
 @mixin typographyParagraphM-hd() {
     font-size: $font-size-paragragh-med-hd;
-    line-height: var(--font-line-height-s, 28px); /* 140% */
+    line-height: var(--font-line-height-m, 48px); /* 150% */
 }
 
 /**
@@ -109,37 +110,38 @@
     font-size: $font-size-paragragh-large-mobile;
     font-family: $font-family-body;
     font-style: normal;
-    font-weight: var(--font-weight-light, 300);
+    font-weight: var(--font-weight-regular, 400);
     letter-spacing: var(--font-spacing-0, 0px);
-    line-height: var(--font-line-height-m, 24px); /* 140% */
+    line-height: var(--font-line-height-l, 32px); /* 133.333% */
  }
 
 @mixin typographyParagraphL() {
     font-size: $font-size-paragragh-large;
-    line-height: var(--font-line-height-m, 28px); /* 140% */
+    line-height: var(--font-line-height-l, 32px); /* 133.333% */
 }
 @mixin typographyParagraphL-hd() {
     font-size: $font-size-paragragh-large-hd;
-    line-height: var(--font-line-height-m, 32px); 
+    line-height: var(--font-line-height-l, 56px); /* 127.273% */
+
 }
 
 /**
  * Paragraph Extra Large Styles
  */
  @mixin typographyParagraphXl-mobile() {
+    font-size: $font-size-paragragh-large-mobile;
     font-family: $font-family-body;
     font-style: normal;
-    font-weight: var(--font-weight-light, 300);
+    font-weight: var(--font-weight-regular, 400);
     letter-spacing: var(--font-spacing-0, 0px);
-    font-size: $font-size-paragragh-xl-mobile;
-    line-height: var(--font-line-height-m, 28px);
+    line-height: var(--font-line-height-l, 32px); /* 133.333% */
  }
 
 @mixin typographyParagraphXl() { 
-    font-size: $font-size-paragragh-xl;
-    line-height: var(--font-line-height-m, 28px);
+    font-size: $font-size-paragragh-large;
+    line-height: var(--font-line-height-l, 32px); /* 133.333% */
 }
 @mixin typographyParagraphXl-hd() {
-    font-size: $font-size-paragragh-xl-hd;
-    line-height: var(--font-line-height-m, 32px); /* 100% */
+    font-size: $font-size-paragragh-large-hd;
+    line-height: var(--font-line-height-l, 56px); /* 127.273% */
 }

@@ -42,95 +42,99 @@ $error-500: $red-500;
 
 /* Mode 1 */
 /* color */
+/* Alert */
+$alert-100: #fef2e1;
+$alert-200: #fef0db;
+$alert-300: #fdebc9;
+$alert-400: #fbdc95;
+$alert-500: #efb701;
+$alert-600: #cd9802;
+$alert-700: #9e7302;
+$alert-800: #765301;
+$alert-900: #674801;
+
+/* Base */
 $base-100: #ffffff;
 $base-200: #f2f2f2;
-$base-300: #d7d7d7;
-$base-400: #b7b7b7;
-$base-500: #898989;
-$base-600: #707070;
-$base-700: #4e4e4e;
-$base-800: #272727;
+$base-300: #e7e7e7;
+$base-400: #d5d5d5;
+$base-500: #b9b9b9;
+$base-600: #757575;
+$base-700: #545454;
+$base-800: #474747;
 $base-900: #000000;
 
-$brand-green-100: #e6fdf9;
-$brand-green-200: #c7faf2;
-$brand-green-300: #9cf6e8;
-$brand-green-400: #73f2df;
-$brand-green-500: #24ecce;
-$brand-green-600: #00caad;
-$brand-green-700: #00a28a;
-$brand-green-800: #007160;
-$brand-green-900: #004f43;
+/* Brand */
+$brand-100: #ffe79b;
+$brand-200: #ffd885;
+$brand-300: #ffcb5d;
+$brand-400: #ffbb33;
+$brand-500: #ff9f03;
+$brand-600: #a34d00;
+$brand-700: #663000;
+$brand-800: #2c1500;
+$brand-900: #050200;
 
-$brand-orange-100: #fff8ec;
-$brand-orange-200: #fff0d5;
-$brand-orange-300: #ffe1ab;
-$brand-orange-400: #ffd281;
-$brand-orange-500: #ffbc42;
-$brand-orange-600: #e2a73b;
-$brand-orange-700: #aa7d2c;
-$brand-orange-800: #71531d;
-$brand-orange-900: #392a0f;
+/* Error */
+$error-100: #f4d6d0;
+$error-200: #f2cdc4;
+$error-300: #edb5a1;
+$error-400: #e6876b;
+$error-500: #e73722;
+$error-600: #af2414;
+$error-700: #78190d;
+$error-800: #541109;
+$error-900: #470e08;
 
-$brand-red-100: #ffeee6;
-$brand-red-200: #ffd9c6;
-$brand-red-300: #ffa67c;
-$brand-red-400: #ff8244;
-$brand-red-500: #fd5200;
-$brand-red-600: #e14a04;
-$brand-red-700: #b73d00;
-$brand-red-800: #7e2800;
-$brand-red-900: #381200;
+/* Neutral */
+$neutral-100: #f8f9fa;
+$neutral-200: #e1e6e9;
+$neutral-300: #d1d9de;
+$neutral-400: #b3bfc8;
+$neutral-500: #3a4751;
+$neutral-600: #2a333a;
+$neutral-700: #1c2328;
+$neutral-800: #0f1416;
+$neutral-900: #000000;
 
-$brand-violet-100: #f0f0ff;
-$brand-violet-200: #ddddff;
-$brand-violet-300: #babcff;
-$brand-violet-400: #989aff;
-$brand-violet-500: #7578ff;
-$brand-violet-600: #595be2;
-$brand-violet-700: #4345aa;
-$brand-violet-800: #2c2e71;
-$brand-violet-900: #161739;
+/* Primary */
+$primary-100: #fffefa;
+$primary-200: #fff4c8;
+$primary-300: #ffeb97;
+$primary-400: #ffe265;
+$primary-500: #ffd733;
+$primary-600: #f9c907;
+$primary-700: #c5a00a;
+$primary-800: #93790a;
+$primary-900: #645207;
 
-$neutral-100: #fafafa;
-$neutral-200: #e8eaf2;
-$neutral-300: #dfdfe9;
-$neutral-400: #8d8da8;
-$neutral-500: #68688b;
-$neutral-600: #40406c;
-$neutral-700: #2e2e54;
-$neutral-800: #21213c;
-$neutral-900: #141425;
+/* Secondary */
+$secondary-100: #f6ebfa;
+$secondary-200: #f0ddf7;
+$secondary-300: #ddb5ed;
+$secondary-400: #be7dda;
+$secondary-500: #983cc3;
+$secondary-600: #632c7c;
+$secondary-700: #371a43;
+$secondary-800: #190d1f;
+$secondary-900: #0f0812;
 
-$primary-100: #f3f5fe;
-$primary-200: #d6dffc;
-$primary-300: #b8c6f9;
-$primary-400: #8ea5f6;
-$primary-500: #2454ff;
-$primary-600: #244ee2;
-$primary-700: #1e41bc;
-$primary-800: #152c81;
-$primary-900: #0c194a;
+/* Success */
+$success-100: #d3dfd5;
+$success-200: #ceddd1;
+$success-300: #bed5c2;
+$success-400: #96bf9e;
+$success-500: #428454;
+$success-600: #386e47;
+$success-700: #274f33;
+$success-800: #1a3421;
+$success-900: #152a1b;
 
-$green-100: #e7faed;
-$green-200: #caf4d8;
-$green-300: #95eab1;
-$green-400: #60df8a;
-$green-500: #2bd463;
+/* New Green */
 $green-600: #0eb846;
 $green-700: #0b8a35;
 $green-800: #075c23;
 $green-900: #042e12;
-
-$red-100: #fde6e6;
-$red-200: #fac8c8;
-$red-300: #f49191;
-$red-400: #ef5a5a;
-$red-500: #ea2424;
-$red-600: #cd0707;
-$red-700: #9a0505;
-$red-800: #670404;
-$red-900: #330202;
  
 $text-headline: #000;
 $text-action: #7F6053;
@@ -142,9 +146,10 @@ $text-action: #7F6053;
  /**
   * Font Family
   */
- $font-family-primary: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+ $font-family-primary: "Roboto", "Helvetica", "Arial", sans-serif;
  $font-family-secondary: serif;
- $font-family-body: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+ $font-family-body: "Roboto", "Helvetica", "Arial", sans-serif;
+ $font-family-headings: "Poppins", sans-serif;
 
 
  /**
@@ -152,35 +157,35 @@ $text-action: #7F6053;
   */
 
   
-  $font-size-sm-mobile: 24px;
-  $font-size-sm-2-mobile: 28px;
-  $font-size-med-mobile: 36px;
-  $font-size-med-2-mobile: 44px;
-  $font-size-large-mobile: 48px;
-  $font-size-xl-mobile: 64px;
+  $font-size-sm-mobile: 40px;
+  $font-size-sm-2-mobile: 48px;
+  $font-size-med-mobile: 56px;
+  $font-size-med-2-mobile: 64px;
+  $font-size-large-mobile: 72px;
+  $font-size-xl-mobile: 80px;
 
   /**
   * Font Sizing Desktop
   */
 
   
- $font-size-sm: var(--font-size-2xl, 32px);
- $font-size-sm-2: var(--font-size-3xl, 40px);
- $font-size-med: var(--font-size-4xl, 48px);
- $font-size-med-2: var(--font-size-5xl, 56px);
- $font-size-large: var(--font-size-6xl, 64px);
- $font-size-xl: var(--font-size-7xl, 80px);
+ $font-size-sm: var(--font-size-2xl, 40px);
+ $font-size-sm-2: var(--font-size-3xl, 56px);
+ $font-size-med: var(--font-size-4xl, 64px);
+ $font-size-med-2: var(--font-size-5xl, 72px);
+ $font-size-large: var(--font-size-6xl, 80px);
+ $font-size-xl: var(--font-size-7xl, 96px);
 
   /**
   * Font Sizing HD Desktop
   */
 
-  $font-size-sm-hd: var(--font-size-2xl, 40px);
-  $font-size-sm-2-hd: var(--font-size-3xl, 48px);
-  $font-size-med-hd: var(--font-size-4xl, 56px);
-  $font-size-med-2-hd: var(--font-size-5xl, 64px);
-  $font-size-large-hd: var(--font-size-6xl, 80px);
-  $font-size-xl-hd:  var(--font-size-7xl, 96px);
+  $font-size-sm-hd: var(--font-size-2xl, 64px);
+  $font-size-sm-2-hd: var(--font-size-3xl, 72x);
+  $font-size-med-hd: var(--font-size-4xl, 80px);
+  $font-size-med-2-hd: var(--font-size-5xl, 96px);
+  $font-size-large-hd: var(--font-size-6xl, 112px);
+  $font-size-xl-hd:  var(--font-size-7xl, 128px);
 
 
   /**
@@ -188,31 +193,31 @@ $text-action: #7F6053;
   */
   $font-size-paragragh-overline-mobile: 10px;
   $font-size-paragragh-xs-mobile: 12px;
-  $font-size-paragragh-s-mobile: 14px;
-  $font-size-paragragh-med-mobile: 16px;
-  $font-size-paragragh-large-mobile: 18px;
-  $font-size-paragragh-xl-mobile: 20px;
+  $font-size-paragragh-s-mobile: 16px;
+  $font-size-paragragh-med-mobile: 20px;
+  $font-size-paragragh-large-mobile: 24px;
+  $font-size-paragragh-xl-mobile: 32px;
 
 
   /**
   * Font Sizing Paragraph
   */
   $font-size-paragragh-overline: 10px;
-  $font-size-paragragh-xs: 12px;
-  $font-size-paragragh-s: 14px;
-  $font-size-paragragh-med: var(--font-size-m, 16px);
-  $font-size-paragragh-large: 20px;
-  $font-size-paragragh-xl: 24px;
+  $font-size-paragragh-xs: 14px;
+  $font-size-paragragh-s: 16px;
+  $font-size-paragragh-med: var(--font-size-m, 20px);
+  $font-size-paragragh-large: 24px;
+  $font-size-paragragh-xl: 32px;
 
  /**
   * Font Sizing Paragraph HD
   */
   $font-size-paragragh-overline-hd: 12px;
-  $font-size-paragragh-xs-hd: 14px;
-  $font-size-paragragh-s-hd: 16px;
-  $font-size-paragragh-med-hd: 20px;
-  $font-size-paragragh-large-hd: 28px;
-  $font-size-paragragh-xl-hd: 32px;
+  $font-size-paragragh-xs-hd: 24px;
+  $font-size-paragragh-s-hd: 28px;
+  $font-size-paragragh-med-hd: 32px;
+  $font-size-paragragh-large-hd: 44px;
+  $font-size-paragragh-xl-hd: 52px;
  
  /**
   * Line Height

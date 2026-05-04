@@ -1,5 +1,5 @@
 .RadioWrapName-s {
-    font-size: var(--font-size-s, 14px);
+    font-size: var(--font-size-s, 16px);
     line-height: var(--font-line-height-xs, 16px); /* 114.286% */
     font-weight: var(--font-weight-regular, 300);
 }
@@ -34,13 +34,14 @@
           &:disabled {
             cursor: no-drop;
             &+ span:before {
-              border-color: var(--border-disabled, #878787)!important;
+              border-color: $base-500 !important;
+              box-shadow: inset 0px 0px 0px 0.75px $base-500 !important;
             }
             &+ span:after {
              
             }
             &+ span {
-              color: var(--text-disabled, #878787)!important;
+              color: $base-500 !important;
             }
           }
           &+ span:before {
@@ -61,17 +62,17 @@
           }
         }
         &.label-xs {
-          padding: 0 0 0 28px;
+          padding: 0 0 0 20px;
           .RadioName {
             color: var(--Text-body, #2B2B2B);
             font-size: var(--font-size-xs, 12px);
             font-style: normal;
-            font-weight: var(--font-weight-book, 325);
+            font-weight: 400;
             line-height: var(--font-line-height-xs, 16px); /* 133.333% */
             letter-spacing: var(--font-spacing-0, 0px);
           }
           input + span:before {
-            box-shadow: inset 0px 0px 0px 0.75px #878787;
+            box-shadow: inset 0px 0px 0px 0.75px $color-form-radio-border;
             width: 12px;
             height: 12px;
           }
@@ -100,14 +101,14 @@
           padding: 0 0 0 24px;
           .RadioName {
             color: var(--Text-body, #2B2B2B);
-            font-size: var(--font-size-s, 14px);
+            font-size: var(--font-size-s, 16px);
             font-style: normal;
-            font-weight: var(--font-weight-book, 325);
+            font-weight: 400;
             line-height: var(--font-line-height-xs, 16px); /* 114.286% */
             letter-spacing: var(--font-spacing-0, 0px);
           }
           input + span:before {
-            box-shadow: inset 0px 0px 0px 0.75px #878787;
+            box-shadow: inset 0px 0px 0px 0.75px $color-form-radio-border;
             width: 16px;
             height: 16px;
           }
@@ -136,14 +137,14 @@
           padding: 0 0 0 28px;
           .RadioName {
             color: var(--Text-body, #2B2B2B);
-            font-size: var(--font-size-m, 16px);
+            font-size: var(--font-size-m, 20px);
             font-style: normal;
-            font-weight: var(--font-weight-book, 325);
+            font-weight: 400;
             line-height: var(--font-line-height-s, 24px); /* 150% */
             letter-spacing: var(--font-spacing-0, 0px);
           }
           input + span:before {
-            box-shadow: inset 0px 0px 0px 0.75px #878787;
+            box-shadow: inset 0px 0px 0px 0.75px $color-form-radio-border;
             width: 20px;
             height: 20px;
           }
@@ -172,14 +173,14 @@
           padding: 0 0 0 32px;
           .RadioName {
             color: var(--Text-body, #2B2B2B);
-            font-size: var(--font-size-l, 20px);
+            font-size: var(--font-size-l, 24px);
             font-style: normal;
             font-weight: var(--font-weight-book, 400);
             line-height: var(--font-line-height-m, 28px); /* 140% */
             letter-spacing: var(--font-spacing-0, 0px);
           }
           input + span:before {
-            box-shadow: inset 0px 0px 0px 0.75px #878787;
+            box-shadow: inset 0px 0px 0px 0.75px $color-form-radio-border;
             width: 24px;
             height: 24px;
           }
@@ -201,7 +202,7 @@
               box-shadow: inset 0px 0px 0px 0.75px $color-radiobox-border-dot;
             }
             &:checked + span {
-              color: #2B2B2B;
+              color: var(--Text-body, #1C2328)
             }
           }
         }

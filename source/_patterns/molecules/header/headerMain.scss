@@ -1,0 +1,148 @@
+.headerWrapper{
+    height: 186px;
+    @include media-breakpoint-up(xl) {
+       height: 200px;     
+    }
+}
+.headerMain{
+    padding: var(--Spacing-xl, 24px) 0;
+    &Logo{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        img{
+            width: 168px;
+            height: auto;
+            transition: 0.3s ease;
+        }
+        @include media-breakpoint-up(xl) {
+            position: relative;
+            top: unset;
+            left: unset;
+            transform: unset;
+            img{
+                width: 276px;
+                height: auto;
+            }
+        }
+        &Hamburger{
+            @include media-breakpoint-up(xl) {
+                scale: 0;
+                width: 0px !important;
+                transition: 0.3s ease;
+            }
+        }
+    }
+    &Hamburger{
+        @include media-breakpoint-up(xl) {
+            display: none;
+        }
+    }
+    &Buttons{
+        a{
+            span{
+                display: none;
+                @include media-breakpoint-up(lg) {
+                    display: block;
+                }
+            }
+            &.btn-favorites{
+                display: none;
+                @include media-breakpoint-up(lg) {
+                    display: flex;
+                }
+            }
+        }
+    }
+    &Small {
+        border-bottom: 1px solid var(--Border-400, #D4D5D5);
+        padding: var(--Spacing-2xl, 32px) 0;
+        .headerMainLogo {
+            position: relative;
+            left: unset;
+            transform: unset;
+            top: unset;
+        }
+    }
+}
+.--scrollMenu{
+    //padding-top: 200px;
+}
+.--scroll{
+    
+    .headerTop{
+        
+        padding: 0;
+        height: 0px;
+        transform: translateY(-80px);
+        transition: 0.3s ease;
+        //opacity: 0;
+    }
+    .headerMainLogo img {
+        @include media-breakpoint-up(xl) {
+            width: 176px;
+            height: auto;
+        }
+        
+    }
+    .headerMain{
+        transition: 0.3s ease;
+        padding: 12px 0; 
+        &Logo{
+            &Hamburger{
+                @include media-breakpoint-up(xl) {
+                    scale: 1;
+                    transition: 0.3s ease;
+                    width: auto !important;
+                    margin-right: 24px;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .headerMenu{
+        @include media-breakpoint-up(xl) {
+            height: 0px;
+            padding: 0;
+            transition: 0.3s ease;
+            opacity: 0;
+
+        }
+        
+    }
+    &.--openMenu{
+        position: fixed;
+
+    }
+    .headerMainSearch{
+        @include media-breakpoint-down(xl) {
+            display: none !important;
+        }
+    }
+}
+@keyframes headerSlideDown{
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.cart-toggle-count {
+    border-radius: 50%;
+    background: $primary-500;
+    color:black;
+    font-size: 14px;
+    font-weight: 700;
+    height: 18px;
+    line-height: 18px;
+    position: absolute;
+    right: -4px;
+    text-align: center;
+    top: -0.14px;
+    width: 18px;
+}

@@ -1,0 +1,149 @@
+.badge{
+    border-radius: var(--Radius-round, 1000px);
+    width: fit-content;
+    cursor: default;
+   
+    &.--primary{
+        border: var(--Stroke-s, 1px) solid var(--Icon-primary, #FFD733);
+        background: var(--Surface-primary-light, #FFF4C8);
+        color: var(--Text-primary, #F9C907);
+    }
+    &.--base{
+        background: var(--Surface-page-invert, #000);
+        color: #fff;
+    }
+    &.--secondary{
+        border: 1px solid var(--Icon-secondary, #983CC3);
+        background: var(--Surface-secondary-light, #F0DDF7);
+        color: var(--Text-secondary, #632C7C)
+    }
+    &.--neutral{
+        border: 1px solid var(--Border-400, #D4D5D5);
+        background: var(--Surface-200, #F5F5F5);
+        color: #000;
+    }
+    &.--alert{
+        border: 1px solid var(--Border-alert, #EFB701);
+        background: var(--Surface-alert-light, #FEF0DB);
+        color: var(--Text-alert, #CD9802);
+        &.--text{
+            color: var(--Text-headline, #030507);
+            padding: var(--Spacing-l, 16px);
+            @include media-breakpoint-up(lg) {
+                padding: var(--Spacing-l, 16px) var(--Spacing-xl, 24px);
+            }
+        }
+    }
+    &.--transparent{
+        background: transparent;
+        border-radius: var(--Radius-xs, 4px);
+        border: var(--Stroke-s, 1px) solid var(--Border-base-invert, #000);
+        color: black;
+    }
+    &.--success{
+        border: 1px solid var(--Border-success, #428454);
+        background: var(--Surface-success-light, #CEDDD1);
+        color: var(--Text-success, #386E47);
+        &.--fill{
+            background: var(--Border-alert, #3DB482);
+            color: white;
+        }
+    }
+    &.--error{
+        border: 1px solid var(--Border-error, #E73722);
+        background: var(--Surface-error-light, #F2CDC4);
+        color: var(--Text-error, #AF2414);
+    }
+    &.--sale{
+        background: var(--Surface-error,#E91616);
+        color: #fff;
+    }
+    &-l{
+       padding: var(--Spacing-null, 0) var(--Spacing-m, 12px);
+        gap: var(--Spacing-s, 8px);
+        @include typographyParagraphL-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphL();
+        }
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphL-hd();
+        }
+    }
+    &-xl{
+       padding: 4px var(--Spacing-m, 16px);
+        gap: var(--Spacing-s, 8px);
+        @include typographyParagraphL-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphL();
+        }
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphL-hd();
+        }
+    }
+    &-m{
+        padding: var(--Spacing-null, 0) var(--Spacing-m, 12px);
+        gap: var(--Spacing-s, 8px);
+        @include typographyParagraphS-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphS();
+        }
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphS-hd();
+        }
+        &.--alert{
+            font-weight: 700;
+        }
+        &.--success{
+            font-weight: 700;
+        }
+        &.--error{
+            font-weight: 700;
+        }
+    }
+    &-s{
+        padding: var(--Spacing-null, 0) var(--Spacing-m, 12px);
+        gap: var(--Spacing-xs, 4px);
+        @include typographyParagraphS-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphS(); 
+        }
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphS-hd();
+        }
+        &.--neutral{
+            font-weight: 700;
+        }
+        &.--alert{
+            font-weight: 700;
+        }
+        &.--success{
+            font-weight: 700;
+        }
+        &.--error{
+            font-weight: 700;
+        }
+    }
+    &-xs{
+        padding: var(--Spacing-null, 0) var(--Spacing-s, 8px);
+        gap: var(--Spacing-xs, 4px);
+        @include typographyParagraphXs-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphXs();
+        }
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphXs-hd();
+        }
+        &.--neutral{
+            font-weight: 700;
+        }
+        &.--alert{
+            font-weight: 700;
+        }
+        &.--success{
+            font-weight: 700;
+        }
+        &.--error{
+            font-weight: 700;
+        }
+    }
+}

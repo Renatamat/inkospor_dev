@@ -55,8 +55,8 @@ $theme-colors: (
   );
 
   $font-weight-lighter:         200;
-  $font-weight-bolder:          600;
-  
+  $font-weight-bolder:          700;
+  $headings-font-weight:        400;
 
 @import "../../node_modules/bootstrap/scss/variables-dark";
 @import "../../node_modules/bootstrap/scss/maps";
@@ -139,12 +139,19 @@ $theme-colors: (
 @import "../_patterns/atoms/images/icon.scss";
 @import "../_patterns/atoms/forms/checkbox.scss";
 @import "../_patterns/atoms/forms/radio.scss";
+@import "../_patterns/atoms/chip/chip.scss";
+@import "../_patterns/atoms/switch/switch.scss";
+@import "../_patterns/atoms/badge/badge.scss";
 
 @import "../_patterns/molecules/gallery slider/gallery-slider.scss";
 @import "../_patterns/molecules/gallery zoom/gallery-zoom.scss";
 @import "../_patterns/molecules/accordions/accordions.scss";
 @import "../_patterns/molecules/cards/cards.scss";
 @import "../_patterns/molecules/portfolio/portfolio.scss";
+@import "../_patterns/molecules/header/headerMain.scss";
+@import "../_patterns/molecules/header/headerMenu.scss";
+
+@import "../_patterns/organisms/footer/footer.scss"; 
 @import "../_patterns/organisms/testfloat/testfloat.scss";
 
 
@@ -183,4 +190,22 @@ $theme-colors: (
     @include media-breakpoint-up(xxxl) {
         font-size: 16px;
     }
+}
+
+.icon-24 {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-20 {
+    width: 20px;
+    height: 20px;
+}
+.icon-16 { 
+    width: 16px;
+    height: 16px;
+}
+.icon-80{
+    width: 80px;
+    height: 80px; 
 }

@@ -1,4 +1,5 @@
 {
 	"wartosc": "../sciezka",
-	"gallery":"/images/foto_frame.jpg"
+	"gallery":"/images/foto_frame.jpg",
+	"logoHeader": "/images/logoInkospor.svg"
 }

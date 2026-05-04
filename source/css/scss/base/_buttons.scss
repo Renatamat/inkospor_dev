@@ -19,7 +19,7 @@ button {
 	font-size: 20px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 24px; /* 120% */
+	// line-height: 24px; /* 120% */
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -27,8 +27,15 @@ button {
 	width: fit-content;
 	transition: 0.3s ease;
 	cursor: pointer;
+	span{
+		transition: 0.3s ease;
+	}
 	&:hover{
 		background: $color-btn-primary-bg-hover;
+	}
+	&.disabled, &[aria-disabled="true"]{
+		cursor: not-allowed;
+		text-decoration: none;
 	}
 }
 
@@ -56,6 +63,25 @@ button {
 }
 
 /* Rozmiary */
+.c-btn-xs { 
+	@include typographyParagraphXs-mobile();
+    @include media-breakpoint-up(lg) {
+        @include typographyParagraphXs();
+    }
+    @include media-breakpoint-up(xxxl) {
+        @include typographyParagraphXs-hd();
+    }
+	padding: var(--Spacing-s, 8px);
+	font-weight: 400;
+	svg{
+		width: 16px;
+		height: 16px;
+	}
+	&>span{
+		padding: 0px 8px;
+	}
+}
+
 .c-btn-s { 
 	@include typographyParagraphS-mobile();
     @include media-breakpoint-up(lg) {
@@ -64,8 +90,8 @@ button {
     @include media-breakpoint-up(xxxl) {
         @include typographyParagraphS-hd();
     }
-	padding: var(--Spacing-s, 8px) var(--Spacing-m, 12px);
-	font-weight: 300;
+	padding: 10px var(--Spacing-xl, 24px);
+	font-weight: 400;
 	svg{
 		width: 16px;
 		height: 16px;
@@ -75,17 +101,15 @@ button {
 	}
 }
 .c-btn-m { 
-
 	@include typographyParagraphM-mobile();
     @include media-breakpoint-up(lg) {
         @include typographyParagraphM();
     }
     @include media-breakpoint-up(xxxl) {
         @include typographyParagraphM-hd();
-		font-weight: 300;
     }
-	font-weight: 300;
-	padding: var(--Spacing-m, 12px);
+	font-weight: 400;
+	padding: 10px var(--Spacing-m, 12px);
 	svg{
 		width: 20px;
 		height: 20px;
@@ -104,14 +128,14 @@ button {
     }
     @include media-breakpoint-up(xxxl) {
         @include typographyParagraphL-hd();
-		font-weight: 300;
+	
     }
-	padding: var(--Spacing-m, 12px) var(--Spacing-m, 16px);
+	font-weight: 400;
+	padding: 14px var(--Spacing-l, 16px);
 	gap: 4px;
 	&>span{
 		padding: 0px var(--Spacing-m, 12px);
 	}
-	font-weight: 300;
 	@include media-breakpoint-up(xxxl) {
 		padding: var(--Spacing-m, 16px) var(--Spacing-m, 24px);
     }
@@ -125,9 +149,9 @@ button {
     @include media-breakpoint-up(xxxl) {
         @include typographyParagraphXl-hd();
     }
-	padding: var(--Spacing-m, 16px) var(--Spacing-l, 24px);
+	padding: 22px var(--Spacing-xl, 24px);
 	gap: 4px;
-	
+	font-weight: 400;
 
 	&>span{
 		padding: 0px var(--Spacing-m, 12px);
@@ -137,9 +161,12 @@ button {
  .c-btn-link { 
 	color: $color-btn-link-text;
 	padding: 0px;
+	font-weight: 700;
 	&:hover {
 		color: $color-btn-link-text-hover;
-		background: unset;
+		background: unset;	
+		text-decoration: underline;
+		
 	}
 	&:target, &:active, &:focus, &:visited  {
 		color: $color-btn-link-text; 
@@ -148,7 +175,7 @@ button {
 /* Typy */
 .c-btn-fill { 
 	color: $color-btn-primary-text;
-	border-radius: 0;
+	border-radius: var(--Radius-brand, 8px);
 	background: $color-btn-primary-bg;
 	border: 2px solid $color-btn-primary-border;
 	&:hover {
@@ -161,32 +188,26 @@ button {
 		color: $color-btn-primary-text-hover; 
 		border: 2px solid $color-btn-primary-border;
 	}
+	&.disabled, &[aria-disabled="true"]{
+		border-color: $color-btn-primary-bg-disabled;
+		background: $color-btn-primary-bg-disabled;
+	}
  }
 .c-btn-outline { 
 	text-wrap: nowrap;
 	color: $color-btn-outline-text;
-	border-radius: 0;
+	border-radius: var(--Radius-brand, 8px);
 	background: $color-btn-outline-bg;
 	border: 2px solid $color-btn-outline-border;
 	&:hover {
 		background: $color-btn-outline-bg-hover;
 		border: 2px solid $color-btn-outline-border-hover;
 		color: $color-btn-outline-text-hover;
-		svg{
-			path{
-				fill:$color-btn-outline-text-hover;
-			}
-		}
 	}
 	&:target, &:active, &:focus {
 		background: unset;
 		border: 2px solid $color-btn-outline-border;
 		color: $color-btn-outline-text;
-	}
-	svg{
-		path{
-			fill:$color-btn-outline;
-		}
 	}
 	&.c-white{
 		&:hover{
@@ -194,41 +215,46 @@ button {
 		}
 
 	}
+	&.disabled, &[aria-disabled="true"]{
+		border-color: $color-btn-outline-border-disabled;
+		color: $color-btn-outline-text-disabled; 
+	}
+	&.c-btn-xs{
+		border: 2px solid $color-btn-outline-border-xs;
+	}
  }
 .c-btn-text { 
-	padding: 0px;
+	padding: var(--Spacing-xs, 4px);
 	color: $color-btn-text-text;
 	svg{
 		path{
-			fill:$color-btn-text-text;
 			transition: .3s ease;
 		}
 	}
 	&:hover {
-		background: unset;		
+		background: transparent;	
 		border: none;
 		color: $color-btn-text-text-hover;
-		svg{
-			path{
-				fill:$color-btn-text-text-hover;
-			}
+		span{
+			text-decoration: underline;
 		}
 	}
 	.c-btn__inner {
 		padding: 0px;
 	}
 	&.c-white{
-		svg{
-			path{
-				fill: #FFF;
-			}
-		}
 		&:hover{
 			svg{
 				path{
 					fill: #4D3A33;
 				}
 			}
+		}
+	}
+	&.disabled, &[aria-disabled="true"]{
+		color: $color-btn-text-text-disabled; 
+		span{
+			text-decoration: none;
 		}
 	}
  }
@@ -249,7 +275,7 @@ button {
 
 .c-btn-icon {
 	transition: .3s;
-	border-radius: 1000px;
+	border-radius: var(--Radius-brand, 8px);
 	align-items: center;
 	justify-content: center;
 	padding: 0px;
@@ -321,7 +347,7 @@ button {
 	border: unset;
 
 	padding: var(--gap-s, 12px) var(--gap-m, 16px);
-	border-radius: 1000px;
+		border-radius: var(--Radius-brand, 8px);
 	background: var(--surface-page, #FFF);
 
 	color: var(--text-action, #2E53C2);
@@ -339,11 +365,6 @@ button {
 	&:hover {
 		color: #fff;
 		background: #2E53C2;
-		svg {
-			path {
-				fill: #fff;
-			}
-		}
 	}
 }
 .c-btn-mobile {

@@ -50,21 +50,26 @@ $color-links-visited: $neutral-900 !default;
 
 $color-btn-primary: $primary-500 !default;
 $color-btn-primary-bg: $primary-500 !default;
-$color-btn-primary-bg-hover: $primary-700 !default;
+$color-btn-primary-bg-disabled: $base-500 !default;
+$color-btn-primary-bg-hover: $primary-800  !default;
 $color-btn-primary-border: $primary-500 !default;
-$color-btn-primary-border-hover: $primary-700 !default;
-$color-btn-primary-text: $base-100 !default;
-$color-btn-primary-text-hover: $base-100 !default;
+$color-btn-primary-border-hover: $primary-800 !default;
+$color-btn-primary-text: $base-900 !default;
+$color-btn-primary-text-hover: $base-900 !default;
+
 
 
 
 $color-btn-outline: $primary-500 !default;
 $color-btn-outline-bg: $base-100 !default;
-$color-btn-outline-bg-hover: $neutral-200 !default;
+$color-btn-outline-bg-hover: $primary-200 !default;
 $color-btn-outline-border: $primary-500 !default;
-$color-btn-outline-border-hover: $primary-700 !default;
-$color-btn-outline-text: $primary-500 !default;
-$color-btn-outline-text-hover: $primary-700 !default;
+$color-btn-outline-border-xs: $base-900 !default;
+$color-btn-outline-border-disabled:  $base-500 !default;
+$color-btn-outline-border-hover: $primary-500 !default;
+$color-btn-outline-text: $base-900 !default;
+$color-btn-outline-text-hover: $base-900 !default;
+$color-btn-outline-text-disabled: $base-500 !default;
 
 
 $color-btn-text: $primary-500 !default;
@@ -72,8 +77,9 @@ $color-btn-text-bg: $base-100 !default;
 $color-btn-text-bg-hover: $neutral-200 !default;
 $color-btn-text-border: $primary-500 !default;
 $color-btn-text-border-hover: $primary-700 !default;
-$color-btn-text-text: $primary-500 !default;
-$color-btn-text-text-hover: $primary-700 !default;
+$color-btn-text-text: $base-900 !default;
+$color-btn-text-text-hover: $base-900 !default;
+$color-btn-text-text-disabled: $base-500 !default;
 
 
 
@@ -83,8 +89,8 @@ $color-btn-secondary-bg-hover: $neutral-700 !default;
 $color-btn-secondary-border: $neutral-900 !default;
 
 
-$color-btn-link-text: $primary-500 !default;
-$color-btn-link-text-hover: $primary-700 !default;
+$color-btn-link-text: $base-900 !default;
+$color-btn-link-text-hover: $base-900 !default;
 
 $color-btn-disabled: $neutral-500 !default;
 $color-btn-disabled-bg: $neutral-700!default;
@@ -100,8 +106,8 @@ $color-btn-disabled-bg: $neutral-700!default;
 
 
 
-$color-checkbox-bg: #2255BE;
-$color-radiobox-bg: #2255BE;
+$color-checkbox-bg: #1C2328;
+$color-radiobox-bg: $primary-500;
 
 @function encode-hash($color) {
   $color-hex: to-upper-case(#{ $color }); // Zamienia kolor na string z hex
@@ -123,12 +129,13 @@ $color-form-label: $neutral-900 !default;
 $color-form-info: $neutral-700;
 $color-form-placeholder: $neutral-700;
 
+$color-form-radio-border: $primary-500 !default;
 
 
 $color-checkbox-bg-dot: #fff;
 $color-radiobox-bg-dot: #fff;
-$color-radiobox-bg-checked-dot: #2255BE;
-$color-radiobox-border-dot: #2255BE;
+$color-radiobox-bg-checked-dot: $primary-500;
+$color-radiobox-border-dot: $primary-500;
 
 
 $color-checkbox-bg-white-dot: #FFF;
@@ -140,7 +147,7 @@ $color-checkbox-bg-white-dot: #FFF;
 }
 
 
-$encoded-color-bg: encode-hash($color-checkbox-bg-dot);
+$encoded-color-bg: encode-hash($color-checkbox-bg);
 $encoded-color-radio-bg: encode-hash($color-radiobox-bg-dot);
 $encoded-color-checked-radio-bg: encode-hash($color-radiobox-bg-checked-dot);
 

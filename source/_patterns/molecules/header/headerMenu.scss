@@ -1,0 +1,98 @@
+.headerMenuNav {
+    width: 100%;
+    padding-bottom: 16px;
+
+    @include media-breakpoint-up(xl) {
+        width: fit-content;
+        padding-bottom: 0;
+    }
+
+    .menu-item {
+        position: relative;
+
+        > a {
+            cursor: pointer;
+            color: var(--Text-primary, #030507);
+            text-decoration: none;
+        }
+
+        &.--active > a,
+        > a:hover {
+            color: var(--Text-secondary, #E91616);
+        }
+    }
+
+    .info-item {
+        .blog-accordeon {
+            min-width: max-content;
+        }
+
+        .c-collapse-icon {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+        }
+
+        .icon-minus,
+        .icon-plus {
+            display: inline-flex;
+            position: absolute;
+            inset: 0;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.2s ease;
+        }
+
+        .wrapper-subnav {
+            width: 100%;
+            margin-top: 8px;
+            background: var(--Surface-200, #F5F5F5);
+
+            @include media-breakpoint-up(xl) {
+                position: absolute;
+                top: 100%;
+                left: -26px;
+                width: 340px;
+                margin-top: 16px;
+                z-index: 99;
+            }
+        }
+
+        .subnav {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            &.show {
+                display: block;
+            }
+        }
+
+        .subnav-item {
+            background: var(--Surface-200, #F5F5F5);
+        }
+
+        .subnav-item-entry {
+            transition: background-color 0.2s ease;
+
+            .link-lvl2 {
+                display: block;
+                width: 100%;
+                padding: var(--Spacing-l, 16px);
+                color: var(--Surface-page-invert, #000);
+                text-decoration: none;
+            }
+
+            &:hover {
+                background: var(--Surface-page-invert, #000);
+
+                .link-lvl2 {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

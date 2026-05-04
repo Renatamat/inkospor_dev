@@ -1,0 +1,72 @@
+.chip{
+    border-radius: var(--Radius-round, 1000px);
+    width: fit-content;
+    color: #000;
+    &.--active{
+        background: $primary-500;
+
+        transition: 0.3s ease;
+        &:hover{
+            background: $primary-800;
+            backdrop-filter: blur(16px);
+        }
+        &.disabled{
+            background: $base-500;
+        }
+    }
+    &.--disactive{
+        transition: 0.3s ease;
+         &:hover{
+            background: $primary-200;
+        }
+        &.disabled{
+            background: transparent;
+            color: $base-500;
+        }
+    }
+    &-l{
+        padding: var(--Spacing-s, 8px) var(--Spacing-xl, 24px);
+        @include typographyParagraphL-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphL();
+        }
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphL-hd();
+        }
+
+    }
+    &-m{
+        padding: var(--Spacing-s, 8px) var(--Spacing-xl, 16px);
+        @include typographyParagraphM-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphM();
+        }
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphM-hd();
+        }
+
+    }
+    &-s{
+        padding: var(--Spacing-s, 8px) var(--Spacing-xl, 16px);
+        @include typographyParagraphS-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphS();
+        }
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphS-hd();
+        }
+
+    }
+    &-xs{
+        padding: var(--Spacing-s, 8px) var(--Spacing-xl, 12px);
+        @include typographyParagraphXs-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphXs();
+        }
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphXs-hd();
+        }
+
+    }
+}
+
