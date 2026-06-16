@@ -428,7 +428,9 @@ $spacing-values: (
   0: 0,
   4: 4px,
   8: 8px,
+  12: 12px,
   16: 16px,
+  20: 20px,
   24: 24px,
   32: 32px,
   48: 48px,
@@ -442,7 +444,7 @@ $spacing-values: (
   200: 200px
 );
 
-// Definicja breakpointów
+// Definicja breakpointĂłw
 $breakpoints: (
   sm: 576px,
   md: 768px,
@@ -463,30 +465,53 @@ $property-map: (
   pt: padding-top,
   pr: padding-right,
   pb: padding-bottom,
-  pl: padding-left
+  pl: padding-left,
+	
+  px: (padding-left, padding-right),
+  py: (padding-top, padding-bottom)
 );
 
-// Mixin generujący spacing z mapowaniem właściwości
+// Mixin generujÄ…cy spacing z mapowaniem wĹ‚aĹ›ciwoĹ›ci
 @mixin generate-spacing($property) {
+
+  $css-properties: map-get($property-map, $property);
+
   @each $key, $value in $spacing-values {
-    $css-property: map-get($property-map, $property); // Pobieranie pełnej nazwy właściwości CSS
 
     .#{$property}-#{$key} {
-      #{$css-property}: #{$value};
+
+      @if type-of($css-properties) == 'list' {
+        @each $prop in $css-properties {
+          #{$prop}: #{$value};
+        }
+      } @else {
+        #{$css-properties}: #{$value};
+      }
+
     }
 
-    // Generowanie klas dla breakpointów
+    // breakpointy
     @each $breakpoint, $breakpoint-value in $breakpoints {
+
       .#{$property}-#{$breakpoint}-#{$key} {
+
         @media (min-width: #{$breakpoint-value}) {
-          #{$css-property}: #{$value};
+
+          @if type-of($css-properties) == 'list' {
+            @each $prop in $css-properties {
+              #{$prop}: #{$value};
+            }
+          } @else {
+            #{$css-properties}: #{$value};
+          }
+
         }
       }
     }
   }
 }
 
-// Generowanie klas dla marginów i paddingów
+// Generowanie klas dla marginĂłw i paddingĂłw
 @include generate-spacing('m');  // margin
 @include generate-spacing('mt'); // margin-top
 @include generate-spacing('mr'); // margin-right
@@ -494,30 +519,38 @@ $property-map: (
 @include generate-spacing('ml'); // margin-left
 
 @include generate-spacing('p');  // padding
+@include generate-spacing('py'); // padding-top-bottom
+@include generate-spacing('px'); // padding-left-right
 @include generate-spacing('pt'); // padding-top
 @include generate-spacing('pr'); // padding-right
 @include generate-spacing('pb'); // padding-bottom
 @include generate-spacing('pl'); // padding-left
 
 
-// Mixiny dla gap
+// Mixin dla klas gap
 @mixin generate-gap($property) {
 	@each $key, $value in $spacing-values {
 	  .#{$property}-#{$key} {
 		gap: #{$value};
 	  }
-  
-	  // Generowanie klas dla breakpointów
-	  @each $breakpoint, $breakpoint-value in $breakpoints {
-		.#{$property}-#{$breakpoint}-#{$key} {
-		  @media (min-width: #{$breakpoint-value}) {
+	}
+
+	// Klasy breakpointowe musza byc po bazowych,
+	// zeby np. gap-lg-16 nadpisal gap-32.
+	@each $breakpoint, $breakpoint-value in $breakpoints {
+	  @media (min-width: #{$breakpoint-value}) {
+		@each $key, $value in $spacing-values {
+		  .#{$property}-#{$breakpoint}-#{$key} {
 			gap: #{$value};
 		  }
 		}
 	  }
-	} 
+	}
   }
   
-  // Wywołanie mixina dla gap
+  // Wywolanie mixina dla gap
   @include generate-gap('gap');
   
+  .gap-spacing-xs{
+	gap: 4px;
+  }

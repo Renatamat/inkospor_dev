@@ -1,0 +1,29 @@
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register{
+    border: none;
+}
+.woocommerce form.login{
+    margin:1em 0;
+}
+.woocommerce .woocommerce-ordering{
+    margin-bottom: 0px;
+}
+.woocommerce-cart{
+    .wc-block-cart-item__wrap{
+        padding-right: 16px;
+    }
+}
+.wc-block-components-order-summary .wc-block-cart-item__total-price-and-sale-badge-wrapper .wc-block-components-sale-badge{
+    display: none;
+}
+.woocommerce-checkout {
+    .wp-block-woocommerce-checkout{
+    padding-top: 0;
+    }
+    .wc-block-components-order-summary .wc-block-components-order-summary-item__description .wc-block-components-product-metadata, .wc-block-components-order-summary .wc-block-components-order-summary-item__description p{
+        margin-top: 0;
+        padding-bottom: 8px;
+    }
+    .wc-block-components-title.wc-block-components-title{
+        letter-spacing: 0;
+    }
+}

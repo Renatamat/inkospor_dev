@@ -41,27 +41,35 @@
 /**
  * Paragraph Small base styles
  */
-.p-s {
-    @include typographyParagraphS-mobile();
+  @mixin p-s() {
+ @include typographyParagraphS-mobile();
     @include media-breakpoint-up(lg) {
         @include typographyParagraphS();
     }
     @include media-breakpoint-up(xxxl) {
         @include typographyParagraphS-hd();
     }
+  }
+.p-s {
+    @include p-s();
 }
 
 /**
  * Paragraph Medium base styles
  */
-.p-m {
+ @mixin p-m() {
     @include typographyParagraphM-mobile();
+
     @include media-breakpoint-up(lg) {
         @include typographyParagraphM();
     }
+
     @include media-breakpoint-up(xxxl) {
         @include typographyParagraphM-hd();
     }
+}
+.p-m {
+  @include p-m();
 }
 
 /**
@@ -88,4 +96,7 @@
     @include media-breakpoint-up(xxxl) {
         @include typographyParagraphXl-hd();
     }
+}
+.p-brand{
+    @include typografyParagrahFontFamilyHeading();
 }

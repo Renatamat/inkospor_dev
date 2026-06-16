@@ -1,0 +1,34 @@
+{{!-- =========================================
+  PRODUCT PAGE (COMPOSED)
+  - left side (toolbar + aside + offcanvas)
+  - product section (listing)
+  Mobile-first
+========================================= --}}
+{{> organisms-header }}
+{{!-- <div class="container">
+    <div class="row">
+        <div class="col-12">
+            {{> molecules-breadcrumb}}
+        </div>
+    </div>
+</div> --}}
+<div class="container">
+  <div class="row">
+
+    {{!-- LEFT SIDE COLUMN (md+), mobile: toolbar w środku left-side partiala --}}
+    <div class="col-12 col-lg-3 mb-24">
+      {{> organisms-product-left-side }}
+    </div>
+
+    {{!-- PRODUCT LISTING COLUMN --}}
+    <div class="col-12 col-lg-9">
+      {{> organisms-product-section}} 
+    </div>
+
+  </div>
+</div>
+{{#if product_bottom_bar.has_items}}
+  <div class="c-product-bottom-bar__spacer" aria-hidden="true"></div>
+{{/if}}
+{{> organisms-product-bottom-bar }}
+ {{> organisms-footer }}

@@ -1,0 +1,45 @@
+.c-product-bottom-bar {
+  --product-bottom-bar-top: auto;
+
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(100%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+
+  &.--visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  &.--stopped {
+    position: absolute;
+    top: var(--product-bottom-bar-top);
+    bottom: auto;
+  }
+
+  &__spacer {
+    height: 104px;
+
+    @include media-breakpoint-up(md) {
+      height: 80px;
+    }
+  }
+
+  &__count {
+    min-width: 28px;
+    min-height: 28px;
+    padding: 0 2px;
+    border-radius: 1000px;
+    background: var(--Surface-primary, #FFD733);
+    color: var(--Text-headline, #030507);
+  }
+}

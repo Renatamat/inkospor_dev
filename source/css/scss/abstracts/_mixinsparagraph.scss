@@ -14,6 +14,10 @@
     text-transform: uppercase;
 }
 
+@mixin typografyParagrahFontFamilyHeading(){
+    font-family: $font-family-headings;
+}
+
 /**
  * Paragraph Overline Styles
  */
@@ -56,8 +60,8 @@
     line-height: var(--font-line-height-xs, 20px); /* 142.857% */
 }
 @mixin typographyParagraphXs-hd() {
-    font-size: $font-size-paragragh-xs-hd;
-    line-height: var(--font-line-height-xs, 32px); /* 133.333% */
+    font-size: $font-size-paragragh-xs;
+    line-height: var(--font-line-height-xs, 20px); /* 142.857% */
 }
 
 /**
@@ -78,8 +82,8 @@
     
 }
 @mixin typographyParagraphS-hd() {
-    font-size: $font-size-paragragh-s-hd;
-    line-height: var(--font-line-height-s, 40px); /* 142.857% */
+    font-size: $font-size-paragragh-s;
+    line-height: var(--font-line-height-s, 24px); /* 150% */
 }
 
 /**
@@ -99,8 +103,8 @@
     line-height: var(--font-line-height-m, 28px); /* 140% */    
 }
 @mixin typographyParagraphM-hd() {
-    font-size: $font-size-paragragh-med-hd;
-    line-height: var(--font-line-height-m, 48px); /* 150% */
+    font-size: $font-size-paragragh-med;
+    line-height: var(--font-line-height-m, 28px); /* 140% */    
 }
 
 /**
@@ -120,8 +124,8 @@
     line-height: var(--font-line-height-l, 32px); /* 133.333% */
 }
 @mixin typographyParagraphL-hd() {
-    font-size: $font-size-paragragh-large-hd;
-    line-height: var(--font-line-height-l, 56px); /* 127.273% */
+  font-size: $font-size-paragragh-large;
+    line-height: var(--font-line-height-l, 32px); /* 133.333% */
 
 }
 
@@ -129,19 +133,19 @@
  * Paragraph Extra Large Styles
  */
  @mixin typographyParagraphXl-mobile() {
-    font-size: $font-size-paragragh-large-mobile;
+    font-size:  $font-size-paragragh-xl-mobile;
     font-family: $font-family-body;
     font-style: normal;
     font-weight: var(--font-weight-regular, 400);
     letter-spacing: var(--font-spacing-0, 0px);
-    line-height: var(--font-line-height-l, 32px); /* 133.333% */
+    line-height: var(--font-line-height-xl, 32px); /* 133.333% */
  }
 
 @mixin typographyParagraphXl() { 
-    font-size: $font-size-paragragh-large;
-    line-height: var(--font-line-height-l, 32px); /* 133.333% */
+    font-size: $font-size-paragragh-xl;
+    line-height: var(--font-line-height-xl, 40px); /* 133.333% */
 }
 @mixin typographyParagraphXl-hd() {
-    font-size: $font-size-paragragh-large-hd;
-    line-height: var(--font-line-height-l, 56px); /* 127.273% */
+    font-size: $font-size-paragragh-xl;
+    line-height: var(--font-line-height-xl, 40px); /* 133.333% */
 }

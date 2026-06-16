@@ -1,0 +1,68 @@
+.c-product-left-side {
+  width: 100%;
+  max-width: 340px;
+
+  &__section {
+    border-top: 1px solid var(--Border-400, #D4D5D5);
+  }
+
+  .c-collapse-icon {
+    span {
+      display: inline-flex;
+    }
+
+    .icon-plus {
+      display: none;
+    }
+  }
+
+  .c-collapse-toggle.collapsed {
+    .icon-minus {
+      display: none;
+    }
+
+    .icon-plus {
+      display: inline-flex;
+    }
+  }
+
+}
+
+.c-btn-s.c-btn-text > span.c-product-left-side__clear {
+  padding-left: 0;
+}
+
+.CheckboxName__Star {
+  margin-top: -2px;
+}
+
+.c-filter-price__input {
+  max-width: 64px;
+}
+
+.c-product-toolbar {
+  .c-product-listing-header__sort {
+    max-width: 218px;
+  }
+}
+
+body .wcpf-field-price-slider .ui-slider-horizontal .ui-slider-range {
+  height: 3px;
+  background: var(--Text-headline, #030507);
+  border-radius: 999px;
+  transform-origin: 0% 50%;
+  will-change: transform;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+body .wcpf-field-price-slider .ui-slider .ui-slider-handle {
+  background-color: var(--Text-headline, #030507);
+  border: 1px solid #030507;
+  top: -7px;
+}
+
+body .wcpf-field-price-slider .wcpf-price-slider .ui-widget-content {
+  height: 2px;
+  background-color: #000;
+}

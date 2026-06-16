@@ -1,0 +1,120 @@
+<article class="c-product-card card border-0 overflow-hidden">
+  <div class="row align-items-stretch p-16 p-lg-24 r-gap-24">
+    <div class="col-12 d-flex flex-column flex-md-row gap-24">
+      <div class="c-product-cart__left-side c-product-card__media d-flex align-items-center justify-content-center mx-auto flex-shrink-0">
+        <img class="c-product-card__img img-fluid" src="{{product.image}}" alt="{{product.alt}}">
+      </div>
+      
+      <div class="c-product-card__right-side d-flex flex-column  r-gap-48 gap-16 w-100">
+          <div class="c-product-card__right-side-top d-flex flex-column flex-md-row gap-24 justify-content-between">
+            <div>
+              <h3 class="p-l fw-bold mb-0">{{product.title}}</h3>
+              <div class="p-s">{{product.brand}}</div>
+            </div>
+            <div class="c-product-card__sale-info w-100 d-flex flex-column align-items-end gap-8 gap-md-24">
+                {{#if is_sale}}
+                  {{#if product.sale_badge_text}}
+                    <div class="c-product-card__promo p-s fw-bold text-center c-white p-8 w-100">
+                      {{product.sale_badge_text}}
+                    </div>
+                  {{/if}}
+                {{/if}}
+
+                <a href="{{product.cta_url}}" class="c-btn c-btn-s c-btn-text fw-bold">
+                  <span>Dowiedz się więcej o produkcie</span>
+                  <svg class="i-sprite icon-16" aria-hidden="true" focusable="false">
+                    <use href="/sprites/icons-16.svg#arrow_up_right"></use>
+                  </svg>
+                </a>
+            </div>
+          </div>
+          <div class="c-product-card__right-side-bottom d-flex justify-content-between gap-48 gap-md-24 flex-column flex-md-row">
+            <dl class="c-product-card__info-list d-flex flex-column mb-0">
+                <div class="d-flex flex-wrap">
+                  <dt class="p-s fw-normal pr-4">Opakowanie</dt>
+                  <dd class="p-s fw-bold mb-0">{{product.package}}</dd>
+                </div>
+                <div class="d-flex flex-wrap">
+                  <dt class="p-s fw-normal pr-4">Kategoria</dt>
+                  <dd class="p-s fw-bold mb-0">{{product.category}}</dd>
+                </div>
+                <div class="d-flex flex-wrap align-items-baseline gap-8">
+                  <dt class="p-s fw-normal">Opakowanie zbiorcze</dt>          
+                  <dd class="p-s fw-bold mb-0"><span class="c-product-card__pack p-s fw-bold mb-0">{{product.box_count}}</span> {{product.box_note}}</dd>
+                </div>
+            </dl>
+              <div class="d-flex flex-column align-items-start  align-self-start align-self-md-end">
+                <div class="d-flex align-items-baseline gap-8 flex-wrap">
+                  <span class="c-product-card__price p-xl fw-bold p-brand{{#if is_sale}} c-red{{/if}}">
+                    {{product.price}}
+                  </span>
+
+                  {{#if is_sale}}
+                    {{#if product.price_old}}
+                      <span class="p-m text-decoration-line-through">{{product.price_old}}</span>
+                    {{/if}}
+                  {{/if}}
+                </div>
+
+                {{#if is_sale}}
+                  <div class="p-xs">{{product.omnibus}}</div>
+                {{/if}}
+              </div>
+            </div>
+
+      </div>
+    </div>
+    </div>
+    
+  {{#product.variants}}
+    <div class="row c-product-card__variant row align-items-center px-24 py-8 r-gap-16">
+      <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+        <div class="p-s fw-bold p-brand">{{name}}</div>
+      </div>
+
+      <div class="col-2 col-sm-4 col-lg-4 align-items-center">
+        <div class="c-product-card__availability justify-content-center {{#if in_stock}}c-product-card__availability--success{{/if}}{{#if unavailable}}c-product-card__availability--error{{/if}}{{#if notified}}c-product-card__availability--error{{/if}} d-flex align-items-center gap-8 p-s fw-bold">
+          <span class="c-product-card__status-dot"></span>
+          <span class="d-none d-sm-inline-block">{{status}}</span>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 col-lg-4 d-flex justify-content-start justify-content-lg-end">
+        {{#if in_stock}}
+          <div class="InputWrap InputWrap-xs InputWrap--noicon c-product-card__qty">
+            <input type="text" inputmode="numeric" placeholder="{{quantity_placeholder}}" aria-label="{{quantity_label}}" value="{{quantity_value}}">
+          </div>
+        {{/if}}
+
+        {{#if unavailable}}
+          <button type="button" class="c-btn c-btn-s c-btn-text fw-bold">
+            <span>{{notify_label}}</span>
+            <svg class="i-sprite icon-16" aria-hidden="true" focusable="false">
+              <use href="/sprites/icons-16.svg#mail"></use>
+            </svg>
+          </button>
+        {{/if}}
+
+        {{#if notified}}
+          <div class="c-product-card__availability c-product-card__availability--success d-flex align-items-center gap-8 p-s fw-bold">
+            <span>{{notified_label}}</span>
+            <svg class="i-sprite icon-16" aria-hidden="true" focusable="false">
+              <use href="/sprites/icons-16.svg#check"></use>
+            </svg>
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  {{/product.variants}}
+
+  <div class="c-product-card__variant row justify-content-end px-24 py-16">
+    <div class="col-12 col-lg-4 d-flex justify-content-end">
+      <button type="button" class="c-btn c-btn-fill c-btn-xs c-product-card__add {{#unless can_add_to_cart}}disabled{{/unless}}" {{#unless can_add_to_cart}}disabled aria-disabled="true"{{/unless}}>
+        <span class="fw-bold text-uppercase">DODAJ DO KOSZYKA</span>
+        <svg class="i-sprite icon-16" aria-hidden="true" focusable="false">
+          <use href="/sprites/icons-16.svg#chevron_right_2"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</article>

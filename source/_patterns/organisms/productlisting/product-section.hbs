@@ -1,0 +1,29 @@
+<section class="c-product-section d-flex flex-column gap-24 pb-64">
+  {{#if show_header}}
+    <div class="c-product-listing-header d-flex justify-content-between align-items-center gap-16">
+      <div class="c-product-listing-header__title">
+        <h2 class="p-l fw-bold m-0 c-product-listing-header__heading p-brand">
+          {{section_title}} <span class="c-product-listing-header__count fw-normal">({{products_count}})</span>
+        </h2>
+      </div>
+
+      <div class="c-product-listing-header__sort d-none d-lg-block  custom-select__size-s">
+        <select class="c-select input-s c-product-listing-header__select p-s --size-s" id="sort" aria-label="Sortowanie">
+          <option value="name-asc">Sortuj według nazwy</option>
+          <option value="name-az">Nazwa A-Z</option>
+          <option value="name-za">Nazwa Z-A</option>
+        </select>
+      </div>
+    </div>
+  {{/if}}
+
+  <div class="d-flex flex-column gap-24">
+    {{#products}}
+      {{> molecules-cards-product this}}
+    {{/products}}
+  </div>
+
+  {{#unless hide_pagination}}
+    {{> molecules-pagination this}}
+  {{/unless}}
+</section>

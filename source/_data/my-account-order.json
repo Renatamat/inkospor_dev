@@ -1,0 +1,83 @@
+{
+  "order_detail": {
+    "back_url": "#",
+    "back_label": "LISTA ZAMÓWIEŃ",
+    "title": "ORDER DETAILS",
+    "number": "1018608",
+    "invoice_url": "#",
+    "invoice_label": "POBIERZ FAKTURĘ",
+    "details": [
+      { "label": "Data zamówienia", "value": "27.04.2026" },
+      { "label": "Numer zamówienia", "value": "1018608" },
+      { "label": "Status", "value": "Zrealizowane", "is_success": true },
+      { "label": "Kurier", "value": "InPost" },
+      { "label": "Dostawa", "value": "Dostarczono", "is_success": true }
+    ],
+    "invoice_address_title": "Invoice address",
+    "invoice_address": ["MADOX", "Rafal Tlokinski", "Topolowa 15 B", "05-119 Lajski", "Poland"],
+    "shipping_address_title": "Shipping address",
+    "shipping_address": ["MADOX", "Rafal Tlokinski", "Topolowa 15 B", "05-119 Lajski", "Poland"]
+  },
+  "order_detail_products_summary": {
+    "shipping_label": "Koszt dostawy",
+    "shipping_value": "36,00 zł",
+    "total_label": "Wartość całkowita",
+    "total_value": "1 690 zł"
+  },
+  "order_detail_products_table": {
+    "columns": [
+      { "key": "brand", "label": "Marka", "width": "144px" },
+      { "key": "product", "label": "Produkt" },
+      { "key": "price", "label": "Cena", "width": "116px" },
+      { "key": "quantity", "label": "Ilość", "width": "52px", "align_center": true },
+      { "key": "value", "label": "Wartość", "width": "116px", "align_end": true }
+    ],
+    "rows": [
+      {
+        "cells": [
+          { "key": "brand", "label": "Marka", "value": "Inkospor" },
+          { "key": "product", "label": "Produkt", "value": "Inkospor Fitness baton I Kokosowy" },
+          { "key": "price", "label": "Cena", "value": "119,00 zł" },
+          { "key": "quantity", "label": "Ilość", "value": "6", "align_center": true },
+          { "key": "value", "label": "Wartość", "value": "119,00 zł", "align_end": true }
+        ]
+      },
+      {
+        "cells": [
+          { "key": "brand", "label": "Marka", "value": "Inkospor" },
+          { "key": "product", "label": "Produkt", "value": "Inkospor Fitness baton I Kokosowy" },
+          { "key": "price", "label": "Cena", "value": "119,00 zł" },
+          { "key": "quantity", "label": "Ilość", "value": "6", "align_center": true },
+          { "key": "value", "label": "Wartość", "value": "119,00 zł", "align_end": true }
+        ]
+      },
+      {
+        "cells": [
+          { "key": "brand", "label": "Marka", "value": "Inkospor" },
+          { "key": "product", "label": "Produkt", "value": "Inkospor Fitness baton I Kokosowy" },
+          { "key": "price", "label": "Cena", "value": "119,00 zł" },
+          { "key": "quantity", "label": "Ilość", "value": "6", "align_center": true },
+          { "key": "value", "label": "Wartość", "value": "119,00 zł", "align_end": true }
+        ]
+      },
+      {
+        "cells": [
+          { "key": "brand", "label": "Marka", "value": "Inkospor" },
+          { "key": "product", "label": "Produkt", "value": "Inkospor Fitness baton I Kokosowy" },
+          { "key": "price", "label": "Cena", "value": "119,00 zł" },
+          { "key": "quantity", "label": "Ilość", "value": "6", "align_center": true },
+          { "key": "value", "label": "Wartość", "value": "119,00 zł", "align_end": true }
+        ]
+      },
+      {
+        "cells": [
+          { "key": "brand", "label": "Marka", "value": "Inkospor" },
+          { "key": "product", "label": "Produkt", "value": "Inkospor Fitness baton I Kokosowy" },
+          { "key": "price", "label": "Cena", "value": "119,00 zł" },
+          { "key": "quantity", "label": "Ilość", "value": "6", "align_center": true },
+          { "key": "value", "label": "Wartość", "value": "119,00 zł", "align_end": true }
+        ]
+      }
+    ]
+  }
+}

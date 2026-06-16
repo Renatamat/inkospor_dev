@@ -41,8 +41,10 @@
 	line-height: var(--font-line-height-7xl, 88px); /* 91.667% */
 }
 @mixin typographyH1-hd() {
-	font-size: $font-size-xl-hd;
-	line-height: var(--font-line-height-7xl, 112px); /* 87.5% */
+	// font-size: $font-size-xl-hd;
+	// line-height: var(--font-line-height-7xl, 112px); /* 87.5% */
+	font-size: $font-size-xl;
+	line-height: var(--font-line-height-7xl, 88px); /* 91.667% */
 	
 }
 
@@ -63,8 +65,10 @@
 }
 
 @mixin typographyH2-hd() {
-	font-size: $font-size-large-hd;
-	line-height: var(--font-line-height-6xl, 104px); /* 92.857% */
+	// font-size: $font-size-large-hd;
+	// line-height: var(--font-line-height-6xl, 104px); /* 92.857% */
+	font-size: $font-size-large;
+	line-height: var(--font-line-height-6xl, 80px); /* 100% */	
 
 }
 
@@ -87,8 +91,10 @@
 }
 
 @mixin typographyH3-hd() {
-	font-size: $font-size-med-2-hd;
-	line-height: var(--font-line-height-5xl, 96px); /* 100% */	
+	// font-size: $font-size-med-2-hd;
+	// line-height: var(--font-line-height-5xl, 96px); /* 100% */	
+	font-size: $font-size-med-2;
+	line-height: var(--font-line-height-5xl, 72px); /* 100% */
 }
 
 
@@ -108,8 +114,10 @@
 	line-height: var(--font-line-height-4xl, 64px); /* 100% */
 }
 @mixin typographyH4-hd() {
-	font-size: $font-size-med-hd;
-	line-height: var(--font-line-height-3xl, 80px); /* 111.111% */	
+	// font-size: $font-size-med-hd;
+	// line-height: var(--font-line-height-3xl, 80px); /* 111.111% */	
+	font-size: $font-size-med;
+	line-height: var(--font-line-height-4xl, 64px); /* 100% */
 }
 
 

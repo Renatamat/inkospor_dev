@@ -64,7 +64,7 @@ button {
 
 /* Rozmiary */
 .c-btn-xs { 
-	@include typographyParagraphXs-mobile();
+	@include typographyParagraphXs();
     @include media-breakpoint-up(lg) {
         @include typographyParagraphXs();
     }
@@ -178,6 +178,10 @@ button {
 	border-radius: var(--Radius-brand, 8px);
 	background: $color-btn-primary-bg;
 	border: 2px solid $color-btn-primary-border;
+	&.--fill-white{
+	background: white;
+	border: 2px solid white;
+	}
 	&:hover {
 		background: $color-btn-primary-bg-hover;
 		border: 2px solid $color-btn-primary-border-hover;
@@ -226,11 +230,14 @@ button {
 .c-btn-text { 
 	padding: var(--Spacing-xs, 4px);
 	color: $color-btn-text-text;
+	outline: none !important;
+	border: none;
 	svg{
 		path{
 			transition: .3s ease;
 		}
 	}
+
 	&:hover {
 		background: transparent;	
 		border: none;

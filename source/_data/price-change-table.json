@@ -1,0 +1,155 @@
+{
+  "price_change_table": {
+    "columns": [
+      {
+        "key": "date",
+        "label": "Data",
+        "width": "120px"
+      },
+      {
+        "key": "product",
+        "label": "Produkt"
+      },
+      {
+        "key": "price",
+        "label": "Nowa cena / Zmiana",
+        "width": "160px",
+        "align_end": true
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "key": "date",
+            "label": "Data",
+            "value": "22.04.2026"
+          },
+          {
+            "key": "product",
+            "label": "Produkt",
+            "value": "Inkospor Fitness baton I Kokosowy"
+          },
+          {
+            "key": "price",
+            "label": "Nowa cena / Zmiana",
+            "value": "119,00 zł",
+            "is_change": true,
+            "align_end": true,
+            "change": "up"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "key": "date",
+            "label": "Data",
+            "value": "22.04.2026"
+          },
+          {
+            "key": "product",
+            "label": "Produkt",
+            "value": "Inkospor Fitness baton I Kokosowy"
+          },
+          {
+            "key": "price",
+            "label": "Nowa cena / Zmiana",
+            "value": "119,00 zł",
+            "is_change": true,
+            "align_end": true,
+            "change": "up"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "key": "date",
+            "label": "Data",
+            "value": "22.04.2026"
+          },
+          {
+            "key": "product",
+            "label": "Produkt",
+            "value": "Inkospor Fitness baton I Kokosowy"
+          },
+          {
+            "key": "price",
+            "label": "Nowa cena / Zmiana",
+            "value": "119,00 zł",
+            "is_change": true,
+            "align_end": true,
+            "change": "down"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "key": "date",
+            "label": "Data",
+            "value": "22.04.2026"
+          },
+          {
+            "key": "product",
+            "label": "Produkt",
+            "value": "Inkospor Fitness baton I Kokosowy"
+          },
+          {
+            "key": "price",
+            "label": "Nowa cena / Zmiana",
+            "value": "119,00 zł",
+            "is_change": true,
+            "align_end": true,
+            "change": "up"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "key": "date",
+            "label": "Data",
+            "value": "22.04.2026"
+          },
+          {
+            "key": "product",
+            "label": "Produkt",
+            "value": "Inkospor Fitness baton I Kokosowy"
+          },
+          {
+            "key": "price",
+            "label": "Nowa cena / Zmiana",
+            "value": "119,00 zł",
+            "is_change": true,
+            "align_end": true,
+            "change": "down"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "key": "date",
+            "label": "Data",
+            "value": "22.04.2026"
+          },
+          {
+            "key": "product",
+            "label": "Produkt",
+            "value": "Inkospor Fitness baton I Kokosowy"
+          },
+          {
+            "key": "price",
+            "label": "Nowa cena / Zmiana",
+            "value": "119,00 zł",
+            "is_change": true,
+            "align_end": true,
+            "change": "up"
+          }
+        ]
+      }
+    ]
+  }
+}
