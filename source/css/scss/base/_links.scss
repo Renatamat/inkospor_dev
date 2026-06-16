@@ -11,14 +11,14 @@ a {
 	outline: 0;
 	transition: color $anim-fade-quick $anim-ease;
 
-	&:hover, &:focus {
-		color: initial;
-	}
+	// &:hover, &:focus {
+	// 	color: initial;
+	// }
 
-	&:active {
-		color:initial;
-	}
-	&:visited{
-		color: initial;
-	}
+	// &:active {
+	// 	color:initial;
+	// }
+	// &:visited{
+	// 	color: initial;
+	// }
 }

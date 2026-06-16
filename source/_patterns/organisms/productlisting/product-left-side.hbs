@@ -1,0 +1,66 @@
+{{!-- =========================================
+  PRODUCT LIST – FILTERS + SORT (MOBILE FIRST)
+========================================= --}}
+
+{{!-- MOBILE TOOLBAR (tylko < lg) --}}
+<div class="c-product-toolbar d-flex d-lg-none justify-content-between align-items-start py-8 gap-16">
+  {{!-- CHIP: FILTRUJ (otwiera offcanvas) --}}
+  <button
+    type="button"
+    class="chip chip-s --active d-flex flex-nowrap align-items-center gap-8 align-self-center"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#filtersOffcanvas"
+    aria-controls="filtersOffcanvas"
+  >
+    <span class="c-chip__label">Filtruj</span>
+    <span class="c-chip__icon" aria-hidden="true">
+      <svg class="i-sprite icon-20 flex-shrink-0" aria-hidden="true" focusable="false">
+  <use href="/sprites/icons-20.svg#filter"></use>
+</svg>
+    </span>
+  </button>
+
+  {{!-- SORT TRIGGER (na start jako button; później podepniesz dropdown/select) --}}
+        <div class="c-product-listing-header__sort custom-select__size-s">
+        <select class="c-select input-s c-product-listing-header__select p-s" id="sort" aria-label="Sortowanie">
+          <option value="name-asc">Sortuj według nazwy</option>
+          <option value="name-az">Nazwa A–Z</option>
+          <option value="name-za">Nazwa Z–A</option>
+        </select>
+      </div>
+</div>
+
+{{!-- DESKTOP SIDEBAR (>= lg) --}}
+<aside class="c-product-left-side d-none d-lg-block">
+  {{> organisms-product-left-side__content }}
+</aside>
+
+{{!-- MOBILE OFFCANVAS (tylko < lg) --}}
+<div
+  class="offcanvas offcanvas-start d-lg-none"
+  tabindex="-1"
+  id="filtersOffcanvas"
+  aria-labelledby="filtersOffcanvasLabel"
+>
+  <div class="offcanvas-header">
+    <div class="d-flex align-items-center gap-16 px-16 py-16">
+    <span class="c-product-left-side__icon" aria-hidden="true">
+      <svg class="i-sprite icon-24 flex-shrink-0" aria-hidden="true" focusable="false">
+        <use href="/sprites/icons-24.svg#filter"></use>
+      </svg>
+    </span>
+    <span class="c-product-left-side__heading m-0 h7 fw-bolder">FILTRY</span>
+  </div>    
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Zamknij"
+    ></button>
+  </div>
+
+  {{!-- p-0 żeby zachować Twoje paddingi z wnętrza filtra --}}
+  <div class="offcanvas-body p-0">
+    {{> organisms-product-left-side__content }}
+  </div>
+</div>

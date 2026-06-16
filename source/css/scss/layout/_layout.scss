@@ -109,3 +109,17 @@
         width: 31.25%!important
     }
 }
+html,
+body {
+	min-height: 100%;
+}
+ 
+.site{
+    min-height: 100dvh;
+}
+.site-main{
+    flex: 1 0 auto;
+}
+.site-footer{
+    flex-shrink: 0;
+}

@@ -1,0 +1,18 @@
+.c-my-account-order-summary {
+  &__details {
+    gap: 4px;
+  }
+}
+
+.c-my-account-order-products {
+  &__table {
+    border-bottom: 1px solid var(--Border-base, #0F1416);
+     @include media-breakpoint-down(md) {
+    border-bottom:none;
+    }
+  }
+
+  &__summary-value {
+    width: 176px;
+  }
+}

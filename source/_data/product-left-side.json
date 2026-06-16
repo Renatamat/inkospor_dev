@@ -1,0 +1,102 @@
+{
+  "product_filters": {
+    "active_filters": [
+      {
+        "label": "Inkospor"
+      }
+    ],
+    "groups": [
+      {
+        "title": "MARKI",
+        "collapse_id": "filter-brands",
+        "name": "brand",
+        "reset_label": "Zresetuj",
+        "options": [
+          {
+            "label": "Inkospor",
+            "value": "inkospor",
+            "count": 54,
+            "checked": true
+          },
+          {
+            "label": "Healion",
+            "value": "healion",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "title": "KATEGORIE",
+        "collapse_id": "filter-categories",
+        "name": "category",
+        "options": [
+          {
+            "label": "Białka",
+            "value": "bialka",
+            "count": 6
+          },
+          {
+            "label": "Aminokwasy",
+            "value": "aminokwasy",
+            "count": 5
+          },
+          {
+            "label": "Kreatyna",
+            "value": "kreatyna",
+            "count": 2
+          },
+          {
+            "label": "Kolagen",
+            "value": "kolagen",
+            "count": 1
+          },
+          {
+            "label": "Gainery",
+            "value": "gainery",
+            "count": 1
+          },
+          {
+            "label": "L - Karnityna",
+            "value": "l-karnityna",
+            "count": 2
+          },
+          {
+            "label": "Witaminy i minerały",
+            "value": "witaminy-mineraly",
+            "count": 3
+          },
+          {
+            "label": "Batony",
+            "value": "batony",
+            "count": 8
+          },
+          {
+            "label": "Napoje gotowe",
+            "value": "napoje-gotowe",
+            "count": 2
+          },
+          {
+            "label": "Żele energetyczne",
+            "value": "zele-energetyczne",
+            "count": 2
+          },
+          {
+            "label": "Elektrolity i węglowodany",
+            "value": "elektrolity-weglowodany",
+            "count": 5
+          },
+          {
+            "label": "Przedtreningówki i stymulanty",
+            "value": "przedtreningowki-stymulanty",
+            "count": 3
+          },
+          {
+            "label": "Akcesoria",
+            "value": "akcesoria",
+            "count": 8
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+<section class="c-my-account-order-products pt-24 pb-64">
+  <div class="c-my-account-order-products__table table-responsive">
+    <table class="c-table table w-100 m-0 {{#if order_detail_products_table.modifier}}c-table--{{order_detail_products_table.modifier}}{{/if}}">
+      {{> molecules-table-header order_detail_products_table}}
+      <tbody>
+        {{#order_detail_products_table.rows}}
+          {{> molecules-table-row this}}
+        {{/order_detail_products_table.rows}}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="c-my-account-order-products__summary d-flex flex-column align-items-end gap-spacing-xs pt-8">
+    <div class="d-inline-flex align-items-baseline gap-8">
+      <span class="p-s fw-bold">{{order_detail_products_summary.shipping_label}}</span>
+      <span class="c-my-account-order-products__summary-value p-m text-end">{{order_detail_products_summary.shipping_value}}</span>
+    </div>
+    <div class="d-inline-flex align-items-baseline gap-8">
+      <span class="p-s fw-bold">{{order_detail_products_summary.total_label}}</span>
+      <span class="c-my-account-order-products__summary-value p-xl fw-bold text-end p-brand">{{order_detail_products_summary.total_value}}</span>
+    </div>
+  </div>
+</section>

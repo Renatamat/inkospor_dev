@@ -18,6 +18,8 @@ html {
  */
 body {
 	min-height: 100vh; /* 1 */
+	display: flex;
+	flex-direction: column;
 	font-family: $font-family-primary;
 	@include typographyBody(); 
 	background-color: $neutral-200;

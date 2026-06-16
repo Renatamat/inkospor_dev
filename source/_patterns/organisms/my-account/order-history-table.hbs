@@ -1,0 +1,12 @@
+<section class="c-order-history-table pt-24 pb-64">
+  <div class="table-responsive">
+    <table class="c-table table w-100 m-0 {{#if order_history_table.modifier}}c-table--{{order_history_table.modifier}}{{/if}}">
+      {{> molecules-table-header order_history_table}}
+      <tbody>
+        {{#order_history_table.rows}}
+          {{> molecules-table-row this}}
+        {{/order_history_table.rows}}
+      </tbody>
+    </table>
+  </div>
+</section>
