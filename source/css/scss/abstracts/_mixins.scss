@@ -33,7 +33,7 @@
 	font-family: $font-family-headings;
 	font-style: normal;
 	font-size: $font-size-xl-mobile;
-	line-height: var(--font-line-height-7xl, 96px); /* 120% */
+	line-height: 48px; /* 120% */
  }
 
 @mixin typographyH1() {
@@ -57,7 +57,7 @@
 	font-family: $font-family-headings;
 	font-style: normal;
 	letter-spacing: var(--font-spacing--2, -2px);
-	line-height: var(--font-line-height-6xl, 88px); /* 122.222% */
+	line-height: 44px; /* 122.222% */
  }
 @mixin typographyH2() {
 	font-size: $font-size-large;
@@ -79,7 +79,7 @@
  @mixin typographyH3-mobile() {
 	font-family: $font-family-headings;
 	font-size: $font-size-med-2-mobile;
-	line-height: var(--font-line-height-5xl, 80px); /* 125% */
+	line-height: 40px; /* 125% */
 	letter-spacing: var(--font-spacing--2, -2px);
 	font-style: normal;
  }
@@ -107,7 +107,7 @@
 	letter-spacing: var(--font-spacing--1, -1px);
 	font-size: $font-size-med-mobile;
 	font-style: normal;
-	line-height: var(--font-line-height-4xl, 72px); /* 128.571% */
+	line-height: 38px; /* 128.571% */
  }
 @mixin typographyH4() {
 	font-size: $font-size-med;
@@ -131,7 +131,7 @@
 	font-style: normal;
 	font-size: $font-size-sm-2-mobile;
 	font-weight: 300;
-	line-height: var(--font-line-height-3xl, 67px); /* 139.583% */
+	line-height: 36px; /* 139.583% */
  }
 
  @mixin typographyH5() {
@@ -140,8 +140,8 @@
 }
 
  @mixin typographyH5-hd() {
-	font-size: $font-size-sm-2-hd;
-	line-height: var(--font-line-height-3xl, 80px); /* 111.111% */
+	font-size: $font-size-sm-2;
+	line-height: var(--font-line-height-3xl, 56px); /* 100% */
 }
 
 
@@ -153,7 +153,7 @@
  @mixin typographyH6-mobile() {
 	font-family: $font-family-headings;
 	font-size: $font-size-sm-mobile;
-	line-height: var(--font-line-height-2xl, 48px); /* 120% */
+	line-height: 30px; /* 120% */
 	letter-spacing: var(--font-spacing--1, -1px);
 	font-style: normal;
  }
@@ -165,6 +165,8 @@
 }
 
  @mixin typographyH6-hd() {
-	font-size: $font-size-sm-hd;
-	line-height: var(--font-line-height-2xl, 72px); /* 112.5% */	
+	// font-size: $font-size-sm-hd;
+	// line-height: var(--font-line-height-2xl, 72px); /* 112.5% */	
+		font-size: $font-size-sm;
+	line-height: var(--font-line-height-2xl, 48px); /* 120% */
 }

@@ -1,0 +1,30 @@
+.hp-cert{
+    &-container{
+        overflow-y: visible;
+        overflow-x: clip;
+    }
+    &-wrapper{
+        @include media-breakpoint-up(xxl){
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 16px;
+            transform: none !important;
+        }
+    }
+    &-card{
+        width: 216px;
+        height: auto;
+        border-radius: var(--Radius-brand-L, 32px);
+        background: rgba(255, 255, 255, 0.40);
+        padding: var(--Spacing-2xl, 32px);
+        border: 1px solid white;
+        will-change: transform, opacity, filter;
+        @include media-breakpoint-up(xxl){
+            width: auto;
+            margin-right: 0 !important;
+        }
+    }
+    &-border{
+        border-top: 1px solid var(--Border-400, #B3BFC8);
+    }
+}

@@ -15,6 +15,7 @@ import { initProductBottomBar } from "./product-bottom-bar";
 import { initCartDrawer } from "./cart-toggle";
 import { initArchiveFilters } from "./archive-filters";
 import { initWooCommerceNoticeScrollGuard } from "./woocommerce-notice-scroll";
+import { initHomepageGoals } from "./homepage-goals";
 
 
 
@@ -34,6 +35,7 @@ const initAll = () => {
   initProductBottomBar();
   initCartDrawer();
   initWooCommerceNoticeScrollGuard();
+  initHomepageGoals();
   initArchiveFilters();
   initToast();
 };
@@ -65,4 +67,5 @@ export { initProductBottomBar };
 export { initCartDrawer };
 export { initArchiveFilters };
 export { initWooCommerceNoticeScrollGuard };
+export { initHomepageGoals };
 export const isPatternlabWebpackReady = true;

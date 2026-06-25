@@ -1,0 +1,123 @@
+.hp-inko{
+    &-container{
+        height: 908px;
+        width: 100%;
+        border-radius: 32px;
+        overflow: hidden;
+        position: relative;
+        @include media-breakpoint-up(md){
+            height: 996px;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
+            height: 54%; 
+            background: linear-gradient(0deg, rgb(40, 53, 60) 0%, rgb(94, 109, 119) 71%, rgba(237, 221, 83, 0) 100%);
+            z-index: 2;
+            @include media-breakpoint-up(md){
+            background: linear-gradient(0deg, rgb(40, 53, 60) 0%, rgb(94, 109, 119) 42%, rgba(237, 221, 83, 0) 100%)
+            }
+            @include media-breakpoint-up(lg){
+                height: 63%;
+                background: linear-gradient(0deg, #28353c, transparent);
+            }
+            @include media-breakpoint-up(xl){
+                display: none;
+            }
+        }
+    }
+    &-bg{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        img{   
+            width: 886px;
+            max-width: unset;
+            position: absolute;
+            right: -58px;
+            
+            @include media-breakpoint-up(sm){
+                right: 0;
+            }
+            @include media-breakpoint-up(md){
+                object-position: right;
+                object-fit: cover;
+                max-width: 100%;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &-logo{
+        max-width: 160px;
+         @include media-breakpoint-up(lg){
+            width: 300px;
+            max-width: 300px;
+         }
+    }
+    &-content{
+        position: absolute;
+        bottom: 60px;
+        left: 20px;
+        width: 91%;
+        z-index: 3;
+        @include media-breakpoint-up(md){
+            bottom: 98px;
+            left: 98px;
+            width: 640px;
+        }
+        @include media-breakpoint-up(xl){
+             bottom: unset;
+            top: 98px;
+        }
+    }
+    &-list-icon{
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--Radius-brand, 8px);
+        background: var(--Surface-primary, #FEE108);
+    }
+    &-front{
+        position: absolute;
+        bottom: 0px;
+        right: -58px;
+        width: 100%;
+        height: 98%;
+        @include media-breakpoint-up(sm){
+            right: 0px;
+        }
+        img{
+            width: 886px;
+            max-width: unset;
+            position: absolute;
+            right: 0;
+            top: 18px;
+            @include media-breakpoint-up(md){
+                object-position: right;
+                object-fit: cover;
+                max-width: 100%;
+                width: 100%;
+                height: 100%;
+                top: unset;
+            }
+        }
+        
+    }
+    &-button{
+        padding: 12px 12px;
+        width: 341px;
+        max-width: 100%;
+        @include media-breakpoint-up(lg){
+            padding: 24px 12px;
+        }
+    }
+}
+
+.container-hp-inko{
+    max-width: 1641px;
+}

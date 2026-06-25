@@ -2,6 +2,16 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { initHomepageCertAnimations } from "./homepage-cert";
+import { initHomepageIngredientsWater } from "./homepage-ingredients-water";
+import { initHomepageGoalsScroll } from "./homepage-goals-scroll";
+import { initHomepageGoalsImages } from "./homepage-goals-images";
+import { initHomepageGmpAnimations } from "./homepage-gmp";
+import { initHomepageProdAnimations } from "./homepage-prod";
+import { initHomepageQualityAnimations } from "./homepage-quality";
+import { initHomepageExpertsAnimations } from "./homepage-experts";
+import { initHomepageMigAnimations } from "./homepage-mig";
+import { initHomepageSliderAnimations } from "./homepage-slider-animations";
 
 // Zarejestruj pluginy
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -164,6 +174,18 @@ export const initGsapAnimations = () => {
   initStaggeredCards();
   initParallax();
   initCounters();
+  initHomepageSliderAnimations();
+  initHomepageCertAnimations();
+  initHomepageIngredientsWater();
+  initHomepageGoalsScroll();
+  initHomepageGoalsImages();
+  initHomepageGmpAnimations();
+  initHomepageProdAnimations();
+  initHomepageQualityAnimations();
+  initHomepageExpertsAnimations();
+  initHomepageMigAnimations();
+
+  requestAnimationFrame(() => ScrollTrigger.refresh());
 };
 
 // Auto-init
@@ -179,5 +201,7 @@ const setup = () => {
 };
 
 setup();
+
+window.addEventListener("load", () => ScrollTrigger.refresh());
 
 export const isGsapBundleReady = true;

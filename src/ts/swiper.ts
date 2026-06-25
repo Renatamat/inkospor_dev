@@ -28,6 +28,43 @@ const safeJson = <T>(value?: string, fallback?: T): T => {
   }
 };
 
+const dispatchActiveSlideAnimationEvent = (
+  el: SwiperEl,
+  type: "init" | "slide-change",
+  speed = 0,
+): void => {
+  if (!el.hasAttribute("data-animate-active-slide")) return;
+
+  window.dispatchEvent(
+    new CustomEvent("homepage-slider:active-slide-animation", {
+      detail: {
+        el,
+        type,
+        speed,
+      },
+    }),
+  );
+};
+
+const dispatchGoalSlideActivation = (swiper: Swiper): void => {
+  const el = swiper.el as SwiperEl;
+  if (!el.hasAttribute("data-goal-slider")) return;
+
+  const section = el.closest<HTMLElement>("[data-goal-selector]");
+  if (!section) return;
+
+  const index = swiper.isEnd
+    ? swiper.slides.length - 1
+    : swiper.activeIndex;
+
+  section.dispatchEvent(
+    new CustomEvent("homepage-goals:activate", {
+      detail: { index },
+    }),
+  );
+};
+
+
 export const initSwipers = (root: ParentNode = document): void => {
   if (typeof document === "undefined") return;
 
@@ -59,6 +96,22 @@ export const initSwipers = (root: ParentNode = document): void => {
         (pagEl ? { el: pagEl, clickable: true } : false),
 
       on: {
+        init(swiper) {
+          dispatchActiveSlideAnimationEvent(swiper.el as SwiperEl, "init");
+        },
+        slideChange(swiper) {
+          dispatchGoalSlideActivation(swiper);
+        },
+        reachEnd(swiper) {
+          dispatchGoalSlideActivation(swiper);
+        },
+        slideChangeTransitionStart(swiper) {
+          dispatchActiveSlideAnimationEvent(
+            swiper.el as SwiperEl,
+            "slide-change",
+            Number(swiper.params.speed) || 0,
+          );
+        },
         slideNextTransitionStart(swiper) {
           if (!onNextAction) return;
           swiperActions[onNextAction]?.(swiper);

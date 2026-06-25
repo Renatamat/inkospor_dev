@@ -1,0 +1,121 @@
+.hp-quality{
+    overflow: hidden;
+    &-image{
+        width: 144px;
+        height: 144px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        @include media-breakpoint-up(md){
+            width: 240px;
+            height: 240px;
+        }
+    }
+    &-slider{
+        position: relative;
+        width: 100%;
+        margin-top: 40px;
+        padding: 0 56px 64px;
+        @include media-breakpoint-up(md){
+            margin-top: 64px;
+        }
+    }
+
+    &-arrow{
+        position: absolute;
+        top: 72px;
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        border: 0;
+        background: transparent;
+        color: var(--Text-headline, #030507);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: none;
+
+        &::after{
+            content: none;
+        }
+
+        &--prev{
+            left: 0;
+        }
+
+        &--next{
+            right: 0;
+        }
+
+        svg{
+            width: 24px;
+            height: 24px;
+        }
+
+        &.swiper-button-disabled{
+            opacity: 0.3;
+        }
+    }
+
+    &-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: 200px;
+        height: auto;
+        flex-shrink: 0;
+        text-align: center;
+        &-image{
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img{
+                width: 100%;
+                max-width: 160px;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &-dots{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        align-items: center;
+        .swiper-pagination-bullet{
+            width: 8px;
+            height: 8px;
+            margin: 0 !important;
+            background: var(--Border-400, #39556A);
+            opacity: 0.4;
+        }
+
+        .swiper-pagination-bullet-active{
+            background: var(--Text-headline, #39556A);
+            width: 12px;
+            height: 12px;
+            opacity: 1;
+        }
+    }
+
+    @include media-breakpoint-down(md){
+        &-slider{
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        &-arrow{
+            display: none;
+        }
+    }
+}
