@@ -210,4 +210,11 @@
             opacity: 0;
         }
     }
+    &.--www{
+        .mobileLogoMenu{
+            img{
+                width: 192px;
+            }
+        }
+    }
 }
