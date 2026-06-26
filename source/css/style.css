@@ -24548,6 +24548,12 @@ button.swiper-pagination-bullet {
     border-left: 1px solid var(--Border-400, #B3BFC8);
   }
 }
+@media (min-width: 992px) and (max-width: 1100px) {
+  .c-footer__contact {
+    border-left: none;
+    padding-left: 0;
+  }
+}
 @media (min-width: 576px) {
   .c-footer__contact-first {
     width: 160px;
