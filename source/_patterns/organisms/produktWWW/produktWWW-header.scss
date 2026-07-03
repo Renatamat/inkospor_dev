@@ -1,0 +1,43 @@
+.btn-buy{
+    height: 64px;
+}
+.buy-select{
+    .custom-select .select-selected{
+        padding: 18px 52px 18px 12px;
+        border-radius: var(--Radius-brand, 8px);
+        background: var(--Surface-200, #F8F9FA);
+        border: unset;
+                @include typographyParagraphM-mobile();
+
+            @include media-breakpoint-up(lg) {
+                @include typographyParagraphM();
+            }
+
+            @include media-breakpoint-up(xxxl) {
+                @include typographyParagraphM-hd();
+            }
+        }
+    .custom-select .select-options-container{
+        border-radius: var(--Radius-brand, 8px);
+        background: var(--Surface-200, #F8F9FA);
+        border: unset;
+        @include typographyParagraphM-mobile();
+
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphM();
+        }
+
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphM-hd();
+        }
+        .select-option.--active{
+                background: #00000012;
+        }
+    }
+}
+
+.pr-header{
+    &-image{
+        background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.40) 94.99%, rgba(255, 255, 255, 0.00) 95%);
+    }
+}

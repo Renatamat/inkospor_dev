@@ -1,0 +1,30 @@
+.cl-cele{
+    &-item{
+        display: flex;
+        height: 220px;
+        width: 180px;
+        padding: var(--Spacing-2xl, 32px) var(--Spacing-xl, 24px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--Spacing-xl, 24px);
+        border-radius: var(--Radius-brand-L, 32px);
+        transition: border-color 0.3s ease, background-color 0.3s ease;
+        border: 0.532px solid var(--Border-400, #B3BFC8);
+
+        &-image{
+            img{
+                width: 52px;
+                height: 52px;
+            }
+        }
+        
+        &.--active{
+            background: var(--Surface-primary, #FEE108);
+            border: 0.532px solid var(--Border-400, #FEE108);
+        }
+        &:hover{
+            border: 0.532px solid var(--Border-400, #000);
+        }
+    }
+}

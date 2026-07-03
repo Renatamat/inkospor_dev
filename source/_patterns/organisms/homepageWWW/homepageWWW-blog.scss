@@ -1,4 +1,11 @@
 .hp-blog{
+    &-small-slider{
+        overflow: visible;
+    }
+    &-small-item{
+        width: 280px;
+        height: auto;
+    }
     &-main{
         &-image{
             border-radius: 32px;
@@ -21,11 +28,24 @@
             }
         }
     }
+    @include media-breakpoint-up(sm){
+        &-small-wrapper{
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            transform: none !important;
+        }
+        &-small-item{
+            width: auto;
+            margin-right: 0 !important;
+        }
+    }
 }
 .btn-blog{
     width: 320px;
     border: 2px solid #000;
     background: transparent;
+    max-width: 100%;
     padding: var(--Spacing-xl, 24px) var(--Spacing-m, 12px);
     &:hover{
         background: #0000002f;

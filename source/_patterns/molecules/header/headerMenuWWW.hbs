@@ -18,60 +18,103 @@
 
     <div class="row rowMenuContent">
       <div class="col-12">
-        <nav class="headerMenuNav" aria-label="Mobilna nawigacja">
+        <nav class="headerMenuNav h-100 d-flex flex-column" aria-label="Mobilna nawigacja">
           <ul class="d-flex flex-column gap-0 m-0 p-0 list-unstyled">
-            <li class="menu-item">
-              <a href="#" class="c-btn c-btn-s c-btn-text --nav fw-bold justify-content-start w-100">
-                <span>PRODUKTY</span>
-              </a>
-            </li>
-
-            <li class="menu-item">
-              <a href="#" class="c-btn c-btn-s c-btn-text --nav fw-bold c-red justify-content-start w-100">
-                <span>% PROMOCJE</span>
-              </a>
-            </li>
-
-            <li class="menu-item has-submenu info-item">
-              <button class="blog-accordeon c-btn c-btn-s c-btn-text --nav fw-bold justify-content-between w-100"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mobile-info-categories" 
-                aria-expanded="false"
-                aria-controls="mobile-info-categories">
-                <span>PRZYDATNE INFORMACJE</span>
-                <span class="c-filter-section__icon c-collapse-icon">
-                  <span class="icon-minus">
-                    <svg class="i-sprite icon-16" aria-hidden="true" focusable="false">
-                      <use href="/sprites/icons-16.svg#chevron_up_2"></use>
-                    </svg>
-                  </span>
-                  <span class="icon-plus">
-                    <svg class="i-sprite icon-16" aria-hidden="true" focusable="false">
-                      <use href="/sprites/icons-16.svg#chevron_down_2"></use>
-                    </svg>
-                  </span>
-                </span>
+            <li class="menu-item has-submenu">
+              <button class="c-btn c-btn-s c-btn-text --nav justify-content-between w-100">
+                <a href="#" class="h6">Produkty</a>
+                <svg class="i-sprite icon-24 mr-8 flex-shrink-0" aria-hidden="true" focusable="false">
+                  <use href="/sprites/icons-16.svg#chevron_right"></use>
+                </svg>
               </button>
-
               <div class="wrapper-subnav">
-                <ul class="subnav collapse" id="mobile-info-categories">
+                <div class="d-flex align-items-center gap-16 pl-16 pr-16 pt-16 pb-16 submenu-back">
+                  <svg class="i-sprite icon-24 mr-8 flex-shrink-0" aria-hidden="true" focusable="false">
+                    <use href="/sprites/icons-16.svg#arrow_left_2"></use>
+                  </svg>
+                  <span class="h6 submenu-name">Produkty</span>
+                </div>
+                <ul class="subnav " id="mobile-info-categories">
                   <li class="subnav-item">
-                    <a href="#" class="p-s fw-bold link-lvl2">Wszystkie kategorie</a>
+                    <a href="#" class="p-l link-lvl2">Aminokwasy</a>
+                    <span class="p-l">8</span>
                   </li>
                   <li class="subnav-item">
-                    <a href="#" class="p-s fw-bold link-lvl2">Odchudzanie i kontrola wagi</a>
+                    <a href="#" class="p-l link-lvl2">Gainery</a>
+                    <span class="p-l">8</span>
                   </li>
                   <li class="subnav-item">
-                    <a href="#" class="p-s fw-bold link-lvl2">Zdrowie i dobre samopoczucie</a>
+                    <a href="#" class="p-l link-lvl2">Kreatyna</a>
+                    <span class="p-l">8</span>
                   </li>
                   <li class="subnav-item">
-                    <a href="#" class="p-s fw-bold link-lvl2">Dieta i ciekawe przepisy</a>
+                    <a href="#" class="p-l link-lvl2">Kolagen</a>
+                    <span class="p-l">8</span>
                   </li>
+                  <li class="subnav-item">
+                    <a href="#" class="p-l link-lvl2">L-karnityna</a>
+                    <span class="p-l">8</span>
+                  </li>
+                  <li class="subnav-item">
+                    <a href="#" class="p-l link-lvl2">Witaminy i minerały</a>
+                    <span class="p-l">8</span>
+                  </li>
+                  <li class="subnav-item">
+                    <a href="#" class="p-l link-lvl2">Przedtreningówki i stymulanty</a>
+                    <span class="p-l">8</span>
+                  </li>
+                  <li class="subnav-item">
+                    <a href="#" class="p-l link-lvl2">Elektrolity i węglowodany</a>
+                    <span class="p-l">8</span>
+                  </li>
+                  <li class="subnav-item">
+                    <a href="#" class="p-l link-lvl2">Żele energetyczne</a>
+                    <span class="p-l">8</span>
+                  </li>
+                  <li class="subnav-item">
+                    <a href="#" class="p-l link-lvl2">L-karnityna</a>
+                    <span class="p-l">8</span>
+                  </li>
+                  <li class="subnav-item">
+                    <a href="#" class="p-l link-lvl2">Elektrolity i węglowodany</a>
+                    <span class="p-l">8</span>
+                  </li>
+                  <li class="subnav-item">
+                    <a href="#" class="p-l link-lvl2">Napoje gotowe</a>
+                    <span class="p-l">8</span>
+                  </li>
+                  
                 </ul>
               </div>
             </li>
+
+            <li class="menu-item">
+              <a href="#" class="c-btn c-btn-s c-btn-text --nav justify-content-start w-100">
+                <span class="h6">Nowości</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="c-btn c-btn-s c-btn-text --nav justify-content-start w-100">
+                <span class="h6">O nas</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="c-btn c-btn-s c-btn-text --nav justify-content-start w-100">
+                <span class="h6">Blog</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="c-btn c-btn-s c-btn-text --nav justify-content-start w-100">
+                <span class="h6">Kontakt</span>
+              </a>
+            </li>
+            
           </ul>
+          <div class="d-flex gap-48 footer-info-social mt-auto justify-content-center">
+              <a href="#"><img src="{{facebook}}" alt=""></a>
+              <a href="#"><img src="{{instagram}}" alt=""></a>
+              <a href="#"><img src="{{tiktok}}" alt=""></a>
+          </div>
         </nav>
 
         

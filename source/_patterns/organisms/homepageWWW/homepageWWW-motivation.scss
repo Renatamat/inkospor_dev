@@ -1,0 +1,25 @@
+.hp-motivation {
+    &-slider {
+        margin-top: 32px;
+        overflow: visible;
+    }
+
+    &-card {
+        width: 280px;
+        height: auto;
+    }
+
+    @include media-breakpoint-up(lg) {
+        &-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+            transform: none !important;
+        }
+
+        &-card {
+            width: auto;
+            margin-right: 0 !important;
+        }
+    }
+}

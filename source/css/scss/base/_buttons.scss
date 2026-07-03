@@ -72,7 +72,7 @@ button {
         @include typographyParagraphXs-hd();
     }
 	padding: var(--Spacing-s, 8px);
-	font-weight: 400;
+	font-weight: 700;
 	svg{
 		width: 16px;
 		height: 16px;
@@ -91,8 +91,9 @@ button {
     @include media-breakpoint-up(xxxl) {
         @include typographyParagraphS-hd();
     }
-	padding: 10px var(--Spacing-xl, 24px);
-	font-weight: 400;
+	padding: 24px;
+	font-weight: 700;
+	gap: 0px;
 	svg{
 		width: 16px;
 		height: 16px;
@@ -114,8 +115,9 @@ button {
     @include media-breakpoint-up(xxxl) {
         @include typographyParagraphM-hd();
     }
-	font-weight: 400;
-	padding: 10px var(--Spacing-m, 12px);
+	font-weight: 700;
+	padding: var(--Spacing-xl, 24px) var(--Spacing-2xl, 32px);
+
 	svg{
 		width: 20px;
 		height: 20px;
@@ -137,7 +139,8 @@ button {
 	
     }
 	font-weight: 400;
-	padding: 14px var(--Spacing-l, 16px);
+	padding: var(--Spacing-l, 16px);
+
 	gap: 4px;
 	&>span{
 		padding: 0px var(--Spacing-m, 12px);
@@ -155,7 +158,8 @@ button {
     @include media-breakpoint-up(xxxl) {
         @include typographyParagraphXl-hd();
     }
-	padding: 22px var(--Spacing-xl, 24px);
+	padding: var(--Spacing-xl, 24px);
+
 	gap: 4px;
 	font-weight: 400;
 
@@ -191,9 +195,9 @@ button {
 		color: $color-btn-primary-text-hover;
 	}
 	&:target, &:active, &:focus, &:visited  {
-		background: $color-btn-primary-bg;
-		color: $color-btn-primary-text-hover; 
-		border: 2px solid $color-btn-primary-border;
+		// background: $color-btn-primary-bg;
+		// color: $color-btn-primary-text-hover; 
+		// border: 2px solid $color-btn-primary-border;
 	}
 	&.disabled, &[aria-disabled="true"]{
 		border-color: $color-btn-primary-bg-disabled;

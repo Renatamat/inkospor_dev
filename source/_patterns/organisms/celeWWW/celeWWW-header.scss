@@ -1,0 +1,45 @@
+.cl-header{
+    padding-top: 20px;
+    margin-bottom: -100px;
+    &-container{
+        border-radius: var(--Radius-brand-L, 32px);
+        background: radial-gradient(179.69% 124.05% at 5.75% 7.74%, #C0CBD4 15%, #6D7E8B 40%, #394B55 75%);
+        width: 100%;
+        height: 672px;
+        min-height: min-content;
+        position: relative;
+        display: flex;
+        align-items: center;
+        max-width: 2200px;
+        @include media-breakpoint-up(xxl){
+            height: 772px;
+        }
+    }
+    &-content{
+        padding-top: 32px;
+        margin-bottom: 116px;
+        position: relative;
+    }
+    &-photo{
+        height: 100%;
+        width: 800px;
+        flex-shrink: 0;
+        img{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 653px;
+
+            @include media-breakpoint-up(xxl){
+                width: 753px;
+            }
+        }
+    }
+    &-badge{
+        border-radius: var(--Radius-round, 1000px);
+        border: 1px solid var(--Border-100, #F8F9FA);
+        padding: var(--Spacing-xxs, 2px) var(--Spacing-m, 12px);
+        width: fit-content;
+        line-height: 20px;
+    }
+}

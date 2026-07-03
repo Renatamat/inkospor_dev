@@ -1,0 +1,187 @@
+.pr-content{
+    &-tabs{
+        width: 100%;
+        display: flex;
+    }
+    &-tab{
+        width: 33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 var(--Spacing-l, 16px) 8px var(--Spacing-l, 16px);
+        border-bottom: var(--Stroke-s, 1px) solid var(--Border-300, #D1D9DE);
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        background: transparent;
+        color: inherit;
+        position: relative;
+        cursor: pointer;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
+            height: 4px;
+            background: #b3bfc800;
+            transition: 0.3s ease;
+        }
+        &.--active,
+        &.active{
+            &::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                bottom: 0px;
+                height: 4px;
+                background: #B3BFC8;
+            }
+            span{
+                font-weight: 700;
+            }
+        }
+    }
+    &-panels{
+        padding-top: var(--Spacing-2xl, 32px);
+    }
+    &-panel{
+        display: none;
+
+        &.active{
+            display: block;
+        }
+    }
+    &-text{
+        h1{
+            display: inline-block;
+            @include typographyH5-mobile();
+            @include media-breakpoint-up(lg) {
+                @include typographyH5(); 
+            }
+            @include media-breakpoint-up(xxxl) {
+                @include typographyH5-hd();
+            }
+        }
+        h2{
+            display: inline-block;
+            @include typographyH6-mobile();
+            @include media-breakpoint-up(lg) {
+                @include typographyH6(); 
+            }
+            @include media-breakpoint-up(xxxl) {
+                @include typographyH6-hd();
+            }
+        }
+        h3{
+            @include typographyParagraphXl-mobile();
+            @include media-breakpoint-up(lg) {
+                @include typographyParagraphXl();
+            }
+            @include media-breakpoint-up(xxxl) {
+                @include typographyParagraphXl-hd();
+            }
+            font-family: 'Poppins';
+        }
+        h4{
+            @include typographyParagraphL-mobile();
+            @include media-breakpoint-up(lg) {
+                @include typographyParagraphL();
+            }
+            @include media-breakpoint-up(xxxl) {
+                @include typographyParagraphL-hd();
+            }
+        }
+        h5{
+            @include typographyParagraphL-mobile();
+            @include media-breakpoint-up(lg) {
+                @include typographyParagraphL();
+            }
+            @include media-breakpoint-up(xxxl) {
+                @include typographyParagraphL-hd();
+            }
+        }
+        p{
+            @include typographyParagraphM-mobile();
+
+            @include media-breakpoint-up(lg) {
+                @include typographyParagraphM();
+            }
+
+            @include media-breakpoint-up(xxxl) {
+                @include typographyParagraphM-hd();
+            }
+        }
+        ul{
+            li{
+                @include typographyParagraphM-mobile();
+
+                @include media-breakpoint-up(lg) {
+                    @include typographyParagraphM();
+                }
+
+                @include media-breakpoint-up(xxxl) {
+                    @include typographyParagraphM-hd();
+                }
+                position: relative;
+                padding-left: 36px;
+                margin-bottom: 12px;
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0.1em;
+                    width: 24px;
+                    height: 24px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 8C0 3.58172 3.58172 0 8 0H16C20.4183 0 24 3.58172 24 8V16C24 20.4183 20.4183 24 16 24H8C3.58172 24 0 20.4183 0 16V8Z' fill='%23190D1F'/%3E%3Cpath d='M7 12.2353L10.2 16L17 8' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+    &-yellowbox{
+        margin-top: 16px;
+        border-radius: var(--Radius-brand-L, 32px);
+        border: var(--Stroke-m, 2px) solid var(--Border-alert, #EFB701);
+        background: #FFF4C8;
+        display: flex;
+        padding: var(--Spacing-2xl, 32px) var(--Spacing-3xl, 48px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 8px;
+        align-self: stretch;
+    }
+    &-ikon{
+        &-container{
+            padding-top: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            align-items: center;
+
+        }
+        &-items{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+        }
+        &-item{
+            flex: 0 0 calc((100% - 72px) / 4);
+            &-ikon{
+                border-radius: var(--Radius-brand-L, 32px);
+                background: rgba(255, 255, 255, 0.40);
+                display: flex;
+                padding: var(--Spacing-2xl, 32px);
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                border: 1px solid white;
+                width: 144px;
+                height: 144px;
+            }
+        }
+    }
+}

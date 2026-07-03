@@ -1,0 +1,55 @@
+.cl-content{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    h2{
+        @include typographyParagraphXl-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphXl();
+        }
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphXl-hd();
+        }
+        font-family: 'Poppins';
+    }
+    h3{
+        @include typographyParagraphL-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphL();
+        }
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphL-hd();
+        }
+        font-family: 'Poppins';
+    }
+    h4{
+        @include typographyParagraphL-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphL();
+        }
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphL-hd();
+        }
+        font-family: 'Poppins';
+    }
+    h5{
+        @include typographyParagraphL-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphL();
+        }
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphL-hd();
+        }
+        font-family: 'Poppins';
+    }
+    p{
+        @include typographyParagraphM-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphM();
+        }
+
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphM-hd();
+        }
+    }
+}

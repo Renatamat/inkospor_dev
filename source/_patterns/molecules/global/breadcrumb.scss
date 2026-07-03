@@ -1,0 +1,32 @@
+.breadcrumb{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0px;
+    &-home{
+        border-radius: var(--Radius-brand, 8px);
+        background: var(--Surface-page, #FFF);
+        padding: var(--Spacing-xs, 4px) var(--Spacing-m, 12px);
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    &-separator{
+        display: flex;
+    }
+    a, .breadcrumb_last{
+        @include typographyParagraphXs-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphXs();
+        }
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphXs-hd();
+        }
+        display: block;
+    }
+    a{
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

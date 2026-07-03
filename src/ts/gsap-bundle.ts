@@ -12,6 +12,8 @@ import { initHomepageQualityAnimations } from "./homepage-quality";
 import { initHomepageExpertsAnimations } from "./homepage-experts";
 import { initHomepageMigAnimations } from "./homepage-mig";
 import { initHomepageSliderAnimations } from "./homepage-slider-animations";
+import { initCeleHeaderAnimations } from "./cele-header";
+import { initCeleCardsAnimations } from "./cele-cards";
 
 // Zarejestruj pluginy
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -184,6 +186,8 @@ export const initGsapAnimations = () => {
   initHomepageQualityAnimations();
   initHomepageExpertsAnimations();
   initHomepageMigAnimations();
+  initCeleHeaderAnimations();
+  initCeleCardsAnimations();
 
   requestAnimationFrame(() => ScrollTrigger.refresh());
 };

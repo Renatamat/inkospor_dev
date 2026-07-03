@@ -1,4 +1,4 @@
-<section class="hp-blog bg-white pt-80 pb-40 pt-lg-192 pb-lg-48">
+<section class="hp-blog bg-white pt-80 pb-40 pt-lg-192 pb-lg-48 overflow-hidden">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -27,7 +27,10 @@
                     </div>
                 </div>
             </div>
-            <div class="offset-lg-1 col-sm-6 col-lg-3">
+            <div class="offset-lg-1 col-lg-6">
+            <div class="hp-blog-small-slider swiper " data-swiper data-swiper-options='{"slidesPerView":"auto","slidesPerGroup":1,"spaceBetween":16,"breakpoints":{"576":{"enabled":false}}}'>
+                <div class="hp-blog-small-wrapper swiper-wrapper">
+            <div class="hp-blog-small-item swiper-slide">
                 <div class="hp-blog-main">
                     <div class="hp-blog-main-image">
                         <img src="{{blog2}}" alt="">
@@ -45,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-lg-3">
+            <div class="hp-blog-small-item swiper-slide">
                 <div class="hp-blog-main">
                     <div class="hp-blog-main-image">
                         <img src="{{blog3}}" alt="">
@@ -62,6 +65,9 @@
                         </a>
                     </div>
                 </div>
+            </div>
+                </div>
+            </div>
             </div>
         </div>
         <div class="row mt-64">

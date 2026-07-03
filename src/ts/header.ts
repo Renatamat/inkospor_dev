@@ -5,6 +5,62 @@ export const initHeader = (): void => {
   const hamburger = header.querySelector<HTMLElement>('.headerMainHamburger .c-btn');
   const closeMobileMenu = header.querySelector<HTMLElement>('#closeMobileMenu');
 
+  if (mobileMenu) {
+    const syncPageScrollLock = (): void => {
+      const isMenuOpen = mobileMenu.classList.contains('--showMobile');
+
+      document.body.classList.toggle(
+        '--mobile-menu-open',
+        isMenuOpen,
+      );
+
+      if (!isMenuOpen) {
+        mobileMenu.querySelectorAll<HTMLElement>('.wrapper-subnav.--active').forEach((submenu) => {
+          submenu.classList.remove('--active');
+        });
+        mobileMenu.querySelectorAll<HTMLElement>('.menu-item.has-submenu > button').forEach((trigger) => {
+          trigger.setAttribute('aria-expanded', 'false');
+        });
+      }
+    };
+
+    syncPageScrollLock();
+    new MutationObserver(syncPageScrollLock).observe(mobileMenu, {
+      attributes: true,
+      attributeFilter: ['class'],
+    });
+  }
+
+  header.querySelectorAll<HTMLElement>('.headerMenu.--www .menu-item.has-submenu').forEach((item) => {
+    const submenuTrigger = item.querySelector<HTMLButtonElement>(':scope > button');
+    const submenuLink = submenuTrigger?.querySelector<HTMLAnchorElement>('a');
+    const submenuWrapper = item.querySelector<HTMLElement>(':scope > .wrapper-subnav');
+    const submenuBack = submenuWrapper?.querySelector<HTMLElement>('.submenu-back');
+    const submenuName = submenuWrapper?.querySelector<HTMLElement>('.submenu-name');
+
+    if (!submenuTrigger || !submenuWrapper) return;
+
+    submenuTrigger.setAttribute('aria-expanded', 'false');
+
+    submenuTrigger.addEventListener('click', (event: MouseEvent) => {
+      const target = event.target as Element | null;
+      if (target?.closest('a')) return;
+
+      event.preventDefault();
+      if (submenuLink && submenuName) {
+        submenuName.textContent = submenuLink.textContent?.trim() ?? '';
+      }
+      submenuWrapper.classList.add('--active');
+      submenuTrigger.setAttribute('aria-expanded', 'true');
+    });
+
+    submenuBack?.addEventListener('click', () => {
+      submenuWrapper.classList.remove('--active');
+      submenuTrigger.setAttribute('aria-expanded', 'false');
+      submenuTrigger.focus();
+    });
+  });
+
   const infoItem = header.querySelector<HTMLLIElement>('.menu-item.has-submenu.info-item');
   const trigger = infoItem?.querySelector<HTMLAnchorElement>('.blog-accordeon');
   const wrapper = infoItem?.querySelector<HTMLElement>('.wrapper-subnav');

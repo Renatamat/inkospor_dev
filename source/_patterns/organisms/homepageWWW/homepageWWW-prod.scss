@@ -89,6 +89,14 @@
             display: none;
         }
     }
+    &-slide{
+        width: 280px;
+        height: auto;
+
+        .hp-prod-item{
+            width: 100%;
+        }
+    }
     &-item{
         border-radius: var(--Radius-brand-L, 32px);
         background: rgba(255, 255, 255, 0.40);
@@ -100,6 +108,8 @@
         width: 280px;
         height: 420px;
         border: 1px solid #fff;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
         transition: background-color 0.3s ease;
         @include media-breakpoint-up(lg){
             gap: var(--Spacing-3xl, 48px);
