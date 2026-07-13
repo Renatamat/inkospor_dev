@@ -100,17 +100,23 @@
     &-item{
         border-radius: var(--Radius-brand-L, 32px);
         background: rgba(255, 255, 255, 0.40);
-        padding: var(--Spacing-2xl, 28px) var(--Spacing-s, 4px);
+        
+        padding: var(--Spacing-l, 12px);
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 32px;
-        width: 280px;
-        height: 420px;
+        gap: 24px;
+        //width: 280px;
+        max-height: 420px;
         border: 1px solid #fff;
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         transition: background-color 0.3s ease;
+        @include media-breakpoint-up(sm){
+             max-height: unset;
+            gap: 32px;
+            padding: var(--Spacing-2xl, 28px) var(--Spacing-s, 4px);
+        }
         @include media-breakpoint-up(lg){
             gap: var(--Spacing-3xl, 48px);
             width: auto;
@@ -120,7 +126,10 @@
             padding: var(--Spacing-2xl, 32px) var(--Spacing-s, 8px);
         }
         &-image{
-            height: 206px;
+            height: 141px;
+             @include media-breakpoint-up(sm){
+                height: 206px
+            }
             @include media-breakpoint-up(lg){
                 height: 272px;
             }

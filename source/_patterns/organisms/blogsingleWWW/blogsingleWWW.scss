@@ -1,0 +1,107 @@
+.bs-header{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.container-bs-header{
+    max-width: 1641px;
+    padding-left: 12px;
+    padding-right: 12px;
+    aspect-ratio: 1200/700;
+    position: relative;
+    @include media-breakpoint-up(sm) {
+        height: 572px;
+    }
+    @include media-breakpoint-up(lg) {
+        height: 772px;
+    }
+}
+.blog-content{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    h1{
+        display: inline-block;
+        @include typographyH5-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyH5();
+        }
+        @include media-breakpoint-up(xxxl) {
+            
+            @include typographyH5-hd();
+        }
+    }
+    h2{
+        @include typographyParagraphXl-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphXl();
+        }
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphXl-hd();
+        }
+        font-family: 'Poppins';
+        margin-top: 24px;
+    }
+    h3{
+        @include typographyParagraphL-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphL();
+        }
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphL-hd();
+        }
+        font-family: 'Poppins';
+    }
+    h4{
+        @include typographyParagraphL-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphL();
+        }
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphL-hd();
+        }
+        font-family: 'Poppins';
+    }
+    h5{
+        @include typographyParagraphL-mobile();
+        @include media-breakpoint-up(lg) {
+            @include typographyParagraphL();
+        }
+        @include media-breakpoint-up(xxxl) {
+            @include typographyParagraphL-hd();
+        }
+        font-family: 'Poppins';
+    }
+    ul{
+            li{
+                @include typographyParagraphM-mobile();
+
+                @include media-breakpoint-up(lg) {
+                    @include typographyParagraphM();
+                }
+
+                @include media-breakpoint-up(xxxl) {
+                    @include typographyParagraphM-hd();
+                }
+                position: relative;
+                padding-left: 36px;
+                margin-bottom: 12px;
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0.1em;
+                    width: 24px;
+                    height: 24px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 8C0 3.58172 3.58172 0 8 0H16C20.4183 0 24 3.58172 24 8V16C24 20.4183 20.4183 24 16 24H8C3.58172 24 0 20.4183 0 16V8Z' fill='%23190D1F'/%3E%3Cpath d='M7 12.2353L10.2 16L17 8' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+}
+.bs-more{
+    .bl-card-content{
+        background: var(--Surface-200, #F8F9FA);
+    }
+}

@@ -1,0 +1,245 @@
+.about-timeline{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    position: relative;
+    padding: 64px 0px;
+    @include media-breakpoint-up(sm) {
+        padding: 128px 0px;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background: #B3BFC8;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+    }
+    &-progress{
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background: #FEE108;
+        left: calc(50% - 1px);
+        top: 0;
+        transform: scaleY(0);
+        transform-origin: top center;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: -1px;
+        transform: translateX(-50%) rotate(180deg);
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 12px solid #B3BFC8;
+
+    }
+    &.--progress-started{
+        &:after{
+            border-top-color: #FEE108;
+        }
+    }
+    &-row{
+        display: flex;
+        position: relative;
+        z-index: 2;
+        &.--big{
+            .about-timeline-text{
+                background-color: #FEE108;
+            }
+            .about-timeline-date{
+                @include typographyH5-mobile();
+                @include media-breakpoint-up(lg) {
+                    @include typographyH5(); 
+                }
+                @include media-breakpoint-up(xxxl) {
+                    @include typographyH5-hd();
+                }
+            }
+        }
+    }
+    &-left{
+        width: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 40px;
+        &.--text{
+            padding-right: 8px;
+            p{
+                text-align: right;
+            }
+            @include media-breakpoint-up(sm) {
+                padding-right: 70px;
+            }
+        }
+    }
+    &-right{
+        width: 50%;
+        padding-left: 8px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        @include media-breakpoint-up(sm) {
+            padding-left: 70px;
+        }
+        &.--date{
+            padding-left: 40px;
+        }
+    }
+    &-text{
+        --timeline-dot-scale: 1;
+        border-radius: var(--Radius-brand, 8px);
+        background: var(--Surface-page, #FFF);
+        box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.03);
+        padding: 8px;
+        width: 100%;
+        @include media-breakpoint-up(sm) {
+            padding: var(--Spacing-l, 16px) var(--Spacing-xl, 24px);
+        }
+        &:after{
+            
+            @include media-breakpoint-up(sm) {
+                content: '';
+                width: 70px;
+                height: 2px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                background-color: #B3BFC8;
+                z-index: 2;
+            }
+        }
+        &:before{
+            content: "";
+            width: 24px;
+            height: 24px;
+            border-radius: 99px;
+            background-color: #B3BFC8;
+            border: 4px solid #E1E6E9;
+            position: absolute;
+            left: -12px;
+            z-index: 3;
+            top: 50%;
+            transform: translateY(-50%) scale(var(--timeline-dot-scale));
+        }
+        &.--active{
+            &:before{
+                background-color: #FEE108;
+            }
+        }
+        &.--left{
+            &:after{
+                
+                @include media-breakpoint-up(sm) {
+                    content: '';
+                width: 70px;
+                height: 2px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: unset;
+                right: 0;
+                background-color: #B3BFC8;
+                z-index: 2;
+                }
+            }
+            &:before{
+                content: "";
+                width: 24px;
+                height: 24px;
+                border-radius: 99px;
+                background-color: #B3BFC8;
+                border: 4px solid #E1E6E9;
+                position: absolute;
+                left: unset;
+                right: -12px;
+                z-index: 3;
+                top: 50%;
+                transform: translateY(-50%) scale(var(--timeline-dot-scale));
+            }
+        }
+        &.--active{
+            &:before{
+                background-color: #FEE108;
+            }
+        }
+    }
+    &-enddot{
+        --timeline-dot-scale: 1;
+        width: 20px;
+        height: 20px;
+        border-radius: 99px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) scale(var(--timeline-dot-scale));
+        background-color: #B3BFC8;
+        &.--active{
+            background-color: #FEE108;
+        }
+    }
+    @media (max-width: 575.98px) {
+        &:before{
+            left: 28%;
+        }
+        &:after{
+            left: 28%;
+        }
+        &-progress{
+            left: calc(28% - 1px);
+        }
+        &-left,
+        &-right{
+            width: auto;
+        }
+        &-left{
+            order: 1;
+            flex: 0 0 28%;
+            padding-right: 24px;
+            justify-content: flex-end;
+        }
+        &-right{
+            order: 2;
+            flex: 0 0 72%;
+            padding-left: 24px;
+        }
+        &-left.--text{
+            order: 2;
+            flex: 0 0 72%;
+            padding-left: 24px;
+            padding-right: 0;
+            justify-content: flex-start;
+            p{
+                text-align: left;
+            }
+        }
+        &-right.--date{
+            order: 1;
+            flex: 0 0 28%;
+            padding-left: 0;
+            padding-right: 24px;
+            justify-content: flex-end;
+        }
+        &-text.--left{
+            &:before{
+                left: -12px;
+                right: unset;
+            }
+        }
+        &-enddot{
+            left: 28%;
+        }
+    }
+}

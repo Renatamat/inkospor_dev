@@ -1,0 +1,9 @@
+.lp-select{
+    .select-selected{
+        background: var(--Surface-200, #F8F9FA);
+        border: unset;
+    }
+    .custom-select .select-options-container{
+        background: var(--Surface-200, #F8F9FA);
+    }
+}

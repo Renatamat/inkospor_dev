@@ -12,9 +12,10 @@ body.--mobile-menu-open {
     .menu-item {
         position: relative;
 
-        > a {
+        > a, > button > a {
             cursor: pointer;
             text-decoration: none;
+            font-weight: 400;
         }
 
         &.--active > a,
@@ -106,6 +107,12 @@ body.--mobile-menu-open {
     &.--openMenu {
         box-shadow: 0 0 0 5000px #0000007c;
         z-index: 999;
+    }
+    &.--www{
+        height: 144px;
+        @include media-breakpoint-up(md) {
+            height: 156px;
+        }
     }
 }
 

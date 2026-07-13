@@ -1,5 +1,9 @@
 .btn-buy{
     height: 64px;
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+         width: auto;
+    }
 }
 .buy-select{
     .custom-select .select-selected{

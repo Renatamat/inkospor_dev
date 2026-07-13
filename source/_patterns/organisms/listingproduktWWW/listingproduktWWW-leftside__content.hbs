@@ -1,0 +1,62 @@
+<div class="c-product-left-side__content d-flex flex-column gap-24">
+
+  <div class="d-flex align-items-center gap-16 pb-3 pt-2 px-3 d-none d-md-flex">
+    <span class="c-product-left-side__icon" aria-hidden="true">
+      <svg class="i-sprite icon-24 flex-shrink-0" aria-hidden="true" focusable="false">
+        <use href="/sprites/icons-24.svg#filter"></use>
+      </svg>
+    </span>
+    <span class="c-product-left-side__heading m-0 p-m fw-bold">FILTRY</span>
+  </div>
+
+
+
+  <div class="d-flex flex-column">
+    {{#product_filters.groups}}
+      <section class="c-filter-section c-product-left-side__section">
+        <button
+          class="c-filter-section__toggle c-collapse-toggle w-100 d-flex justify-content-between align-items-center p-16 border-0 bg-transparent"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#{{collapse_id}}"
+          aria-expanded="true"
+          aria-controls="{{collapse_id}}"
+        >
+          <span class="c-filter-section__title p-m fw-bold text-start text-uppercase">{{title}}</span>
+          <span class="c-filter-section__icon c-collapse-icon" aria-hidden="true">
+            <span class="icon-minus">
+              <svg class="i-sprite icon-16" aria-hidden="true" focusable="false">
+                <use href="/sprites/icons-16.svg#minus"></use>
+              </svg>
+            </span>
+            <span class="icon-plus">
+              <svg class="i-sprite icon-16" aria-hidden="true" focusable="false">
+                <use href="/sprites/icons-16.svg#plus"></use>
+              </svg>
+            </span>
+          </span>
+        </button>
+
+        <div class="collapse show" id="{{collapse_id}}">
+          <div class="CheckboxWrap d-flex flex-column gap-12 pr-16 pt-8 pl-16 pb-16">
+            {{#options}}
+              <label class="c-filter-check label-s">
+                <input class="form-check-input" name="{{../name}}" type="checkbox" value="{{value}}" {{#if checked}}checked{{/if}}>
+                <span class="c-filter-check__label CheckboxName">{{label}} ({{count}})</span>
+              </label>
+            {{/options}}
+
+            {{#if reset_label}}
+              <a class="c-btn c-btn-xs c-btn-text fw-bold" href="#">
+                <span class="c-product-left-side__clear">{{reset_label}}</span>
+                <svg class="i-sprite icon-16" aria-hidden="true" focusable="false">
+                  <use href="/sprites/icons-16.svg#close_2"></use>
+                </svg>
+              </a>
+            {{/if}}
+          </div>
+        </div>
+      </section>
+    {{/product_filters.groups}}
+  </div>
+</div>

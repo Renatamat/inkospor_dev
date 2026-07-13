@@ -4,6 +4,35 @@ export const initHeader = (): void => {
   const mobileMenu = header.querySelector<HTMLElement>('.headerMenu');
   const hamburger = header.querySelector<HTMLElement>('.headerMainHamburger .c-btn');
   const closeMobileMenu = header.querySelector<HTMLElement>('#closeMobileMenu');
+  const headerMainWWW = header.querySelector<HTMLElement>('.headerMain.--www');
+
+  if (headerMainWWW) {
+    const scrollOffset = 70;
+    let isScrollState = false;
+    let isScrollTicking = false;
+
+    const updateHeaderScrollState = (): void => {
+      const shouldHaveScrollState = window.scrollY >= scrollOffset;
+
+      if (shouldHaveScrollState !== isScrollState) {
+        isScrollState = shouldHaveScrollState;
+        headerMainWWW.classList.toggle('--scroll', shouldHaveScrollState);
+      }
+    };
+
+    const requestHeaderScrollUpdate = (): void => {
+      if (isScrollTicking) return;
+
+      isScrollTicking = true;
+      window.requestAnimationFrame(() => {
+        updateHeaderScrollState();
+        isScrollTicking = false;
+      });
+    };
+
+    updateHeaderScrollState();
+    window.addEventListener('scroll', requestHeaderScrollUpdate, { passive: true });
+  }
 
   if (mobileMenu) {
     const syncPageScrollLock = (): void => {

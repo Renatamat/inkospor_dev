@@ -33,10 +33,10 @@
 
 
 $container-max-widths: (
-  sm: 100%,
-  md: 100%, 
-  lg: 100%,
-  xl: 100%,
+  sm: 540px,
+  md: 720px, 
+  lg: 960px,
+  xl: 1140px,
   xxl: 1454px, 
   xxxl: 1454px,
 );
@@ -159,8 +159,11 @@ $theme-colors: (
 @import "../_patterns/molecules/header/headerMain.scss";
 @import "../_patterns/molecules/header/headerMenu.scss";
 @import "../_patterns/molecules/global/breadcrumb.scss";
+@import "../_patterns/molecules/global/popupshare.scss";
+@import "../_patterns/molecules/global/pagination.scss";
 @import "../_patterns/molecules/table/table.scss";
 @import "../_patterns/organisms/footer/footer.scss"; 
+@import "../_patterns/organisms/blogWWW/blogWWW-header.scss"; 
 @import "../_patterns/organisms/homepageWWW/homepageWWW-slider.scss"; 
 @import "../_patterns/organisms/homepageWWW/homepageWWW-prod.scss"; 
 @import "../_patterns/organisms/homepageWWW/homepageWWW-cert.scss"; 
@@ -178,6 +181,10 @@ $theme-colors: (
 @import "../_patterns/organisms/celeWWW/celeWWW-listing.scss";  
 @import "../_patterns/organisms/celeWWW/celeWWW-description.scss";  
 @import "../_patterns/organisms/celeWWW/celeWWW-cele.scss";
+@import "../_patterns/organisms/onasWWW/onas.scss";
+@import "../_patterns/organisms/listingproduktWWW/listingproduktWWW.scss";
+@import "../_patterns/organisms/kontaktWWW/contactWWW.scss";
+@import "../_patterns/organisms/blogsingleWWW/blogsingleWWW.scss";
 @import "../_patterns/organisms/produktWWW/produktWWW-header.scss";
 @import "../_patterns/organisms/produktWWW/produktWWW-content.scss";
 @import "../_patterns/organisms/productlisting/product-left-side.scss"; 

@@ -3,6 +3,7 @@
     align-items: center;
     gap: 8px;
     padding: 8px 0px;
+    overflow: auto;
     &-home{
         border-radius: var(--Radius-brand, 8px);
         background: var(--Surface-page, #FFF);
@@ -22,6 +23,7 @@
         @include media-breakpoint-up(xxxl) {
             @include typographyParagraphXs-hd();
         }
+        text-wrap: nowrap;
         display: block;
     }
     a{

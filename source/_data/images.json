@@ -68,5 +68,9 @@
 	"productIcon": "/images/produkticon.svg",
 	"productIcon2": "/images/produkticon2.svg",
 	"productIcon3": "/images/produkticon3.svg",
-	"productIcon4": "/images/produkticon4.svg"
+	"productIcon4": "/images/produkticon4.svg",
+	"blogheader": "/images/blogheader.jpg",
+	"blogcard1": "/images/blogcard1.jpg",
+	"blogsingleheader": "/images/blogsingleheader.jpg",
+	"aboutheader": "/images/aboutheader.jpg"
 }

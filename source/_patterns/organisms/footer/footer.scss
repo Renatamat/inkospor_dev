@@ -69,10 +69,14 @@
   }
 }
 .footer-info{
-  display: grid;
-  grid-template-columns: 1.5fr 1.5fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 24px;
-
+  @include media-breakpoint-up(sm){
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1fr;
+    
+  }
   &-column{
       display: flex;
     flex-direction: column;

@@ -214,9 +214,26 @@
     transform: translateY(0);
 }
 .headerMain.--www{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: padding 0.28s ease, background-color 0.28s ease, backdrop-filter 0.28s ease;
+    @include media-breakpoint-up(lg) {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+
     .btn-buy-healion{
         padding: 16px 24px;
         width: 100%;
+        margin-top: 8px;
+        @include media-breakpoint-up(md) {
+            margin-top: unset;
+        }
         span{
             display: block;
         }
@@ -224,11 +241,40 @@
     .headerMainLogo{
         img{
             width: 192px;
+            transition: width 0.28s ease;
             @include media-breakpoint-up(md) {
                 width: 254px;
             }
         }
     }
-    
+    .headerMainButtons{
+        @include media-breakpoint-down(lg) {
+            max-height: 64px;
+            opacity: 1;
+            overflow: hidden;
+            transition: max-height 0.28s ease, opacity 0.2s ease;
+        }
+    }
+    &.--scroll{
+        padding-top: 12px;
+        padding-bottom: 12px;
+        background: #ffffff59;
+        backdrop-filter: blur(12px);
+        // .headerMainLogo{
+        //     img{
+        //         width: 160px;
+        //         @include media-breakpoint-up(lg) {
+        //             width: 180px;
+        //         }
+        //     }
+        // }
+        .headerMainButtons{
+            @include media-breakpoint-down(lg) {
+                max-height: 0;
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+    }
 }
 

@@ -1,9 +1,15 @@
 .cl-header{
     padding-top: 20px;
-    margin-bottom: -100px;
+    
+    @include media-breakpoint-up(lg){
+        margin-bottom: -100px;
+    }
     &-container{
         border-radius: var(--Radius-brand-L, 32px);
-        background: radial-gradient(179.69% 124.05% at 5.75% 7.74%, #C0CBD4 15%, #6D7E8B 40%, #394B55 75%);
+        background: radial-gradient(232.98% 62.09% at 0% 100%, #C0CBD4 0%, #6D7E8B 40%, #394B55 75%);
+
+
+        
         width: 100%;
         height: 672px;
         min-height: min-content;
@@ -11,25 +17,39 @@
         display: flex;
         align-items: center;
         max-width: 2200px;
+        @include media-breakpoint-up(lg){
+            background: radial-gradient(179.69% 124.05% at 5.75% 7.74%, #C0CBD4 15%, #6D7E8B 40%, #394B55 75%);
+        }
         @include media-breakpoint-up(xxl){
             height: 772px;
         }
     }
     &-content{
         padding-top: 32px;
-        margin-bottom: 116px;
+       
         position: relative;
+        @include media-breakpoint-up(lg){
+             margin-bottom: 116px;
+        }
     }
     &-photo{
-        height: 100%;
-        width: 800px;
+        
         flex-shrink: 0;
+        @include media-breakpoint-up(lg){
+            height: 100%;
+            width: 800px;
+        }
         img{
+           @include media-breakpoint-up(lg){
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 653px;
-
+                bottom: 0;
+                left: 0;
+                width: 500px;
+            }
+            @include media-breakpoint-up(xl){
+                 
+                width: 653px;
+            }
             @include media-breakpoint-up(xxl){
                 width: 753px;
             }

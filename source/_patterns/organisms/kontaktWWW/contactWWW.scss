@@ -1,0 +1,14 @@
+.contact-pb{
+    border-bottom: 1px solid var(--Border-400, #D4D5D5);
+    padding-bottom: var(--Spacing-s, 8px);
+
+}
+.contact-form-wrap{
+    border-radius: var(--Radius-brand-L, 32px);
+    background: var(--Surface-200, #F5F5F5);
+    padding: 24px;
+    @include media-breakpoint-up(md) {
+        padding: var(--Spacing-3xl, 48px);
+    }
+    
+}

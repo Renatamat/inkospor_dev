@@ -14,6 +14,11 @@ import { initHomepageMigAnimations } from "./homepage-mig";
 import { initHomepageSliderAnimations } from "./homepage-slider-animations";
 import { initCeleHeaderAnimations } from "./cele-header";
 import { initCeleCardsAnimations } from "./cele-cards";
+import { initProductHeaderAnimations } from "./product-header";
+import { initProductContentAnimations } from "./product-content";
+import { initBlogHeaderAnimations } from "./blog-header";
+import { initBlogListingAnimations } from "./blog-listing";
+import { initAboutTimelineAnimations } from "./about-timeline";
 
 // Zarejestruj pluginy
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -188,6 +193,11 @@ export const initGsapAnimations = () => {
   initHomepageMigAnimations();
   initCeleHeaderAnimations();
   initCeleCardsAnimations();
+  initProductHeaderAnimations();
+  initProductContentAnimations();
+  initBlogHeaderAnimations();
+  initBlogListingAnimations();
+  initAboutTimelineAnimations();
 
   requestAnimationFrame(() => ScrollTrigger.refresh());
 };

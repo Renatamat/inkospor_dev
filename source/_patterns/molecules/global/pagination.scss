@@ -1,0 +1,47 @@
+.pagination{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    &-numbers{
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        &>a{
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--Radius-xs, 8px);
+             @include media-breakpoint-up(xxl) {
+                    width: 48px;
+                    height: 44px;
+             }
+            @include typographyParagraphM-mobile();
+            @include media-breakpoint-up(lg) {
+                @include typographyParagraphM();
+            }
+            @include media-breakpoint-up(xxxl) {
+                @include typographyParagraphM-hd();
+            }
+            &:hover{
+                border: 1px solid var(--Border-base-invert, #000);
+            }
+            &.--active{
+                background: var(--Surface-primary, #FEE108);
+                &:hover{
+                    border: 1px solid #00000000;
+                }
+            }
+        }
+    }
+    &-dotsicon{
+        color: #B9B9B9;
+    }
+    &-prev{
+        cursor: pointer;
+    }
+    &-next{
+        cursor: pointer;
+    }
+}
