@@ -177,6 +177,8 @@ $theme-colors: (
 @import "../_patterns/organisms/productlisting/product-bottom-bar.scss"; 
 @import "../_patterns/organisms/koszyk/checkout.scss"; 
 @import "../_patterns/organisms/my-account/order-detail.scss"; 
+@import "../_patterns/organisms/faq/faq.scss";
+@import "../_patterns/organisms/simple-page/simple.scss";
 
 
 .breadcrump-wrapper a {
