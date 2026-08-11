@@ -1,0 +1,33 @@
+{{#if product_bottom_bar.has_items}}
+  <div
+    class="c-product-bottom-bar"
+    data-product-bottom-bar
+    data-items-count="{{product_bottom_bar.quantity}}"
+    aria-hidden="true"
+  >
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-16 gap-md-32 py-16">
+        <div class="d-flex align-items-end gap-16">
+          <div class="d-flex align-items-baseline gap-4">
+            <span class="p-s">Ilość</span>
+            <span class="c-product-bottom-bar__count d-inline-flex align-items-center justify-content-center fw-bold p-m">
+              {{product_bottom_bar.quantity}}
+            </span>
+          </div>
+
+          <div class="d-flex align-items-baseline gap-4">
+            <span class="p-s">Suma:</span>
+            <span class="p-m fw-bold">{{product_bottom_bar.total}}</span>
+          </div>
+        </div>
+
+        <a class="c-btn c-btn-fill c-btn-s px-24 py-12 fw-bold" href="{{product_bottom_bar.button_url}}">
+          <span>{{product_bottom_bar.button_label}}</span>
+          <svg class="i-sprite icon-16" aria-hidden="true" focusable="false">
+            <use href="/sprites/icons-16.svg#chevron_right_2"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+{{/if}}

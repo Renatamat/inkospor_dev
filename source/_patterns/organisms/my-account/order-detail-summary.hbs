@@ -1,0 +1,44 @@
+<section class="c-my-account-order-summary pb-24">
+  <div class="row g-24">
+    <div class="col-12 col-lg-6">
+      <div class="d-flex flex-column align-items-start gap-24">
+        <div class="d-flex align-items-start gap-16">
+          <div class="c-my-account-order-summary__details d-flex flex-column gap-spacing-xs fw-bold">
+            {{#order_detail.details}}
+              <span class="p-s fw-bold">{{label}}</span>
+            {{/order_detail.details}}
+          </div>
+          <div class="c-my-account-order-summary__details d-flex flex-column">
+            {{#order_detail.details}}
+              <span class="p-s {{#if is_success}}fw-bold c-success{{/if}}">{{value}}</span>
+            {{/order_detail.details}}
+          </div>
+        </div>
+
+        <a class="c-btn c-btn-s c-btn-fill --fill-white fw-bold" href="{{order_detail.invoice_url}}">
+          <span>{{order_detail.invoice_label}}</span>
+          <svg class="i-sprite icon-16" aria-hidden="true" focusable="false">
+            <use href="/sprites/icons-16.svg#download"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <div class="row g-8">
+        <div class="col-12 col-sm-6">
+          <div class="d-flex flex-column gap-spacing-xs">
+            <span class="p-s fw-bold">{{order_detail.invoice_address_title}}</span>
+            <span class="p-s">{{#order_detail.invoice_address}}{{.}}<br>{{/order_detail.invoice_address}}</span>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6">
+          <div class="d-flex flex-column gap-spacing-xs">
+            <span class="p-s fw-bold">{{order_detail.shipping_address_title}}</span>
+            <span class="p-s">{{#order_detail.shipping_address}}{{.}}<br>{{/order_detail.shipping_address}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

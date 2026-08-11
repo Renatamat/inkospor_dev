@@ -1,42 +1,30 @@
 .headerWrapper{
-    height: 186px;
+    // height: 160px;
     @include media-breakpoint-up(xl) {
        height: 200px;     
     }
 }
 .headerMain{
-    padding: var(--Spacing-xl, 24px) 0;
     &Logo{
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-
         img{
-            width: 168px;
+            width: 92px;
             height: auto;
             transition: 0.3s ease;
-        }
-        @include media-breakpoint-up(xl) {
-            position: relative;
-            top: unset;
-            left: unset;
-            transform: unset;
-            img{
-                width: 276px;
-                height: auto;
+            @media (min-width: 390px){
+                 width: 110px;
             }
+              @include media-breakpoint-up(sm) {
+                            width: 160px;
+             }
+             @include media-breakpoint-up(xl) {
+                    width: 216px;
+             }
         }
-        &Hamburger{
-            @include media-breakpoint-up(xl) {
-                scale: 0;
-                width: 0px !important;
-                transition: 0.3s ease;
-            }
-        }
+
     }
     &Hamburger{
-        @include media-breakpoint-up(xl) {
+        width: 92px;
+        @include media-breakpoint-up(lg) {
             display: none;
         }
     }
@@ -44,9 +32,13 @@
         a{
             span{
                 display: none;
-                @include media-breakpoint-up(lg) {
+                @include media-breakpoint-up(md) {
                     display: block;
                 }
+            }
+            .position-relative,
+            .cart-toggle-count {
+                display: inline-flex;
             }
             &.btn-favorites{
                 display: none;
@@ -82,7 +74,7 @@
     }
     .headerMainLogo img {
         @include media-breakpoint-up(xl) {
-            width: 176px;
+            width: 160px;
             height: auto;
         }
         
@@ -90,17 +82,6 @@
     .headerMain{
         transition: 0.3s ease;
         padding: 12px 0; 
-        &Logo{
-            &Hamburger{
-                @include media-breakpoint-up(xl) {
-                    scale: 1;
-                    transition: 0.3s ease;
-                    width: auto !important;
-                    margin-right: 24px;
-                    height: auto;
-                }
-            }
-        }
     }
     .headerMenu{
         @include media-breakpoint-up(xl) {
@@ -133,16 +114,102 @@
     }
 }
 .cart-toggle-count {
-    border-radius: 50%;
+    align-items: center;
     background: $primary-500;
+    border-radius: 1000px;
     color:black;
     font-size: 14px;
     font-weight: 700;
-    height: 18px;
-    line-height: 18px;
+    height: 20px;
+    justify-content: center;
+    line-height: 20px;
+    min-width: 20px;
+    padding: 0 2px;
     position: absolute;
-    right: -4px;
+    left: 8px;
     text-align: center;
-    top: -0.14px;
-    width: 18px;
+    top: -6px;
+}
+
+.headerAccountMenu {
+    position: relative;
+}
+
+.headerAccountDropdown {
+    color: var(--Surface-page-invert, #000);
+    background: var(--Surface-200, #F8F9FA);
+    border-radius: 8px;
+    overflow: hidden;
+
+    &--desktop {
+        position: absolute;
+        background-color: #e1e6e9;
+        border: var(--Stroke-s, 1px) solid var(--Border-disabled, #999);
+        border-radius: 8px;
+        top: 100%;
+        right: 0;
+        z-index: 1001;
+        width: 340px;
+        padding-top: 16px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(8px);
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+
+    }
+
+    &--mobile {
+        margin-top: 8px;
+        border-radius: 0;
+    }
+
+    .subnav {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .subnav-item {
+        // background: var(--Surface-200, #F5F5F5);
+    }
+
+    .subnav-item-entry {
+        transition: background-color 0.2s ease;
+
+        .link-lvl2 {
+            display: block;
+            width: 100%;
+            padding: 8px var(--Spacing-l, 16px);
+            color: var(--Surface-page-invert, #000);
+            text-decoration: none;
+        }
+
+        &:hover .link-lvl2 {
+            text-decoration: underline;
+        }
+    }
+
+    &__user {
+        padding: var(--Spacing-l, 16px);
+        overflow-wrap: anywhere;
+    }
+
+    &__user-item {
+        border-bottom: 1px solid var(--Border-300, #D1D9DE);
+    }
+
+    &__logout {
+        text-decoration: none;
+    }
+
+    &__logout-item .subnav-item-entry {
+        padding: var(--Spacing-l, 16px);
+    }
+}
+
+.headerAccountMenu:hover .headerAccountDropdown--desktop,
+.headerAccountMenu:focus-within .headerAccountDropdown--desktop {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }

@@ -1,0 +1,70 @@
+.c-product-card {
+  background: var(--Surface-200, #F8F9FA);
+  border-radius: var(--Radius-brand, 8px);
+
+  &__media {
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
+  }
+
+  &__promo {
+    background: var(--Surface-error, #AF2414);
+  }
+
+  &__pack {
+    background: var(--Surface-300, #E1E6E9);
+    border-radius: var(--Radius-brand, 8px);
+    padding: var(--Spacing-xs, 4px) var(--Spacing-s, 8px); 
+  }
+  &__info-list{
+    gap: 4px;
+  }
+  &__sale-info{
+    max-width: 312px;
+  }
+  &__price {
+    font-family: $font-family-headings;
+     del{
+        order: 4;
+        @include p-m();
+        color: var(--Text-headline, #030507);
+      }
+      ins{
+        text-decoration: none;
+      }
+  }
+
+  &__variant {
+    border-top: 1px solid var(--Border-300, #D1D9DE);
+      &.is-active-filter {
+          background: $base-200;
+      }
+  }
+
+  &__availability {
+    &--success {
+      color: var(--Text-success, #386E47);
+    }
+
+    &--error {
+      color: var(--Text-error, #AF2414);
+    }
+  }
+
+  &__status-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: currentColor;
+    flex: 0 0 auto;
+  }
+
+  &__qty,
+  &__add {
+     width: 100%;
+       @include media-breakpoint-up(md) {
+        max-width: 216px;   
+       }
+  }
+}

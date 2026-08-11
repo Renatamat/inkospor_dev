@@ -1,0 +1,416 @@
+{
+  "order_history_table": {
+    "columns": [
+      {
+        "key": "order-date",
+        "label": "Data zamówienia",
+        "width": "144px"
+      },
+      {
+        "key": "order-number",
+        "label": "Numer zamówienia"
+      },
+      {
+        "key": "order-value",
+        "label": "Wartość zamówienia",
+        "width": "166px"
+      },
+      {
+        "key": "status",
+        "label": "Status",
+        "width": "64px",
+        "align_center": true
+      },
+      {
+        "key": "delivery",
+        "label": "Dostawa",
+        "width": "96px",
+        "align_center": true
+      },
+      {
+        "key": "details",
+        "label": "Szczegóły",
+        "width": "88px",
+        "align_center": true
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "key": "order-date",
+            "label": "Data zamówienia",
+            "value": "22.04.2026"
+          },
+          {
+            "key": "order-number",
+            "label": "Numer zamówienia",
+            "value": "123456",
+            "url": "#",
+            "is_link": true
+          },
+          {
+            "key": "order-value",
+            "label": "Wartość zamówienia",
+            "value": "119,00 zł"
+          },
+          {
+            "key": "status",
+            "label": "Status",
+            "value": "Zrealizowane",
+            "is_status": true,
+            "status": "success",
+            "icon": "check",
+            "align_center": true
+          },
+          {
+            "key": "delivery",
+            "label": "Dostawa",
+            "value": "Brak dostawy",
+            "is_status": true,
+            "status": "error",
+            "icon": "close_2",
+            "align_center": true
+          },
+          {
+            "key": "details",
+            "label": "Szczegóły",
+            "value": "Zobacz",
+            "url": "#",
+            "is_action": true,
+            "align_center": true
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "key": "order-date",
+            "label": "Data zamówienia",
+            "value": "22.04.2026"
+          },
+          {
+            "key": "order-number",
+            "label": "Numer zamówienia",
+            "value": "123456",
+            "url": "#",
+            "is_link": true
+          },
+          {
+            "key": "order-value",
+            "label": "Wartość zamówienia",
+            "value": "119,00 zł"
+          },
+          {
+            "key": "status",
+            "label": "Status",
+            "value": "Zrealizowane",
+            "is_status": true,
+            "status": "success",
+            "icon": "check",
+            "align_center": true
+          },
+          {
+            "key": "delivery",
+            "label": "Dostawa",
+            "value": "Brak dostawy",
+            "is_status": true,
+            "status": "error",
+            "icon": "close_2",
+            "align_center": true
+          },
+          {
+            "key": "details",
+            "label": "Szczegóły",
+            "value": "Zobacz",
+            "url": "#",
+            "is_action": true,
+            "align_center": true
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "key": "order-date",
+            "label": "Data zamówienia",
+            "value": "22.04.2026"
+          },
+          {
+            "key": "order-number",
+            "label": "Numer zamówienia",
+            "value": "654321",
+            "url": "#",
+            "is_link": true
+          },
+          {
+            "key": "order-value",
+            "label": "Wartość zamówienia",
+            "value": "119,00 zł"
+          },
+          {
+            "key": "status",
+            "label": "Status",
+            "value": "Zrealizowane",
+            "is_status": true,
+            "status": "success",
+            "icon": "check",
+            "align_center": true
+          },
+          {
+            "key": "delivery",
+            "label": "Dostawa",
+            "value": "Brak dostawy",
+            "is_status": true,
+            "status": "error",
+            "icon": "close_2",
+            "align_center": true
+          },
+          {
+            "key": "details",
+            "label": "Szczegóły",
+            "value": "Zobacz",
+            "url": "#",
+            "is_action": true,
+            "align_center": true
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "key": "order-date",
+            "label": "Data zamówienia",
+            "value": "22.04.2026"
+          },
+          {
+            "key": "order-number",
+            "label": "Numer zamówienia",
+            "value": "654321",
+            "url": "#",
+            "is_link": true
+          },
+          {
+            "key": "order-value",
+            "label": "Wartość zamówienia",
+            "value": "119,00 zł"
+          },
+          {
+            "key": "status",
+            "label": "Status",
+            "value": "Zrealizowane",
+            "is_status": true,
+            "status": "success",
+            "icon": "check",
+            "align_center": true
+          },
+          {
+            "key": "delivery",
+            "label": "Dostawa",
+            "value": "Dostarczono",
+            "is_status": true,
+            "status": "success",
+            "icon": "check",
+            "align_center": true
+          },
+          {
+            "key": "details",
+            "label": "Szczegóły",
+            "value": "Zobacz",
+            "url": "#",
+            "is_action": true,
+            "align_center": true
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "key": "order-date",
+            "label": "Data zamówienia",
+            "value": "22.04.2026"
+          },
+          {
+            "key": "order-number",
+            "label": "Numer zamówienia",
+            "value": "789012",
+            "url": "#",
+            "is_link": true
+          },
+          {
+            "key": "order-value",
+            "label": "Wartość zamówienia",
+            "value": "119,00 zł"
+          },
+          {
+            "key": "status",
+            "label": "Status",
+            "value": "Zrealizowane",
+            "is_status": true,
+            "status": "success",
+            "icon": "check",
+            "align_center": true
+          },
+          {
+            "key": "delivery",
+            "label": "Dostawa",
+            "value": "Dostarczono",
+            "is_status": true,
+            "status": "success",
+            "icon": "check",
+            "align_center": true
+          },
+          {
+            "key": "details",
+            "label": "Szczegóły",
+            "value": "Zobacz",
+            "url": "#",
+            "is_action": true,
+            "align_center": true
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "key": "order-date",
+            "label": "Data zamówienia",
+            "value": "22.04.2026"
+          },
+          {
+            "key": "order-number",
+            "label": "Numer zamówienia",
+            "value": "345678",
+            "url": "#",
+            "is_link": true
+          },
+          {
+            "key": "order-value",
+            "label": "Wartość zamówienia",
+            "value": "119,00 zł"
+          },
+          {
+            "key": "status",
+            "label": "Status",
+            "value": "Zrealizowane",
+            "is_status": true,
+            "status": "success",
+            "icon": "check",
+            "align_center": true
+          },
+          {
+            "key": "delivery",
+            "label": "Dostawa",
+            "value": "Dostarczono",
+            "is_status": true,
+            "status": "success",
+            "icon": "check",
+            "align_center": true
+          },
+          {
+            "key": "details",
+            "label": "Szczegóły",
+            "value": "Zobacz",
+            "url": "#",
+            "is_action": true,
+            "align_center": true
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "key": "order-date",
+            "label": "Data zamówienia",
+            "value": "22.04.2026"
+          },
+          {
+            "key": "order-number",
+            "label": "Numer zamówienia",
+            "value": "901234",
+            "url": "#",
+            "is_link": true
+          },
+          {
+            "key": "order-value",
+            "label": "Wartość zamówienia",
+            "value": "119,00 zł"
+          },
+          {
+            "key": "status",
+            "label": "Status",
+            "value": "Zrealizowane",
+            "is_status": true,
+            "status": "success",
+            "icon": "check",
+            "align_center": true
+          },
+          {
+            "key": "delivery",
+            "label": "Dostawa",
+            "value": "Dostarczono",
+            "is_status": true,
+            "status": "success",
+            "icon": "check",
+            "align_center": true
+          },
+          {
+            "key": "details",
+            "label": "Szczegóły",
+            "value": "Zobacz",
+            "url": "#",
+            "is_action": true,
+            "align_center": true
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "key": "order-date",
+            "label": "Data zamówienia",
+            "value": "22.04.2026"
+          },
+          {
+            "key": "order-number",
+            "label": "Numer zamówienia",
+            "value": "567890",
+            "url": "#",
+            "is_link": true
+          },
+          {
+            "key": "order-value",
+            "label": "Wartość zamówienia",
+            "value": "119,00 zł"
+          },
+          {
+            "key": "status",
+            "label": "Status",
+            "value": "Zrealizowane",
+            "is_status": true,
+            "status": "success",
+            "icon": "check",
+            "align_center": true
+          },
+          {
+            "key": "delivery",
+            "label": "Dostawa",
+            "value": "Dostarczono",
+            "is_status": true,
+            "status": "success",
+            "icon": "check",
+            "align_center": true
+          },
+          {
+            "key": "details",
+            "label": "Szczegóły",
+            "value": "Zobacz",
+            "url": "#",
+            "is_action": true,
+            "align_center": true
+          }
+        ]
+      }
+    ]
+  }
+}

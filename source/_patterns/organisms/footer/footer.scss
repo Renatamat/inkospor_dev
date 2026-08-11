@@ -1,109 +1,70 @@
-.c-footer__payments{
-  row-gap: 20px;
-  column-gap: 56px;
-
-    
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px 56px; 
-    justify-items: center;
-    align-items: center;
-    @include media-breakpoint-up(lg){
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-}
-
 .c-footer {
-  &__top {
-      --gap: 40px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px 24px;
-      @include media-breakpoint-up(xl) {
-        --gap: 48px;
-        column-gap: var(--gap);
-      }
-    }
+  margin-top: auto;
 
-  &__top-box {
-    position: relative;
-    padding: 0;
+  &__logo {
+    flex: 0 0 auto;
+
+    img {
+      width: 160px;
+      height: auto;
+    }
+    
   }
 
-
-  @include media-breakpoint-up(sm) {
-    &__top {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+  &__contact {
+    @include media-breakpoint-up(lg) {
+      border-left: 1px solid var(--Border-400, #B3BFC8);
+    }
+    &-first{
+    @include media-breakpoint-up(sm) {
+      width: 160px;
+        }
+    }
+    &-map{
+        @include media-breakpoint-up(lg) {
+          max-width: 228px;
+        }
+         @include media-breakpoint-up(xl) {
+          max-width: unset;
+        }
     }
   }
 
-  @include media-breakpoint-up(xl) {
-    &__top {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    &__top-box::after {
-      content: "";
-      position: absolute;
-      right: calc(var(--gap) / -2);
-      top: 0;
-      bottom: 0;
-      width: 1px;
-      height: 100%;
-      background: var(--border-400);
+  &__payments {
+    img {
       display: block;
-    }
-
-    &__top-box:last-child::after {
-      display: none;
-    }
-
-  }
-
-
-
-  &__b2b {
-    border: 1px solid var(--Border-disabled, #939393);
-    background: var(--Surface-page, #FFF);
-     @include media-breakpoint-up(xl){
-    align-items: center;
-     }
-    .b2b-img{
-      flex-shrink: 0; 
-    }
-    .c-btn{
-      flex-shrink: 0; 
-      height: max-content;
-    }
-    @include media-breakpoint-up(lg){
-      &-box{
-        width: calc(50% - 1px);
-      }
-    }
-    .c-divider-horizontal{
-      width: 100%;
-      background-color: var(--Border-disabled, #939393);
-      @include media-breakpoint-up(lg){
-        width: 1px;
-        height: stretch
-      }
+      max-height: 48px;
+      width: auto;
     }
   }
-  &__inner{
-    & > *{
-     --bs-gutter-y: var(--Spacing-3xl, 40px);
-      @include media-breakpoint-up(xl){
-        --bs-gutter-y: var(--Spacing-3xl, 48px);
-      }
-    }
-  }
-  &__link-maps{
+
+  &__link-maps {
     text-underline-offset: 4px;
   }
-  .border-xl-start{
-     @include media-breakpoint-up(xl){
-        border-left: 1px solid var(--Border-disabled, #939393);
-     }
+
+  &__copyright-links {
+     @include media-breakpoint-up(sm){
+        > *:not(:last-child) {
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -12px;
+            width: 1px;
+            height: 20px;
+            background-color: var(--Border-base, #0F1416);
+            transform: translateY(-50%);
+            @include media-breakpoint-up(md){
+              right: -24px;
+            }
+          }
+        }
+      }
   }
-  
+
+  &__artnova-logo {
+    flex: 0 0 auto;
+  }
 }

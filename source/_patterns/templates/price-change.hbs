@@ -1,0 +1,28 @@
+{{!-- =========================================
+  PRODUCT PAGE (COMPOSED)
+  - left side (toolbar + aside + offcanvas)
+  - product section (listing)
+  Mobile-first
+========================================= --}}
+{{> organisms-header }}
+{{!-- <div class="container">
+    <div class="row">
+        <div class="col-12">
+            {{> molecules-breadcrumb}}
+        </div>
+    </div>
+</div> --}}
+<div class="container">
+  <div class="row">
+
+    {{!-- LEFT SIDE COLUMN (md+), mobile: toolbar w środku left-side partiala --}}
+    <div class="col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+      {{> organisms-price-change-header }}
+      {{> organisms-price-change-table }}
+    </div>
+
+  </div>
+</div>
+
+{{> organisms-product-bottom-bar }}
+ {{> organisms-footer }}

@@ -1,0 +1,12 @@
+<section class="c-price-change-table pt-24 pb-64">
+  <div class="table-responsive">
+    <table class="c-table table w-100 m-0 {{#if price_change_table.modifier}}c-table--{{price_change_table.modifier}}{{/if}}">
+      {{> molecules-table-header price_change_table}}
+      <tbody>
+        {{#price_change_table.rows}}
+          {{> molecules-table-row this}}
+        {{/price_change_table.rows}}
+      </tbody>
+    </table>
+  </div>
+</section>

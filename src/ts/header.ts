@@ -1,6 +1,9 @@
 export const initHeader = (): void => {
-  const header = document.querySelector<HTMLElement>('header');
-  if (!header) return;
+  const header = document.querySelector<HTMLElement>('header') ?? document;
+  const primaryHeader = document.querySelector<HTMLElement>('.primaryHeader');
+  const mobileMenu = header.querySelector<HTMLElement>('.headerMenu');
+  const hamburger = header.querySelector<HTMLElement>('.headerMainHamburger .c-btn');
+  const closeMobileMenu = header.querySelector<HTMLElement>('#closeMobileMenu');
 
   const infoItem = header.querySelector<HTMLLIElement>('.menu-item.has-submenu.info-item');
   const trigger = infoItem?.querySelector<HTMLAnchorElement>('.blog-accordeon');
@@ -41,6 +44,35 @@ export const initHeader = (): void => {
     if (event.key === 'Escape' && isOpen()) {
       setOpen(false);
       trigger.focus();
+    }
+  });
+
+  const closeMobile = (): void => {
+    mobileMenu?.classList.remove('--showMobile');
+    mobileMenu?.setAttribute('aria-hidden', 'true');
+    hamburger?.setAttribute('aria-expanded', 'false');
+    primaryHeader?.classList.remove('--openMenu');
+  };
+
+  hamburger?.setAttribute('aria-controls', 'mobileMenu');
+  hamburger?.setAttribute('aria-expanded', 'false');
+
+  hamburger?.addEventListener('click', (event: MouseEvent) => {
+    event.preventDefault();
+    mobileMenu?.classList.add('--showMobile');
+    mobileMenu?.setAttribute('aria-hidden', 'false');
+    hamburger?.setAttribute('aria-expanded', 'true');
+    primaryHeader?.classList.add('--openMenu');
+  });
+
+  closeMobileMenu?.addEventListener('click', () => {
+    closeMobile();
+  });
+
+  document.addEventListener('keydown', (event: KeyboardEvent) => {
+    if (event.key === 'Escape' && mobileMenu?.classList.contains('--showMobile')) {
+      closeMobile();
+      hamburger?.focus();
     }
   });
 };

@@ -1,0 +1,39 @@
+{
+  "is_sale": true,
+  "product": {
+    "title": "AMINOSTRONG HYDROLIZAT BIAŁEK SERWATKOWYCH",
+    "brand": "INKOSPOR",
+    "image": "/images/baton1.jpg",
+    "alt": "AMINOSTRONG HYDROLIZAT BIAŁEK SERWATKOWYCH",
+    "cta_url": "#",
+    "package": "240 tabletek / 40 porcji",
+    "category": "Aminokwasy",
+    "box_count": "24",
+    "box_note": "Możesz zamówić dowolną ilość",
+    "price": "139,00 zł",
+    "price_old": "119,00 zł",
+    "omnibus": "Najniższa cena 109,00 zł",
+    "sale_badge_text": "Get 10% off!",
+    "variants": [
+      {
+        "name": "Smak kokosowy",
+        "status": "W magazynie",
+        "in_stock": true,
+        "quantity_placeholder": "Podaj Ilość",
+        "quantity_label": "Podaj Ilość dla smaku kokosowego"
+      },
+      {
+        "name": "Smak Rumowa trufla",
+        "status": "Niedostępne",
+        "unavailable": true,
+        "notify_label": "Powiadom o dostępności"
+      },
+      {
+        "name": "Smak Marcepanowy",
+        "status": "Niedostępne",
+        "notified": true,
+        "notified_label": "Zostaniesz powiadomiony"
+      }
+    ]
+  }
+}

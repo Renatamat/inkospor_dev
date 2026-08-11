@@ -1,0 +1,131 @@
+.c-cart-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  visibility: hidden;
+  pointer-events: none;
+  transition: visibility 0s linear 0.3s;
+
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(9, 18, 27, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &__content {
+    position: fixed;
+    top: 0;
+    right: -508px;
+    width: 100%;
+    max-width: 508px;
+    height: 100%;
+    z-index: 1101;
+    overflow: hidden;
+    background: var(--Surface-200, #F8F9FA);
+    transition: right 0.3s ease-in-out;
+    pointer-events: auto;
+    will-change: right;
+
+    @include media-breakpoint-down(lg) {
+      max-width: 100%;
+      right: -100%;
+    }
+  }
+
+  .cart-products {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    background: var(--Surface-200, #F8F9FA);
+  }
+
+  &.--no-transition,
+  &.--no-transition &__content {
+    transition: none !important;
+  }
+
+  &.--show {
+    visibility: visible;
+    pointer-events: auto;
+    transition-delay: 0s;
+
+    &::before {
+      opacity: 1;
+    }
+
+    .c-cart-drawer__content {
+      right: 0;
+    }
+  }
+
+  &__header-side {
+    width: 100px;
+  }
+
+  &__item {
+    border-bottom: 1px solid var(--Border-300, #E4E5E5);
+  }
+
+  &__image-wrap {
+    width: 96px;
+    height: 96px;
+    flex-shrink: 0;
+
+    @include media-breakpoint-up(sm) {
+      width: 120px;
+      height: 120px;
+    }
+
+    .c-product-card__img {
+      object-fit: contain;
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  &__price {
+    line-height: 20px;
+
+    &--sale {
+      color: var(--Text-secondary, #E91616);
+    }
+  }
+
+  &__price-old {
+    text-decoration: line-through;
+  }
+
+  &__summary-total {
+    border-top: 2px solid var(--Border-action, #000);
+  }
+}
+
+body.cart-drawer-open {
+  overflow: hidden;
+}
+
+.c-qty-switch {
+  overflow: hidden;
+  border: 1px solid var(--Border-300, #E4E5E5);
+  border-radius: 4px;
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background: var(--Surface-300, #E4E5E5);
+    border: 0;
+  }
+
+  &__value {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
