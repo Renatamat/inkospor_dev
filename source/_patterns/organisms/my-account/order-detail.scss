@@ -7,6 +7,12 @@
 .c-my-account-order-products {
   &__table {
     border-bottom: 1px solid var(--Border-base, #0F1416);
+<<<<<<< HEAD
+=======
+     @include media-breakpoint-down(md) {
+    border-bottom:none;
+    }
+>>>>>>> 4c462bb4efc29502f00f5c1479b6257c8dded200
   }
 
   &__summary-value {

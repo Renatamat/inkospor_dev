@@ -29,6 +29,16 @@
     background: var(--Surface-warning, #f59e0b);
     border-color: var(--Border-warning, #f59e0b);
   }
+<<<<<<< HEAD
+=======
+
+  .js-cart-toast-text a {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+>>>>>>> 4c462bb4efc29502f00f5c1479b6257c8dded200
 }
 
 .toast-container {

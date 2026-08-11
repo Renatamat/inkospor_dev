@@ -11,7 +11,11 @@
             height: auto;
             transition: 0.3s ease;
             @media (min-width: 390px){
+<<<<<<< HEAD
                  width: 110px;
+=======
+                 width: 120px;
+>>>>>>> 4c462bb4efc29502f00f5c1479b6257c8dded200
             }
               @include media-breakpoint-up(sm) {
                             width: 160px;
@@ -23,7 +27,11 @@
 
     }
     &Hamburger{
+<<<<<<< HEAD
         width: 92px;
+=======
+        // width: 92px;
+>>>>>>> 4c462bb4efc29502f00f5c1479b6257c8dded200
         @include media-breakpoint-up(lg) {
             display: none;
         }

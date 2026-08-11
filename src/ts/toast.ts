@@ -39,6 +39,25 @@ const TOAST_VARIANT_CLASSES: Record<ToastVariant, string> = {
 const MAX_VISIBLE_TOASTS = 4;
 const EARLY_DISMISS_DELAY_MS = 900;
 const EARLY_DISMISS_STAGGER_MS = 120;
+<<<<<<< HEAD
+=======
+const ALLOWED_TOAST_TAGS = new Set([
+  "A",
+  "B",
+  "BR",
+  "DIV",
+  "EM",
+  "I",
+  "LI",
+  "OL",
+  "P",
+  "SPAN",
+  "STRONG",
+  "UL",
+]);
+const ALLOWED_TOAST_ATTRIBUTES = new Set(["aria-label", "class", "href", "rel", "target"]);
+const ALLOWED_TOAST_LINK_PROTOCOLS = new Set(["http:", "https:", "mailto:", "tel:"]);
+>>>>>>> 4c462bb4efc29502f00f5c1479b6257c8dded200
 
 const pendingToasts: { message: string; variant: ToastVariant }[] = [];
 
@@ -141,7 +160,58 @@ const getToastTemplate = (): HTMLTemplateElement | null => {
   return template instanceof HTMLTemplateElement ? template : null;
 };
 
+<<<<<<< HEAD
 const normalizeToastMessage = (message: string): string => {
+=======
+const isAllowedToastHref = (href: string): boolean => {
+  const trimmedHref = href.trim();
+
+  if (!trimmedHref) return false;
+
+  if (
+    trimmedHref.startsWith("/") ||
+    trimmedHref.startsWith("#") ||
+    trimmedHref.startsWith("?")
+  ) {
+    return true;
+  }
+
+  try {
+    return ALLOWED_TOAST_LINK_PROTOCOLS.has(new URL(trimmedHref, window.location.origin).protocol);
+  } catch (_error) {
+    return false;
+  }
+};
+
+const sanitizeToastElement = (element: Element): void => {
+  if (!ALLOWED_TOAST_TAGS.has(element.tagName)) {
+    element.replaceWith(...Array.from(element.childNodes));
+    return;
+  }
+
+  Array.from(element.attributes).forEach((attribute) => {
+    if (!ALLOWED_TOAST_ATTRIBUTES.has(attribute.name)) {
+      element.removeAttribute(attribute.name);
+      return;
+    }
+
+    if (element.tagName !== "A" && ["href", "rel", "target"].includes(attribute.name)) {
+      element.removeAttribute(attribute.name);
+      return;
+    }
+
+    if (attribute.name === "href" && !isAllowedToastHref(attribute.value)) {
+      element.removeAttribute(attribute.name);
+    }
+  });
+
+  if (element.tagName === "A" && element.getAttribute("target") === "_blank") {
+    element.setAttribute("rel", "noopener noreferrer");
+  }
+};
+
+const sanitizeToastMessageHtml = (message: string): string => {
+>>>>>>> 4c462bb4efc29502f00f5c1479b6257c8dded200
   const wrapper = document.createElement("div");
   wrapper.innerHTML = message;
 
@@ -149,6 +219,20 @@ const normalizeToastMessage = (message: string): string => {
     .querySelectorAll(".restore-item, a[href*='undo_item'], a[href*='undo']")
     .forEach((restoreLink) => restoreLink.remove());
 
+<<<<<<< HEAD
+=======
+  Array.from(wrapper.querySelectorAll("*")).forEach((element) => {
+    sanitizeToastElement(element);
+  });
+
+  return wrapper.innerHTML.trim();
+};
+
+const normalizeToastMessage = (message: string): string => {
+  const wrapper = document.createElement("div");
+  wrapper.innerHTML = sanitizeToastMessageHtml(message);
+
+>>>>>>> 4c462bb4efc29502f00f5c1479b6257c8dded200
   return cleanText(wrapper.textContent || wrapper.innerText || message);
 };
 
@@ -232,6 +316,10 @@ const renderToast = (
   template: HTMLTemplateElement
 ): void => {
   const normalizedMessage = normalizeToastMessage(message);
+<<<<<<< HEAD
+=======
+  const sanitizedMessageHtml = sanitizeToastMessageHtml(message);
+>>>>>>> 4c462bb4efc29502f00f5c1479b6257c8dded200
 
   if (!normalizedMessage) return;
 
@@ -241,7 +329,11 @@ const renderToast = (
 
   if (!toastEl || !textEl) return;
 
+<<<<<<< HEAD
   textEl.textContent = normalizedMessage;
+=======
+  textEl.innerHTML = sanitizedMessageHtml || normalizedMessage;
+>>>>>>> 4c462bb4efc29502f00f5c1479b6257c8dded200
   toastEl.classList.remove(...Object.values(TOAST_VARIANT_CLASSES));
   toastEl.classList.add(TOAST_VARIANT_CLASSES[variant]);
   setToastA11yAttributes(toastEl, variant);

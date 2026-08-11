@@ -21,6 +21,7 @@
     gap: 4px;
   }
   &__sale-info{
+<<<<<<< HEAD
     max-width: 312px;
   }
   &__price {
@@ -28,6 +29,20 @@
      del{
         order: 4;
         @include p-m();
+=======
+     @include media-breakpoint-up(sm) {
+    max-width: 312px;
+     }
+  }
+  &__price {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    font-family: $font-family-headings;
+     del{
+        order: 4;
+        @include p-s(); 
+>>>>>>> 4c462bb4efc29502f00f5c1479b6257c8dded200
         color: var(--Text-headline, #030507);
       }
       ins{
@@ -40,6 +55,19 @@
       &.is-active-filter {
           background: $base-200;
       }
+<<<<<<< HEAD
+=======
+      & > *{
+        order: 3;
+
+      }
+      &-title  {
+      order:1;
+      }
+      &-availability  {
+      order:2;
+      }
+>>>>>>> 4c462bb4efc29502f00f5c1479b6257c8dded200
   }
 
   &__availability {

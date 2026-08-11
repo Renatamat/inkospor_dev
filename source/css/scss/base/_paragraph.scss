@@ -41,14 +41,17 @@
 /**
  * Paragraph Small base styles
  */
-.p-s {
-    @include typographyParagraphS-mobile();
+  @mixin p-s() {
+ @include typographyParagraphS-mobile();
     @include media-breakpoint-up(lg) {
         @include typographyParagraphS();
     }
     @include media-breakpoint-up(xxxl) {
         @include typographyParagraphS-hd();
     }
+  }
+.p-s {
+    @include p-s();
 }
 
 /**

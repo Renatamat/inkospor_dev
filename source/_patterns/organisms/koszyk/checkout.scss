@@ -14,7 +14,20 @@
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
   }
+<<<<<<< HEAD
 
+=======
+  &__header{
+    border-bottom: 1px solid var(--Border-300, #D1D9DE);
+    background: #e1e6e9;
+    & > *{
+      flex: 1 1 ;
+    }
+  }
+  &__footer{
+     background: #e1e6e9;
+  }
+>>>>>>> 4c462bb4efc29502f00f5c1479b6257c8dded200
   &__content {
     position: fixed;
     top: 0;
@@ -98,7 +111,11 @@
   }
 
   &__summary-total {
+<<<<<<< HEAD
     border-top: 2px solid var(--Border-action, #000);
+=======
+    // border-top: 2px solid var(--Border-action, #000);
+>>>>>>> 4c462bb4efc29502f00f5c1479b6257c8dded200
   }
 }
 

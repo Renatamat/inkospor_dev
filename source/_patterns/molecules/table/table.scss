@@ -11,6 +11,10 @@
     border-bottom: 1px solid var(--Border-300, #D1D9DE);
     vertical-align: middle;
     border-top: none;
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 4c462bb4efc29502f00f5c1479b6257c8dded200
   }
 
   thead &__cell {
@@ -66,7 +70,11 @@
 
     tr {
       padding: 8px 0;
+<<<<<<< HEAD
       border-bottom: 1px solid var(--Border-300, #D1D9DE);
+=======
+      border-bottom: 5px solid var(--Border-300, #D1D9DE);
+>>>>>>> 4c462bb4efc29502f00f5c1479b6257c8dded200
     }
 
     &__cell {
@@ -75,8 +83,17 @@
       width: 100%;
       border-bottom: 0;
       text-align: right;
+<<<<<<< HEAD
     }
 
+=======
+        &:last-of-type, &--details{
+          border-bottom: none;
+        }
+    }
+
+
+>>>>>>> 4c462bb4efc29502f00f5c1479b6257c8dded200
     &__label,
     &__value {
       display: block;
