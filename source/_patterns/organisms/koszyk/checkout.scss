@@ -21,7 +21,7 @@
       flex: 1 1 ;
     }
   }
-  &__footer{
+  &__footer{ 
      background: #e1e6e9;
   }
   &__content {
@@ -107,7 +107,7 @@
   }
 
   &__summary-total {
-    // border-top: 2px solid var(--Border-action, #000);
+    border-top: 2px solid var(--Border-action, #000);
   }
 }
 
