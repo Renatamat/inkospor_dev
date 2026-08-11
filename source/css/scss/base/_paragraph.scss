@@ -75,7 +75,7 @@
 /**
  * Paragraph Large base styles
  */
-.p-l {
+@mixin p-l() {
     @include typographyParagraphL-mobile();
     @include media-breakpoint-up(lg) {
         @include typographyParagraphL();
@@ -85,10 +85,14 @@
     }
 }
 
+.p-l {
+    @include p-l();
+}
+
 /**
  * Paragraph Extra Large base styles
  */
-.p-xl {
+@mixin p-xl() {
     @include typographyParagraphXl-mobile();
     @include media-breakpoint-up(lg) {
         @include typographyParagraphXl();
@@ -96,6 +100,10 @@
     @include media-breakpoint-up(xxxl) {
         @include typographyParagraphXl-hd();
     }
+}
+
+.p-xl {
+    @include p-xl();
 }
 .p-brand{
     @include typografyParagrahFontFamilyHeading();
