@@ -24124,15 +24124,6 @@ button.swiper-pagination-bullet {
 .c-product-card__variant.is-active-filter {
   background: #f2f2f2;
 }
-.c-product-card__variant > * {
-  order: 3;
-}
-.c-product-card__variant-title {
-  order: 1;
-}
-.c-product-card__variant-availability {
-  order: 2;
-}
 .c-product-card__availability--success {
   color: var(--Text-success, #386E47);
 }
@@ -24180,6 +24171,9 @@ button.swiper-pagination-bullet {
   .headerMainLogo img {
     width: 216px;
   }
+}
+.headerMainHamburger {
+  width: 92px;
 }
 @media (min-width: 992px) {
   .headerMainHamburger {
@@ -24344,22 +24338,6 @@ button.swiper-pagination-bullet {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-}
-
-.headerMain.--www .btn-buy-healion {
-  padding: 16px 24px;
-  width: 100%;
-}
-.headerMain.--www .btn-buy-healion span {
-  display: block;
-}
-.headerMain.--www .headerMainLogo img {
-  width: 192px;
-}
-@media (min-width: 768px) {
-  .headerMain.--www .headerMainLogo img {
-    width: 254px;
-  }
 }
 
 .headerMenuNav {
@@ -24536,9 +24514,6 @@ button.swiper-pagination-bullet {
 }
 .headerMenu .blog-accordeon[aria-expanded=true] .icon-plus {
   opacity: 0;
-}
-.headerMenu.--www .mobileLogoMenu img {
-  width: 192px;
 }
 
 .c-footer {
@@ -26030,6 +26005,10 @@ body .wcpf-field-price-slider .wcpf-price-slider .ui-widget-content {
 .c-cart-drawer__price-old {
   text-decoration: line-through;
 }
+.c-cart-drawer__summary-total {
+  border-top: 2px solid var(--Border-action, #000);
+}
+
 body.cart-drawer-open {
   overflow: hidden;
 }

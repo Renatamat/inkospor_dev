@@ -23,7 +23,7 @@
 
     }
     &Hamburger{
-        // width: 92px;
+        width: 92px;
         @include media-breakpoint-up(lg) {
             display: none;
         }
@@ -213,22 +213,3 @@
     visibility: visible;
     transform: translateY(0);
 }
-.headerMain.--www{
-    .btn-buy-healion{
-        padding: 16px 24px;
-        width: 100%;
-        span{
-            display: block;
-        }
-    }
-    .headerMainLogo{
-        img{
-            width: 192px;
-            @include media-breakpoint-up(md) {
-                width: 254px;
-            }
-        }
-    }
-    
-}
-
