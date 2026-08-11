@@ -8,6 +8,12 @@
         background: var(--Surface-primary-light, #FFF4C8);
         color: var(--Text-primary, #F9C907);
     }
+    &.--new{
+        border: 1px solid var(--Border-error, #E73722);
+        border-radius: var(--Radius-brand, 8px);
+        background: var(--Surface-error, #AF2414);
+        color: white;
+    }
     &.--base{
         background: var(--Surface-page-invert, #000);
         color: #fff;

@@ -1,0 +1,34 @@
+.c-faq {
+  &__toggle {
+    color: var(--Text-headline, #030507);
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--Border-base, #0F1416);
+    text-align: left;
+
+    &:focus-visible {
+      outline: 2px solid var(--Border-action, #7F6053);
+      outline-offset: 4px;
+    }
+  }
+
+  &__chevron {
+    display: inline-flex;
+    transition: transform 0.3s ease;
+  }
+
+  &__toggle.collapsed &__chevron {
+    transform: rotate(180deg);
+  }
+
+  &__answer {
+    p, ul, ol{
+      padding-bottom: 16px;
+    }
+    p:last-child, 
+    ul:last-child,
+    ol:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

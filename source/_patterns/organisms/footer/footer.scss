@@ -12,8 +12,13 @@
   }
 
   &__contact {
+
     @include media-breakpoint-up(lg) {
       border-left: 1px solid var(--Border-400, #B3BFC8);
+    }
+   @media (min-width: 992px) and (max-width: 1100px) {
+      border-left:none;
+      padding-left: 0;
     }
     &-first{
     @include media-breakpoint-up(sm) {
