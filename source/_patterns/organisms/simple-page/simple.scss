@@ -45,16 +45,16 @@
         padding-bottom: 24px;
     }
         h1{
-         @include p-xl();
+        //  @include p-xl();
         font-weight: bold;
     }
     h2 {
-        @include p-l();
+        // @include p-l();
         font-weight: bold;
     }
 
     h3 {
-        @include p-m();
+        // @include p-m();
         font-weight: bold;
     }
 }

@@ -75,7 +75,7 @@
 /**
  * Paragraph Large base styles
  */
- @mixin p-l() {
+.p-l {
     @include typographyParagraphL-mobile();
     @include media-breakpoint-up(lg) {
         @include typographyParagraphL();
@@ -84,13 +84,11 @@
         @include typographyParagraphL-hd();
     }
 }
-.p-l {
-  @include p-l(); 
-}
+
 /**
  * Paragraph Extra Large base styles
  */
- @mixin p-xl(){
+.p-xl {
     @include typographyParagraphXl-mobile();
     @include media-breakpoint-up(lg) {
         @include typographyParagraphXl();
@@ -99,13 +97,6 @@
         @include typographyParagraphXl-hd();
     }
 }
-.p-xl {
-  @include p-xl();
-}
 .p-brand{
     @include typografyParagrahFontFamilyHeading();
-}
-
-.f-brand{
-    font-family: 'Poppins';
 }

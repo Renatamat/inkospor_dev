@@ -33,10 +33,10 @@
 
 
 $container-max-widths: (
-  sm: 100%,
-  md: 100%, 
-  lg: 100%,
-  xl: 100%,
+  sm: 540px,
+  md: 720px, 
+  lg: 960px,
+  xl: 1140px,
   xxl: 1454px, 
   xxxl: 1454px,
 );
@@ -158,66 +158,52 @@ $theme-colors: (
 @import "../_patterns/molecules/cards/cards-product.scss";
 @import "../_patterns/molecules/header/headerMain.scss";
 @import "../_patterns/molecules/header/headerMenu.scss";
-
+@import "../_patterns/molecules/table/table.scss";
 @import "../_patterns/organisms/footer/footer.scss"; 
-@import "../_patterns/organisms/homepageWWW/homepageWWW-slider.scss"; 
-@import "../_patterns/organisms/homepageWWW/homepageWWW-prod.scss"; 
-@import "../_patterns/organisms/homepageWWW/homepageWWW-cert.scss"; 
-@import "../_patterns/organisms/homepageWWW/homepageWWW-GMP.scss"; 
-@import "../_patterns/organisms/homepageWWW/homepageWWW-inko.scss"; 
-@import "../_patterns/organisms/homepageWWW/homepageWWW-eksperci.scss"; 
-@import "../_patterns/organisms/homepageWWW/homepageWWW-blog.scss"; 
-@import "../_patterns/organisms/homepageWWW/homepageWWW-doping.scss"; 
-@import "../_patterns/organisms/homepageWWW/homepageWWW-quality.scss"; 
-@import "../_patterns/organisms/homepageWWW/homepageWWW-mig.scss"; 
-@import "../_patterns/organisms/homepageWWW/homepageWWW-skladniki.scss"; 
-@import "../_patterns/organisms/homepageWWW/homepageWWW-cel.scss"; 
 @import "../_patterns/organisms/productlisting/product-left-side.scss"; 
 @import "../_patterns/organisms/productlisting/product-section.scss"; 
 @import "../_patterns/organisms/productlisting/product-bottom-bar.scss"; 
 @import "../_patterns/organisms/koszyk/checkout.scss"; 
 @import "../_patterns/organisms/my-account/order-detail.scss"; 
-@import "../_patterns/organisms/faq/faq.scss";
-@import "../_patterns/organisms/simple-page/simple.scss";
 
 
-.breadcrump-wrapper a {
-    padding: 0px 8px;
-    color: var(--Text-on, #FFF);
-    /* S/Regular */
-    font-family: var(--font-family-body, Sora);
-    font-size: var(--font-size-s, 14px);
-    font-style: normal;
-    font-weight: var(--font-weight-regular, 300);
-    line-height: var(--font-line-height-xs, 16px); /* 114.286% */
-    letter-spacing: var(--font-spacing-0, 0px);
-    @include media-breakpoint-up(xxxl) { 
-        font-size: 16px; 
-    }
-    &:hover{  
-        color:#7F6053;
-    }
-}
+// .breadcrump-wrapper a {
+//     padding: 0px 8px;
+//     color: var(--Text-on, #FFF);
+//     /* S/Regular */
+//     font-family: var(--font-family-body, Sora);
+//     font-size: var(--font-size-s, 14px);
+//     font-style: normal;
+//     font-weight: var(--font-weight-regular, 300);
+//     line-height: var(--font-line-height-xs, 16px); /* 114.286% */
+//     letter-spacing: var(--font-spacing-0, 0px);
+//     @include media-breakpoint-up(xxxl) { 
+//         font-size: 16px; 
+//     }
+//     &:hover{  
+//         color:#7F6053;
+//     }
+// }
 .pt-14-proc{
     padding-top: 14%;
 }
-.breadcrump-wrapper .breadcrump-separator {
-    font-size: var(--font-size-m, 16px);
-    line-height: var(--font-line-height-s, 24px); /* 150% */
-}
+// .breadcrump-wrapper .breadcrump-separator {
+//     font-size: var(--font-size-m, 16px);
+//     line-height: var(--font-line-height-s, 24px); /* 150% */
+// }
 
-.breadcrump-wrapper .breadcrump-last {
-    color: var(--Text-action, #7F6053); 
-    font-family: var(--font-family-body, Sora);
-    font-size: var(--font-size-s, 14px);
-    font-style: normal;
-    font-weight: var(--font-weight-regular, 300);
-    line-height: var(--font-line-height-xs, 16px); /* 114.286% */
-    letter-spacing: var(--font-spacing-0, 0px);
-    @include media-breakpoint-up(xxxl) {
-        font-size: 16px;
-    }
-}
+// .breadcrump-wrapper .breadcrump-last {
+//     color: var(--Text-action, #7F6053); 
+//     font-family: var(--font-family-body, Sora);
+//     font-size: var(--font-size-s, 14px);
+//     font-style: normal;
+//     font-weight: var(--font-weight-regular, 300);
+//     line-height: var(--font-line-height-xs, 16px); /* 114.286% */
+//     letter-spacing: var(--font-spacing-0, 0px);
+//     @include media-breakpoint-up(xxxl) {
+//         font-size: 16px;
+//     }
+// }
 
 .icon-24 {
     width: 24px;
