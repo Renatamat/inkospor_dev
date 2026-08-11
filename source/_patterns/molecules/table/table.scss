@@ -139,7 +139,7 @@
   @include media-breakpoint-down(md) {
     border-spacing: 0;
 
-    thead {
+    thead { 
       display: none;
     }
 
@@ -159,8 +159,8 @@
       align-items: flex-start;
       justify-content: space-between;
       width: 100%;
-      border-bottom: 0;
+      border-bottom: 2px;
       text-align: right;
-    }
+    } 
   }
 }

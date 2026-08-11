@@ -80,7 +80,6 @@ button {
 	&>span{
 		padding: 0px 8px;
 	}
-	gap: 0px;
 }
 
 .c-btn-s { 
@@ -99,11 +98,6 @@ button {
 	}
 	&>span{
 		padding: 0px 8px;
-	}
-	&.c-btn-text{
-		&>span{
-			padding: 0px;
-		}
 	}
 }
 .c-btn-m { 
@@ -184,7 +178,10 @@ button {
 	border-radius: var(--Radius-brand, 8px);
 	background: $color-btn-primary-bg;
 	border: 2px solid $color-btn-primary-border;
-	
+	&.--fill-white{
+	background: white;
+	border: 2px solid white;
+	}
 	&:hover {
 		background: $color-btn-primary-bg-hover;
 		border: 2px solid $color-btn-primary-border-hover;
@@ -198,14 +195,6 @@ button {
 	&.disabled, &[aria-disabled="true"]{
 		border-color: $color-btn-primary-bg-disabled;
 		background: $color-btn-primary-bg-disabled;
-	}
-	&.--fill-white{
-		background: white;
-		border: 2px solid white;
-		&:hover {
-			background: rgb(201, 200, 200);
-			border: 2px solid rgb(201, 200, 200);
-		}
 	}
  }
 .c-btn-outline { 
@@ -236,14 +225,6 @@ button {
 	}
 	&.c-btn-xs{
 		border: 2px solid $color-btn-outline-border-xs;
-	}
-	&.--white{
-		background-color: transparent;
-		border: 2px solid #fff;
-		color: #fff;
-		&:hover{
-			background-color: #ffffff5d;
-		}
 	}
  }
 .c-btn-text { 
@@ -315,7 +296,6 @@ button {
 		width: 16px;
 		height: 16px;
 	}
-	
 }
 
 .c-btn-icon-m {
